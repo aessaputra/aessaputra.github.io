@@ -3,14 +3,14 @@
 :root {
   --bg: rgb(255, 252, 240);
   --bg2: rgb(242, 240, 229);
-  --text: #6f6e69;
-  --title: #343331;
+  --text: #4a4944;        /* Darker text for better contrast */
+  --title: #1a1a18;       /* Darker title for better contrast */
   --brand: rgb(58, 169, 159);
   --border: rgb(230, 228, 217);
   
   --font: "Inter", sans-serif;
-  --weight-medium: 400;
-  --weight-bold: 600;
+  --weight-medium: 500;    /* Increased from 400 for better readability */
+  --weight-bold: 700;      /* Increased from 600 for better emphasis */
   
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -19,22 +19,22 @@
   --space-xl: 3rem;
   
   --max-width: 48rem;
-  --line-height: 1.5;
+  --line-height: 1.6;     /* Increased from 1.5 for better readability */
   
   /* 5-level typography scale (1rem = 15px) */
   --scale-xs: 0.8rem;     /* 12px */
   --scale-sm: 0.933rem;   /* 14px */
-  --scale-base: 1rem;     /* 15px */
-  --scale-lg: 1.2rem;     /* 18px */
-  --scale-xl: 1.4rem;     /* 21px */
+  --scale-base: 1.067rem; /* Increased from 1rem (16px) */
+  --scale-lg: 1.333rem;   /* Increased from 1.2rem (20px) */
+  --scale-xl: 1.6rem;     /* Increased from 1.4rem (24px) */
 }
 
 /* Dark theme variables */
 [data-theme="dark"] {
   --bg: #18181c;
   --bg2: #23232a;
-  --text: #d6d6d6;
-  --title: #fff;
+  --text: #e6e6e6;        /* Lighter text for better contrast in dark mode */
+  --title: #ffffff;       /* Pure white for titles */
   --brand: #3ac9b0;
   --border: #33343a;
 }
@@ -52,7 +52,7 @@ body.theme-transition {
 }
 
 html {
-  font-size: 15px;
+  font-size: 16px;        /* Increased from 15px for better base font size */
 }
 
 body {
@@ -205,11 +205,11 @@ h4, h5, h6 {
 }
 
 p {
-  font-size: var(--scale-base); 
+  font-size: var(--scale-base);
   margin-bottom: var(--space-md);
   color: var(--text);
   line-height: 1.7;
-  font-weight: 400;
+  font-weight: var(--weight-medium); /* Using variable instead of hardcoded 400 */
 }
 
 a {
@@ -392,9 +392,10 @@ code {
   background: var(--bg2);
   padding: 0.125rem 0.25rem;
   border-radius: 0.25rem;
-  font-size: 0.875em;
+  font-size: 0.9em;       /* Increased from 0.875em for better readability */
   font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
   color: var(--text);
+  font-weight: 500;       /* Added weight for better visibility */
 }
 
 pre {
@@ -410,8 +411,9 @@ pre code {
   background: none;
   padding: 0;
   border-radius: 0;
-  font-size: 0.875rem;
+  font-size: 0.9rem;      /* Increased from 0.875rem */
   line-height: 1.5;
+  font-weight: 500;       /* Added weight for better visibility */
 }
 
 hr {
@@ -442,7 +444,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: var(--space-lg) 0;
-  font-size: 0.875rem;
+  font-size: 0.9rem;       /* Increased from 0.875rem */
 }
 
 th, td {
@@ -477,6 +479,7 @@ td {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font);
+  font-weight: var(--weight-medium); /* Added weight for better visibility */
 }
 
 .search-input:focus {
