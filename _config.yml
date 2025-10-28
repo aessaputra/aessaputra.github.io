@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -35,33 +35,29 @@ preferences:
     enabled: true
 
 # Site Configuration
-title: "Your Site Title"
-heading: "Your Name"
-description: "A brief description of your site"
-url: "https://yoursite.com"
-baseurl: ""
+title: 'My Notes'
+heading: 'Aes Saputra'
+description: 'Obsidian Notes Published'
+url: 'https://aessaputra.github.io'
+baseurl: ''
 
 # Asset Configuration
-apple_touch_icon: "/assets/img/profile.png"
-css_file: "/assets/css/style.css"
-ie_css: "/assets/css/ie-target.css"
+apple_touch_icon: '/assets/img/profile.png'
+css_file: '/assets/css/style.css'
+ie_css: '/assets/css/ie-target.css'
 
 # Menu Items
 menu:
-  - title: "Notes"
-    url: "/notes"
-  - title: "Blog"
-    url: "/blog"
-  - title: "About"
-    url: "/about"
+  - title: 'About'
+    url: '/about'
 
 # Footer
 footer:
-  copyright: "© 2024 Your Name. Contents under CC-BY-NC"
+  copyright: '© 2025 Aes Saputra. Contents under CC-BY-NC'
   credits:
     enabled: true
-    url: "/credits"
-    text: "Credits"
+    url: '/credits'
+    text: 'Credits'
 
 # Collections
 collections:
@@ -72,19 +68,19 @@ collections:
 # Defaults
 defaults:
   - scope:
-      path: ""
-      type: "notes"
+      path: ''
+      type: 'notes'
     values:
-      layout: "Post"
-      content-type: "notes"
-      feed: "show"
+      layout: 'Post'
+      content-type: 'notes'
+      feed: 'show'
   - scope:
-      path: ""
-      type: "posts"
+      path: ''
+      type: 'posts'
     values:
-      layout: "Post"
-      content-type: "post"
-      feed: "show"
+      layout: 'Post'
+      content-type: 'post'
+      feed: 'show'
       permalink: /blog/:title/
 
 # Plugins
@@ -94,7 +90,7 @@ plugins:
 
 # Private links (for broken wiki links)
 privatelinks:
-  title: "Private Note"
+  title: 'Private Note'
   msg: "This note hasn't been published yet."
 
 # Math rendering
