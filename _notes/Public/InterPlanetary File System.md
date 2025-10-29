@@ -1,13 +1,13 @@
 ---
-title: 'InterPlanetary File System'
-feed: 'show'
+title: InterPlanetary File System
+feed: show
 date: 2025-10-28
 author:
-  - '[[Aes Saputra]]'
+  - "[[Aes Saputra]]"
 themes:
-  - '[[Decentralization]]'
-  - '[[Peer to Peer]]'
-  - '[[Distributed System]]'
+  - "[[Decentralization]]"
+  - "[[Peer to Peer]]"
+  - "[[Distributed System]]"
 tags:
   - ipfs
   - file-sharing
@@ -15,7 +15,10 @@ tags:
   - blockchain
 rating: 6
 categories:
-  - '[[Personal Notes]]'
+  - "[[Personal Notes]]"
+aliases:
+  - IPFS
+  - InterPlanetary File System
 ---
 
 IPFS adalah protokol, hipermedia, dan jaringan peer-to-peer untuk berbagi data menggunakan tabel hash terdistribusi untuk menyimpan informasi penyedia. Melalui penomoran konten, IPFS mengidentifikasi setiap file dalam namespace global yang menghubungkan host IPFS, menciptakan sistem terdistribusi untuk penyimpanan dan berbagi file.
