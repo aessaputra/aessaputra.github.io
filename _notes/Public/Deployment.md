@@ -1,5 +1,5 @@
 ---
-title: Deploy
+title: Deployment
 feed: show
 date: 2024-01-15
 ---
@@ -50,7 +50,7 @@ Kunjungi `http://localhost:4000` untuk melihat situsmu.
 Tambahkan domain milikmu di `_config.yml`:
 
 ```yaml
-url: "https://yourdomain.com"
+url: 'https://yourdomain.com'
 ```
 
 Lalu konfigurasikan domain tersebut pada penyedia hosting.
@@ -65,15 +65,17 @@ Lalu konfigurasikan domain tersebut pada penyedia hosting.
 ## Pemecahan Masalah
 
 **Situs tidak memperbarui?**
+
 - Periksa apakah perubahan sudah dipush ke repositori
 - Pastikan proses build selesai tanpa error
 - Hapus cache peramban
 
 **Tautan rusak?**
+
 - Pastikan seluruh judul catatan sama persis
 - Pastikan catatan memiliki `feed: "show"` pada front matter
 - Build ulang situs setelah menambahkan catatan baru
 
 ---
 
-*Taman digitalmu siap dibagikan kepada dunia!*
+_Taman digitalmu siap dibagikan kepada dunia!_
