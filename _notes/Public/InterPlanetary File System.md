@@ -15,7 +15,7 @@ tags:
   - blockchain
 rating: 6
 categories:
-  - "[[Personal Notes]]"
+  - "[[Posts]]"
 aliases:
   - IPFS
   - InterPlanetary File System

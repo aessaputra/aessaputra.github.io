@@ -16,7 +16,10 @@ tags:
   - cryptography
 rating: 6
 categories:
-  - "[[Personal Notes]]"
+  - "[[Posts]]"
+aliases:
+  - IPNS
+  - InterPlanetary Name System
 ---
 
 IPNS adalah sistem di dalam ekosistem [[InterPlanetary File System]] yang memungkinkan pembuatan alamat mutable (nama tetap) yang dapat menunjuk ke konten IPFS (CID) yang dapat sering diperbarui. Ideal untuk use-case seperti situs web dinamis, blog, aplikasi yang terus diperbarui.
