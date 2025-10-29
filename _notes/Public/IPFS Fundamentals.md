@@ -19,8 +19,8 @@ status:
   - "[[DAGs]]"
   - "[[DHTs]]"
 feed: show
+title: IPFS Fundamentals
 ---
-# IPFS Fundamentals
 
 > "The InterPlanetary File System - IPFS - is a peer-to-peer distributed system for storing and accessing files, websites, applications, and data. IPFS is designed to power the Distributed Web - DWeb."
 

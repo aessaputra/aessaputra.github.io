@@ -147,6 +147,6 @@ Filebase menunjukkan bagaimana teknologi decentralization seperti IPFS bisa diak
 
 ## 📚 Terkait
 
-- [[IPFS fundamentals]]
+- [[IPFS Fundamentals]]
 - [[Decentralized web infrastructure]]
 - [[Enterprise-grade decentralized solutions]]
