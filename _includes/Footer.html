@@ -8,10 +8,10 @@
     </h6>
   </div>
   <div class="footer-right">
-    <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode" role="switch" aria-checked="false">
       <div class="theme-toggle-icons">
         <!-- Sun icon (visible in dark mode) -->
-        <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+        <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <circle cx="12" cy="12" r="5"></circle>
           <line x1="12" y1="1" x2="12" y2="3"></line>
           <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -24,7 +24,7 @@
         </svg>
         
         <!-- Moon icon (visible in light mode) -->
-        <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+        <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
       </div>
@@ -44,6 +44,7 @@
     root.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
     updateIcon(theme);
+    updateAria(theme);
   }
   
   function updateIcon(theme) {
@@ -56,12 +57,23 @@
     }
   }
   
+  function updateAria(theme) {
+    themeToggle.setAttribute('aria-checked', theme === 'dark' ? 'true' : 'false');
+  }
+  
   // Initial theme
   const savedTheme = localStorage.getItem('theme');
   const initialTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   setTheme(initialTheme);
   
-  themeToggle.addEventListener('click', function() {
+  // Handle theme toggle with both click and touch events for better mobile support
+  themeToggle.addEventListener('click', toggleTheme);
+  themeToggle.addEventListener('touchend', function(e) {
+    e.preventDefault(); // Prevent double-firing on mobile
+    toggleTheme();
+  });
+  
+  function toggleTheme() {
     root.classList.add('theme-transition');
     body.classList.add('theme-transition');
     
@@ -73,5 +85,13 @@
       root.classList.remove('theme-transition');
       body.classList.remove('theme-transition');
     }, 300);
+  }
+  
+  // Handle keyboard navigation
+  themeToggle.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleTheme();
+    }
   });
 </script>

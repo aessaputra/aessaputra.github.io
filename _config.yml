@@ -42,7 +42,8 @@ url: 'https://aessaputra.github.io'
 baseurl: ''
 
 # Asset Configuration
-apple_touch_icon: '/assets/img/profile.png'
+apple_touch_icon: '/assets/img/apple-touch-icon.png'
+favicon: '/assets/img/favicon.ico'
 css_file: '/assets/css/style.css'
 ie_css: '/assets/css/ie-target.css'
 

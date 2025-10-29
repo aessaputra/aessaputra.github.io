@@ -36,7 +36,10 @@
     <link rel="apple-touch-icon" href="{{ site.baseurl }}{{ site.apple_touch_icon }}">
     {%- endif -%}
     {%- if site.favicon -%}
-    <link rel="icon" href="{{ site.baseurl }}{{ site.favicon }}" type="image/svg+xml" sizes="any" />
+    <link rel="icon" href="{{ site.baseurl }}{{ site.favicon }}">
+    <link rel="icon" href="{{ site.baseurl }}/assets/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="{{ site.baseurl }}/assets/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="{{ site.baseurl }}/assets/img/site.webmanifest">
     {%- endif -%}
     {%- if site.css_file -%}
     <link href="{{ site.baseurl }}{{ site.css_file }}" rel="stylesheet" media="all" class="default" />
