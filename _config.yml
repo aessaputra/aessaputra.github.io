@@ -56,7 +56,7 @@ menu:
 footer:
   copyright: '© 2025 Aes Saputra. Contents under CC-BY-NC'
   credits:
-    enabled: true
+    enabled: false
     url: '/credits'
     text: 'Credits'
 

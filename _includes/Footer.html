@@ -1,11 +1,6 @@
 <div class="footer">
   <div class="footer-left">
-    <h6>
-      {{ site.footer.copyright }}
-      {%- if site.footer.credits.enabled -%}
-          • <a href="{{ site.baseurl }}{{ site.footer.credits.url }}">{{ site.footer.credits.text }}</a>
-      {%- endif -%}
-    </h6>
+    <h6>{{ site.footer.copyright }}</h6>
   </div>
   <div class="footer-right">
     <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode" role="switch" aria-checked="false">
