@@ -32,15 +32,21 @@
     </title>
 
     <link rel="canonical" href="{{site.url}}{{page.url}}" />
-    {%- if site.apple_touch_icon -%}
-    <link rel="apple-touch-icon" href="{{ site.baseurl }}{{ site.apple_touch_icon }}">
-    {%- endif -%}
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon-96x96.png" sizes="96x96">
     {%- if site.favicon -%}
+    {%- assign favicon_ext = site.favicon | split: '.' | last -%}
+    {%- if favicon_ext == 'svg' -%}
+    <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}{{ site.favicon }}">
+    {%- else -%}
     <link rel="icon" href="{{ site.baseurl }}{{ site.favicon }}">
-    <link rel="icon" href="{{ site.baseurl }}/assets/img/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" href="{{ site.baseurl }}/assets/img/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="{{ site.baseurl }}/assets/img/site.webmanifest">
     {%- endif -%}
+    {%- endif -%}
+    <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+    {%- if site.apple_touch_icon -%}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}{{ site.apple_touch_icon }}">
+    {%- endif -%}
+    <meta name="apple-mobile-web-app-title" content="{{ site.title | default: site.heading }}">
+    <link rel="manifest" href="{{ site.baseurl }}/site.webmanifest">
     {%- if site.css_file -%}
     <link href="{{ site.baseurl }}{{ site.css_file }}" rel="stylesheet" media="all" class="default" />
     {%- else -%}
