@@ -19,14 +19,14 @@
   --space-xl: 3rem;
   
   --max-width: 48rem;
-  --line-height: 1.6;     /* Increased from 1.5 for better readability */
+  --line-height: 1.7;      /* Slightly taller line height to match larger text */
   
-  /* 5-level typography scale (1rem = 15px) */
-  --scale-xs: 0.8rem;     /* 12px */
-  --scale-sm: 0.933rem;   /* 14px */
-  --scale-base: 1.067rem; /* Increased from 1rem (16px) */
-  --scale-lg: 1.333rem;   /* Increased from 1.2rem (20px) */
-  --scale-xl: 1.6rem;     /* Increased from 1.4rem (24px) */
+  /* 5-level typography scale (1rem = 17px) */
+  --scale-xs: 0.9rem;      /* ~15px */
+  --scale-sm: 1rem;        /* ~17px */
+  --scale-base: 1.2rem;    /* ~20px */
+  --scale-lg: 1.5rem;      /* ~26px */
+  --scale-xl: 1.85rem;     /* ~31px */
 }
 
 /* Dark theme variables */
@@ -52,7 +52,7 @@ body.theme-transition {
 }
 
 html {
-  font-size: 16px;        /* Increased from 15px for better base font size */
+  font-size: 17px;         /* Larger base size for more comfortable reading */
 }
 
 body {
@@ -89,6 +89,7 @@ body {
 
 .nav-left a {
   text-decoration: none;
+  color: var(--title);
 }
 
 .logo {
@@ -112,7 +113,7 @@ body {
 .nav-link {
   color: var(--text);
   text-decoration: none;
-  font-size: var(--scale-base);
+  font-size: var(--scale-sm);
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -130,20 +131,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(1.2rem, 4vw, 1.4rem);
+  font-size: clamp(1.6rem, 4.5vw, 2.2rem);
   font-weight: var(--weight-bold);
   margin-bottom: var(--space-lg);
 }
 
 h2 {
-  font-size: clamp(1.1rem, 3vw, 1.2rem);
+  font-size: clamp(1.4rem, 3.5vw, 1.8rem);
   font-weight: var(--weight-bold);
   margin-top: var(--space-xl);
   margin-bottom: var(--space-md);
 }
 
 h3 {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   font-weight: var(--weight-bold);
   margin-top: var(--space-lg);
   margin-bottom: var(--space-sm);
