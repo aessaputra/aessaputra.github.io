@@ -1,12 +1,13 @@
 ---
-title: InterPlanetary Name System
-feed: show
+title: 'InterPlanetary Name System'
+feed: 'show'
+date: 2025-10-28
 author:
-  - "[[Aes Saputra]]"
+  - '[[Aes Saputra]]'
 themes:
-  - "[[Decentralization]]"
-  - "[[Distributed System]]"
-  - "[[IPFS]]"
+  - '[[Decentralization]]'
+  - '[[Distributed System]]'
+  - '[[IPFS]]'
 tags:
   - ipfs
   - ipns
@@ -15,8 +16,9 @@ tags:
   - cryptography
 rating: 6
 categories:
-  - "[[Personal Notes]]"
+  - '[[Personal Notes]]'
 ---
+
 IPNS adalah sistem di dalam ekosistem [[InterPlanetary File System|IPFS]] yang memungkinkan pembuatan alamat mutable (nama tetap) yang dapat menunjuk ke konten IPFS (CID) yang dapat sering diperbarui. Ideal untuk use-case seperti situs web dinamis, blog, aplikasi yang terus diperbarui.
 
 ## Konsep Utama

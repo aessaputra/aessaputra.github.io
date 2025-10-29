@@ -1,23 +1,24 @@
 ---
-title: Filebase
-feed: show
+title: 'Filebase'
+feed: 'show'
+date: 2025-10-28
 categories:
-  - "[[Personal Notes]]"
+  - '[[Personal Notes]]'
 author:
-  - "[[Aes Saputra]]"
+  - '[[Aes Saputra]]'
 themes:
-  - "[[Decentralization]]"
-  - "[[File Hosting]]"
-  - "[[IPFS]]"
+  - '[[Decentralization]]'
+  - '[[File Hosting]]'
+  - '[[IPFS]]'
 tags:
   - personal
   - ipfs
   - file-hosting
   - decentralized
   - filebase
-created: 2025-10-28
 rating: 6
 ---
+
 **Solusi Lengkap Buat:**
 
 - Hosting file di [[InterPlanetary File System|IPFS]] dengan performa enterprise
@@ -65,14 +66,11 @@ CDN ini berjalan pada infrastruktur fisik (bare-metal) tanpa bergantung pada pen
 ## 🛠️ Cara Mulai
 
 1. **Buat akun** (gratis 5GB storage)  
-    Kunjungi website Filebase dan daftar dengan email. Gratisan ini cukup untuk memulai proyek kecil.
-    
+   Kunjungi website Filebase dan daftar dengan email. Gratisan ini cukup untuk memulai proyek kecil.
 2. **Upload file** lewat dashboard  
-    Drag & drop file ke dashboard atau gunakan tombol upload. File akan otomatis di-pin ke jaringan IPFS.
-    
+   Drag & drop file ke dashboard atau gunakan tombol upload. File akan otomatis di-pin ke jaringan IPFS.
 3. **Akses konten** pakai: `https://ipfs.filebase.io/ipfs/<CID>`  
-    Setiap upload menghasilkan Content Identifier (CID) unik yang bisa digunakan untuk mengakses file dari mana saja.
-    
+   Setiap upload menghasilkan Content Identifier (CID) unik yang bisa digunakan untuk mengakses file dari mana saja.
 
 ---
 
@@ -118,19 +116,22 @@ CDN ini berjalan pada infrastruktur fisik (bare-metal) tanpa bergantung pada pen
 Pake `@filebase/sdk` buat integrasi seamless ke Node.js/Next.js:
 
 ```javascript
-import { ObjectManager } from "@filebase/sdk";
+import { ObjectManager } from '@filebase/sdk';
 
 // Upload file sederhana
-await ObjectManager.put("catatan.txt", "Ini konten private Bos!");
+await ObjectManager.put('catatan.txt', 'Ini konten private Bos!');
 
 // Upload dengan metadata
-await ObjectManager.put("data.json", JSON.stringify({ 
-  title: "Proyek Saya",
-  version: "1.0.0"
-}));
+await ObjectManager.put(
+  'data.json',
+  JSON.stringify({
+    title: 'Proyek Saya',
+    version: '1.0.0',
+  })
+);
 
 // Download file
-const content = await ObjectManager.get("data.json");
+const content = await ObjectManager.get('data.json');
 console.log(content);
 ```
 
