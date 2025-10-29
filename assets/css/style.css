@@ -136,6 +136,21 @@ h1 {
   margin-bottom: var(--space-lg);
 }
 
+.post-meta {
+  font-size: var(--scale-sm);
+  color: var(--text);
+  opacity: 0.75;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: calc(-1 * var(--space-sm));
+  margin-bottom: var(--space-lg);
+}
+
+.post-meta span[aria-hidden="true"] {
+  line-height: 1;
+}
+
 h2 {
   font-size: clamp(1.4rem, 3.5vw, 1.8rem);
   font-weight: var(--weight-bold);
