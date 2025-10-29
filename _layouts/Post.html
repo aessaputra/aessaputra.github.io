@@ -21,7 +21,16 @@
     <meta content="{{ site.url }}{{ page.url }}" property="og:url">
     {%- endif -%}
 
-    <title>{%- if page.title -%}{{ page.title }} - {%- endif -%}{{ site.heading }}</title>
+    <title>
+        {%- if page.url == "/" or page.permalink == "/" -%}
+        {{ site.heading }}
+        {%- elsif page.title -%}
+        {{ page.title }} - {{ site.heading }}
+        {%- else -%}
+        {{ site.heading }}
+        {%- endif -%}
+    </title>
+
     <link rel="canonical" href="{{site.url}}{{page.url}}" />
     {%- if site.apple_touch_icon -%}
     <link rel="apple-touch-icon" href="{{ site.baseurl }}{{ site.apple_touch_icon }}">
