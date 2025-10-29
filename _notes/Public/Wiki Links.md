@@ -4,34 +4,34 @@ feed: show
 date: 2024-01-15
 ---
 
-Wiki links let you connect your notes using double brackets, like `[[Note Title]]`. This works exactly like linking notes in Obsidian.
+Wiki links memungkinkan kamu menghubungkan catatan dengan tanda kurung ganda seperti `[[Judul Catatan]]`. Fungsinya sama persis seperti menautkan catatan di Obsidian.
 
-## How to Use
+## Cara Menggunakan
 
-Simply type `[[Note Title]]` in your note. If a note with that title exists, it becomes a clickable link. If not, you'll see a placeholder indicating the note doesn't exist yet.
+Cukup ketik `[[Judul Catatan]]` di dalam catatan. Jika catatan dengan judul tersebut ada, ia akan menjadi tautan yang bisa diklik. Jika belum ada, kamu akan melihat placeholder yang menandakan catatan belum dibuat.
 
-You can also link to external websites: `[[Google::https://google.com]]`.
+Kamu juga bisa menautkan situs eksternal: `[[Google::https://google.com]]`.
 
-## Examples
+## Contoh
 
 ```markdown
-This note connects to [[Getting Started]] and [[Markdown Guide]].
+Catatan ini terhubung ke [[Getting Started]] dan [[Markdown Guide]].
 
-For more information, check out [[Jekyll::https://jekyllrb.com]].
+Untuk informasi lebih lanjut, kunjungi [[Jekyll::https://jekyllrb.com]].
 ```
 
-## Automatic Backlinks
+## Backlink Otomatis
 
-When you create a wiki link to another note, that note automatically shows a "Backlinks" section. For example, if you visit [[Getting Started]], you'll see this note listed there because we linked to it.
+Saat kamu membuat Wiki Link ke catatan lain, catatan tersebut otomatis menampilkan bagian "Backlinks". Misalnya, ketika membuka [[Getting Started]], kamu akan melihat catatan ini tercantum di sana karena kita menautkannya.
 
 
-## Troubleshooting
+## Pemecahan Masalah
 
-If a wiki link appears broken:
-1. Check the exact spelling of the note title
-2. Make sure the note exists in the `_notes` folder
-3. Verify the note has `feed: "show"` in its front matter
+Jika sebuah Wiki Link tampak rusak:
+1. Periksa penulisan judul catatan dengan tepat
+2. Pastikan catatan berada di folder `_notes`
+3. Verifikasi catatan memiliki `feed: "show"` pada front matter
 
 ---
 
-*Wiki links transform your notes from isolated documents into a connected knowledge base.* 
+*Wiki links mengubah catatanmu dari dokumen terpisah menjadi basis pengetahuan yang saling terhubung.*

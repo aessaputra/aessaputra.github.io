@@ -4,9 +4,11 @@
 
 layout: Post
 permalink: /
-title: Jekyll Garden
+title: Home
 ---
 
-Jekyll Garden is a simple theme that turns your Obsidian notes into a beautiful website. If you use Obsidian for note-taking, this theme makes it easy to publish your markdown files as a connected website with wiki-style links and full-text search.
+Selamat datang di ruang catatan digital ini. Situs ini membantu mengubah catatan Obsidian menjadi halaman web yang terhubung lengkap dengan tautan wiki dan pencarian penuh.
 
-Start by reading [[Getting Started]] to set up your own Jekyll Garden. Learn how to use [[Wiki Links]] to connect your notes, explore the [[Markdown Guide]] for formatting, and customize your site with the [[Customization]] guide. When you're ready to share your notes online, follow the [[Deployment]] instructions.
+Mulailah dengan membaca [[Getting Started]] untuk menyiapkan lingkungan Anda sendiri. Pelajari penggunaan [[Wiki Links]] untuk menghubungkan catatan, jelajahi [[Markdown Guide]] agar format tetap rapi, dan sesuaikan tampilan melalui panduan [[Customization]]. Saat siap memublikasikan secara daring, ikuti langkah pada [[Deployment]].
+
+Untuk menelusuri semua catatan yang telah dipublikasikan, buka [notes.md](pages/notes.md).

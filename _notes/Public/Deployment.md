@@ -1,79 +1,79 @@
 ---
-title: Deployment
+title: Deploy
 feed: show
 date: 2024-01-15
 ---
 
-Once you've set up your Jekyll Garden site, here's how to publish it online.
+Setelah situs Jekyll Garden selesai disiapkan, berikut cara memublikasikannya secara daring.
 
-## GitHub Pages (Free)
+## GitHub Pages (Gratis)
 
-GitHub Pages is the easiest way to get started:
+GitHub Pages adalah cara termudah untuk memulai:
 
-1. **Upload your files** to a GitHub repository
-2. **Enable GitHub Pages** in repository settings
-3. **Set source** to "Deploy from a branch"
-4. **Choose your main branch** (usually `main` or `master`)
+1. **Unggah seluruh berkas** ke repositori GitHub
+2. **Aktifkan GitHub Pages** di pengaturan repositori
+3. **Atur sumber** ke "Deploy from a branch"
+4. **Pilih branch utama** (biasanya `main` atau `master`)
 
-Your site will be available at `https://yourusername.github.io/repository-name`
+Situsmu akan tersedia di `https://usernamekamu.github.io/nama-repositori`
 
-## Netlify (Free)
+## Netlify (Gratis)
 
-Netlify offers automatic deployments:
+Netlify menawarkan proses deploy otomatis:
 
-1. **Connect your GitHub repository** to Netlify
-2. **Set build command**: `bundle exec jekyll build`
-3. **Set publish directory**: `_site`
-4. **Deploy automatically** when you push changes
+1. **Hubungkan repositori GitHub** ke Netlify
+2. **Atur perintah build**: `bundle exec jekyll build`
+3. **Atur direktori hasil build**: `_site`
+4. **Deploy otomatis** setiap kali kamu melakukan push
 
-## Vercel (Free)
+## Vercel (Gratis)
 
-Vercel is another great option:
+Vercel juga menjadi opsi yang baik:
 
-1. **Import your repository** to Vercel
+1. **Impor repositorimu** ke Vercel
 2. **Framework preset**: Jekyll
-3. **Deploy automatically** on every push
+3. **Deploy otomatis** pada setiap push
 
-## Local Testing
+## Pengujian Lokal
 
-Test your site before deploying:
+Uji situs sebelum melakukan deploy:
 
 ```bash
 bundle install
 bundle exec jekyll serve
 ```
 
-Visit `http://localhost:4000` to see your site.
+Kunjungi `http://localhost:4000` untuk melihat situsmu.
 
-## Custom Domain
+## Domain Kustom
 
-Add your own domain in `_config.yml`:
+Tambahkan domain milikmu di `_config.yml`:
 
 ```yaml
 url: "https://yourdomain.com"
 ```
 
-Then configure your domain with your hosting provider.
+Lalu konfigurasikan domain tersebut pada penyedia hosting.
 
 ## Tips
 
-- **Test locally first**: Make sure everything works before deploying
-- **Check your links**: Ensure all [[Wiki Links]] work correctly
-- **Optimize images**: Compress images for faster loading
-- **Use HTTPS**: Most hosting providers offer this automatically
+- **Uji lokal terlebih dahulu**: Pastikan semuanya berjalan sebelum deploy
+- **Periksa tautan**: Pastikan semua [[Wiki Links]] berfungsi
+- **Optimalkan gambar**: Kompres gambar agar waktu muat lebih cepat
+- **Gunakan HTTPS**: Sebagian besar penyedia hosting sudah menyediakannya otomatis
 
-## Troubleshooting
+## Pemecahan Masalah
 
-**Site not updating?**
-- Check that your changes are pushed to the repository
-- Verify the build completed successfully
-- Clear your browser cache
+**Situs tidak memperbarui?**
+- Periksa apakah perubahan sudah dipush ke repositori
+- Pastikan proses build selesai tanpa error
+- Hapus cache peramban
 
-**Broken links?**
-- Ensure all note titles match exactly
-- Check that notes have `feed: "show"` in front matter
-- Rebuild your site after adding new notes
+**Tautan rusak?**
+- Pastikan seluruh judul catatan sama persis
+- Pastikan catatan memiliki `feed: "show"` pada front matter
+- Build ulang situs setelah menambahkan catatan baru
 
 ---
 
-*Your digital garden is ready to share with the world!* 
+*Taman digitalmu siap dibagikan kepada dunia!*

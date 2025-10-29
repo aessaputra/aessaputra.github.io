@@ -1,86 +1,86 @@
 ---
-title: Markdown Guide
+title: Panduan Markdown
 feed: show
 date: 2024-01-15
 ---
 
-This guide shows the essential markdown formatting you can use in your notes.
+Panduan ini menampilkan format Markdown penting yang dapat kamu gunakan dalam catatan.
 
-## Headings
-
-```markdown
-# Main heading
-## Section heading
-### Subsection heading
-```
-
-## Text Formatting
+## Judul
 
 ```markdown
-*Italic text* or _italic text_
-**Bold text** or __bold text__
-`inline code`
-~~strikethrough~~
+# Judul Utama
+## Judul Bagian
+### Judul Subbagian
 ```
 
-## Lists
+## Pemformatan Teks
 
 ```markdown
-- Unordered list item
-- Another item
-  - Nested item
-
-1. Ordered list item
-2. Another item
+*Teks miring* atau _teks miring_
+**Teks tebal** atau __teks tebal__
+`kode inline`
+~~coret~~
 ```
 
-## Links
+## Daftar
 
 ```markdown
-[Link text](https://example.com)
-[[Wiki link to another note]]
-[[External link::https://example.com]]
+- Item daftar tak berurut
+- Item lainnya
+  - Item bertingkat
+
+1. Item daftar berurut
+2. Item lainnya
 ```
 
-## Code Blocks
+## Tautan
+
+```markdown
+[Teks tautan](https://example.com)
+[[Tautan Wiki ke catatan lain]]
+[[Tautan eksternal::https://example.com]]
+```
+
+## Blok Kode
 
 ```markdown
 ```javascript
-function hello() {
-    console.log("Hello, World!");
+function halo() {
+    console.log("Halo, Dunia!");
 }
 ```
 ```
 
-## Blockquotes
+## Kutip Blok
 
 ```markdown
-> This is a blockquote.
-> It can span multiple lines.
+> Ini adalah kutipan blok.
+> Dapat mencakup beberapa baris.
 ```
 
-## Tables
+## Tabel
 
 ```markdown
 | Header 1 | Header 2 |
 |----------|----------|
-| Content  | Content  |
+| Konten   | Konten   |
 ```
 
-## Math (if enabled)
+## Matematika (jika diaktifkan)
 
 ```markdown
-Inline math: $x = y$
-Block math: $$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$
+math inline: $x = y$
+math blok: $$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$
 ```
 
-## Images
+## Gambar
 
 ```markdown
-![Alt text](/assets/img/image.jpg)
+![Teks alternatif](/assets/img/image.jpg)
 ```
 
-## Horizontal Rules
+## Garis Horisontal
 
 ```markdown
 ---
@@ -88,11 +88,11 @@ Block math: $$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$
 
 ## Tips
 
-- Use clear, descriptive headings
-- Keep paragraphs short and focused
-- Use [[Wiki Links]] to connect related notes
-- Don't over-format - focus on readability
+- Gunakan judul yang jelas dan deskriptif
+- Buat paragraf singkat dan fokus
+- Pakai [[Wiki Links]] untuk menghubungkan catatan terkait
+- Jangan berlebihan dalam pemformatan — utamakan keterbacaan
 
 ---
 
-*This covers the most common markdown features you'll need for your notes.* 
+*Ini mencakup fitur Markdown paling umum yang kamu perlukan untuk catatan.*

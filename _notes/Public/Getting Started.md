@@ -1,19 +1,19 @@
 ---
-title: Getting Started
+title: Panduan Memulai
 feed: show
 date: 2024-01-15
 ---
 
-Jekyll Garden makes it easy to turn your Obsidian notes into a website. Here's how to get started:
+Jekyll Garden memudahkan kamu mengubah catatan Obsidian menjadi sebuah situs web. Berikut langkah awal yang bisa diikuti:
 
-## Quick Setup
+## Penyiapan Cepat
 
-1. **Download this theme** to your computer
-2. **Add your notes** to the `_notes` folder (each note is a markdown file)
-3. **Edit `_config.yml`** to set your site's title and information
-4. **Deploy** to GitHub Pages or Netlify
+1. **Unduh tema ini** ke komputermu
+2. **Tambahkan catatanmu** ke folder `_notes` (setiap catatan berupa file markdown)
+3. **Edit `_config.yml`** untuk mengatur judul dan informasi situs
+4. **Deploy** ke GitHub Pages atau Netlify
 
-## Adding Your First Note
+## Menambahkan Catatan Pertama
 
 Create a new markdown file in the `_notes` folder:
 
@@ -25,22 +25,22 @@ feed: "show"
 ---
 ```
 
-Then write your content using [[Wiki Links]] to connect to other notes.
+Lalu tulis kontenmu dengan memanfaatkan [[Wiki Links]] untuk terhubung dengan catatan lain.
 
-## What's Next?
+## Langkah Selanjutnya
 
-- Learn how to use [[Wiki Links]] to connect your notes
-- See the [[Markdown Guide]] for formatting help
-- Customize your site with the [[Customization]] guide
-- Deploy your site using the [[Deployment]] instructions
+- Pelajari cara memakai [[Wiki Links]] untuk menghubungkan catatan
+- Gunakan [[Markdown Guide]] sebagai panduan format
+- Kustomisasi situs melalui panduan [[Customization]]
+- Deploy situs memakai instruksi [[Deployment]]
 
 ## Tips
 
-- **Start small**: Add a few notes first to see how it works
-- **Use descriptive titles**: They become your URLs and link targets
-- **Link liberally**: The more connections, the better your garden grows
-- **Keep it simple**: Focus on content, not complex formatting
+- **Mulai kecil**: Tambahkan beberapa catatan terlebih dahulu untuk melihat alurnya
+- **Gunakan judul deskriptif**: Judul akan menjadi target tautan dan URL
+- **Buat banyak tautan**: Semakin banyak koneksi, taman digitalmu makin kaya
+- **Tetap sederhana**: Fokus pada konten, bukan format yang rumit
 
 ---
 
-*Your digital garden is ready to grow! 🌱* 
+*Taman digitalmu siap tumbuh! 🌱*
