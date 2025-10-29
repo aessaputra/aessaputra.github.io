@@ -12,12 +12,20 @@ Cukup ketik `[[Judul Catatan]]` di dalam catatan. Jika catatan dengan judul ters
 
 Kamu juga bisa menautkan situs eksternal: `[[Google::https://google.com]]`.
 
+### Alias Tampilan
+
+- Gunakan format `[[Nama Catatan|Teks Tampilan]]` untuk menampilkan label berbeda.
+- Resolusi tautan akan mencari judul catatan dan daftar `aliases` pada front matter (case-insensitive).
+- Jika label hanya ingin memanggil alias yang sudah didefinisikan, cukup tulis `[[Alias Catatan]]`; sistem otomatis mengarah ke catatan aslinya.
+
 ## Contoh
 
 ```markdown
 Catatan ini terhubung ke [[Getting Started]] dan [[Markdown Guide]].
 
 Untuk informasi lebih lanjut, kunjungi [[Jekyll::https://jekyllrb.com]].
+
+Alias tampilan: [[InterPlanetary File System|IPFS]] menjelaskan teknologi.
 ```
 
 ## Backlink Otomatis
@@ -31,6 +39,8 @@ Jika sebuah Wiki Link tampak rusak:
 1. Periksa penulisan judul catatan dengan tepat
 2. Pastikan catatan berada di folder `_notes`
 3. Verifikasi catatan memiliki `feed: "show"` pada front matter
+4. Untuk alias tampilan, pastikan bagian sebelum `|` adalah target catatan yang valid
+5. Jika tampilan alias berubah menjadi tabel saat build, pastikan baris daftar tidak diawali spasi ganda; cukup tulis `- [[Target|Alias]] ...`
 
 ---
 

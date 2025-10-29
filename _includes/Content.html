@@ -14,18 +14,70 @@ document.addEventListener('DOMContentLoaded', function() {
             {
                 title: "{{ note.title | escape }}",
                 url: "{{ site.baseurl }}{{ note.url }}",
-                excerpt: "{{ note.content | strip_html | normalize_whitespace | truncatewords: 20 | escape }}"
+                excerpt: "{{ note.content | strip_html | normalize_whitespace | truncatewords: 20 | escape }}",
+                aliases: {{ note.aliases | jsonify }}
             }{%- unless forloop.last -%},{%- endunless -%}
         {%- endfor -%}
     ];
     
-    // Function to find note by title (case-insensitive)
+    const entityDecoder = document.createElement('textarea');
+
+    // Normalize wiki targets for comparison
+    function normalizeLinkTarget(text) {
+        if (!text) return '';
+        entityDecoder.innerHTML = text;
+        return entityDecoder.value.trim().toLowerCase();
+    }
+
+    function getNoteAliases(note) {
+        if (!note || !note.aliases) return [];
+        if (Array.isArray(note.aliases)) return note.aliases;
+        if (typeof note.aliases === 'string') return [note.aliases];
+        return [];
+    }
+
+    // Function to find note by title or alias (case-insensitive)
     function findNoteByTitle(title) {
-        return availableNotes.find(note => 
-            note.title.toLowerCase() === title.toLowerCase()
-        );
+        const normalized = normalizeLinkTarget(title);
+        if (!normalized) return null;
+
+        return availableNotes.find(note => {
+            if (normalizeLinkTarget(note.title) === normalized) {
+                return true;
+            }
+
+            return getNoteAliases(note).some(alias => normalizeLinkTarget(alias) === normalized);
+        });
     }
     
+    function collapseWikiAliasTable(table) {
+        if (!table || table.tagName !== 'TABLE') return null;
+        const rows = table.querySelectorAll('tr');
+        if (rows.length !== 1) return null;
+
+        const cells = rows[0].querySelectorAll('td');
+        if (cells.length !== 2) return null;
+
+        const firstCell = cells[0].textContent || '';
+        const secondCell = cells[1].textContent || '';
+
+        const trimmedFirst = firstCell.trim();
+        const closingIndex = secondCell.indexOf(']]');
+
+        if (!trimmedFirst.startsWith('[[') || closingIndex === -1) return null;
+
+        const target = trimmedFirst.replace(/^\[\[/, '').trim();
+        const alias = secondCell.slice(0, closingIndex).trim();
+        const remainder = secondCell.slice(closingIndex + 2);
+
+        if (!target) return null;
+
+        const reconstructed = `[[${target}|${alias}]]${remainder}`;
+        const textNode = document.createTextNode(reconstructed);
+        table.parentNode.replaceChild(textNode, table);
+        return textNode;
+    }
+
     // Function to process wiki links in text nodes only
     function processWikiLinks(node) {
         if (node.nodeType === Node.TEXT_NODE) {
@@ -67,12 +119,25 @@ document.addEventListener('DOMContentLoaded', function() {
                     linkSpan.appendChild(link);
                 } else {
                     // Internal link - try to find the note
-                    const foundNote = findNoteByTitle(linkText);
+                    let targetText = linkText;
+                    let displayText = linkText;
+
+                    if (linkText.includes('|')) {
+                        const pipeIndex = linkText.indexOf('|');
+                        targetText = linkText.slice(0, pipeIndex).trim();
+                        const aliasText = linkText.slice(pipeIndex + 1).trim();
+                        displayText = aliasText || targetText;
+                    } else {
+                        targetText = targetText.trim();
+                        displayText = displayText.trim();
+                    }
+
+                    const foundNote = findNoteByTitle(targetText);
                     const link = document.createElement('a');
                     
                     if (foundNote) {
                         link.href = foundNote.url;
-                        link.textContent = linkText;
+                        link.textContent = displayText;
                         link.className = 'wiki-link';
                         
                         // Add hover preview functionality
@@ -86,9 +151,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     } else {
                         // Note doesn't exist - create a placeholder
                         link.href = 'javascript:void(0)';
-                        link.textContent = linkText;
+                        link.textContent = displayText || linkText;
                         link.className = 'stale-link';
-                        link.title = 'Note not found: ' + linkText;
+                        link.title = 'Note not found: ' + (targetText || linkText);
                     }
                     
                     linkSpan.appendChild(link);
@@ -112,7 +177,16 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (node.nodeType === Node.ELEMENT_NODE) {
             // Recursively process child nodes
             const children = Array.from(node.childNodes);
-            children.forEach(child => processWikiLinks(child));
+            children.forEach(child => {
+                if (child.nodeType === Node.ELEMENT_NODE && child.tagName === 'TABLE') {
+                    const collapsed = collapseWikiAliasTable(child);
+                    if (collapsed) {
+                        processWikiLinks(collapsed);
+                        return;
+                    }
+                }
+                processWikiLinks(child);
+            });
         }
     }
     
