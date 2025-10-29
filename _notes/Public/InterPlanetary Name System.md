@@ -75,7 +75,7 @@ IPNS adalah sistem di dalam ekosistem [[InterPlanetary File System]] yang memung
 
 ## Hubungan dengan Konsep Lain
 
-- [[InterPlanetary File System|IPFS]]: Fondasi teknis dari IPNS.
+- [[IPFS::/notes/interplanetary-file-system]]: Fondasi teknis dari IPNS.
 - [[Decentralized web]]: Konteks penggunaan IPNS dalam web terdesentralisasi.
 - [[Cryptography in distributed systems]]: Dasar dari mekanisme keamanan IPNS.
 - [[Content addressing vs name addressing]]: Perbedaan fundamental antara CID dan IPNS.
