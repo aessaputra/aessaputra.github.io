@@ -1,5 +1,5 @@
 ---
-title: Panduan Markdown
+title: Markdown Guide
 feed: show
 date: 2024-01-15
 ---
@@ -10,15 +10,17 @@ Panduan ini menampilkan format Markdown penting yang dapat kamu gunakan dalam ca
 
 ```markdown
 # Judul Utama
+
 ## Judul Bagian
+
 ### Judul Subbagian
 ```
 
 ## Pemformatan Teks
 
 ```markdown
-*Teks miring* atau _teks miring_
-**Teks tebal** atau __teks tebal__
+_Teks miring_ atau _teks miring_
+**Teks tebal** atau **teks tebal**
 `kode inline`
 ~~coret~~
 ```
@@ -44,26 +46,28 @@ Panduan ini menampilkan format Markdown penting yang dapat kamu gunakan dalam ca
 
 ## Blok Kode
 
-```markdown
+````markdown
 ```javascript
 function halo() {
-    console.log("Halo, Dunia!");
+  console.log('Halo, Dunia!');
 }
 ```
-```
+````
+
+````
 
 ## Kutip Blok
 
 ```markdown
 > Ini adalah kutipan blok.
 > Dapat mencakup beberapa baris.
-```
+````
 
 ## Tabel
 
 ```markdown
 | Header 1 | Header 2 |
-|----------|----------|
+| -------- | -------- |
 | Konten   | Konten   |
 ```
 
@@ -95,4 +99,4 @@ math blok: $$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$
 
 ---
 
-*Ini mencakup fitur Markdown paling umum yang kamu perlukan untuk catatan.*
+_Ini mencakup fitur Markdown paling umum yang kamu perlukan untuk catatan._

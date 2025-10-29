@@ -1,5 +1,5 @@
 ---
-title: Panduan Memulai
+title: Getting Started
 feed: show
 date: 2024-01-15
 ---
@@ -19,9 +19,9 @@ Create a new markdown file in the `_notes` folder:
 
 ```yaml
 ---
-title: "My First Note"
+title: 'My First Note'
 date: 2024-01-15
-feed: "show"
+feed: 'show'
 ---
 ```
 
@@ -43,4 +43,4 @@ Lalu tulis kontenmu dengan memanfaatkan [[Wiki Links]] untuk terhubung dengan ca
 
 ---
 
-*Taman digitalmu siap tumbuh! 🌱*
+_Taman digitalmu siap tumbuh! 🌱_
