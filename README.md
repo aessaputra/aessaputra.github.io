@@ -1,93 +1,125 @@
-# Jekyll Garden
-![screenshot](https://github.com/user-attachments/assets/f5752b1a-eb11-4385-a2ad-09f0e698ad30)
-A simple Jekyll theme that turns your Obsidian notes into a beautiful website. Perfect for sharing your thoughts and knowledge online. If you use Obsidian for note-taking, this theme makes it easy to publish your markdown files as a connected website with wiki-style links and full-text search.
+ini adalah dokumentasi hal2 teknis
 
+# Dokumentasi Teknis
 
-### What it does
+Repositori ini menyajikan catatan Obsidian ke dalam situs statis berbasis Jekyll Garden. Dokumen ini merangkum informasi teknis untuk setup lokal, struktur konten, penyesuaian tampilan, serta proses build dan deploy.
 
-Jekyll Garden connects your notes together with simple `[[note title]]` links, just like in Obsidian. You can find any note quickly with the built-in search that works as you type. The design focuses on your content with a clean, minimal look that works great on phones, tablets, and computers. Choose between dark and light themes, and when you want to write traditional blog posts, you can do that too. The theme also supports mathematical expressions if you need to write equations.
+## Ringkasan Proyek
 
-## Getting Started
+- Theme Jekyll yang mengubah catatan markdown (`_notes`) menjadi halaman web dengan dukungan wiki-style link `[[...]]`.
+- Fitur utama: pencarian instan, backlinks, preview halaman, dukungan KaTeX, dan mode terang/gelap.
+- Situs diatur melalui `_config.yml` dan memanfaatkan koleksi Jekyll (`collections`) untuk catatan.
+- Output statis dihasilkan ke `_site/` baik secara lokal (`bundle exec jekyll serve`) maupun saat build CI/CD.
 
-Getting started is straightforward. First, download this theme to your computer. Then edit the settings in the `_config.yml` file with your website information. Add your notes to the `_notes` folder, and finally deploy to GitHub Pages, Netlify, or any web hosting service.
+## Prasyarat Lingkungan
 
-## Basic Setup
+- Ruby 3.1+ dan Bundler (`gem install bundler`) untuk menjalankan Jekyll.
+- Paket build-essential dan dependensi Ruby (di Debian/Ubuntu: `sudo apt install build-essential ruby-dev`).
+- Opsional: Node.js/NPM bila ingin menambah pipeline build asset.
+- Browser modern untuk memeriksa hasil build lokal.
 
-Edit `_config.yml` with your information:
+## Menjalankan Secara Lokal
 
-```yaml
-title: "My Website"
-heading: "Your Name"
-description: "A brief description of your site"
-url: "https://yoursite.com"
+```bash
+# 1. Pasang dependensi Ruby
+bundle install
+
+# 2. Jalankan server pengembangan (localhost:4000)
+bundle exec jekyll serve --livereload
+
+# 3. Hentikan server dengan Ctrl+C
 ```
 
-### Deployment Options
+Gunakan flag `--baseurl ''` ketika mengakses situs dari folder lokal tanpa struktur direktori GitHub Pages. Setiap perubahan pada markdown langsung tercermin setelah reload, kecuali `_config.yml` yang memerlukan restart server.
 
-You can deploy your site to a subdomain (like `notes.yoursite.com`) or a subdirectory (like `yoursite.com/notes`):
+## Struktur Direktori
 
-**For subdomains:**
-```yaml
-url: "https://notes.yoursite.com"
-baseurl: ""
+```
+.
+├── _config.yml          # Konfigurasi global situs, menu, plugin, preferensi
+├── _includes/           # Komponen HTML untuk di-include (mis. Content.html)
+├── _layouts/            # Template layout (Post.html dsb)
+├── _notes/              # Sumber catatan publik yang dipublikasikan
+├── _posts/              # Tulisan blog standar (format YYYY-MM-DD-judul.md)
+├── assets/              # CSS, font, dan aset statis lain
+├── pages/               # Halaman statis seperti /notes, /writing, /about
+├── utilities/           # Skrip/helper tambahan terkait konten
+├── SearchData.json      # Index pencarian yang dibuat saat build
+└── autocomplete.txt     # Sumber data untuk fitur autocomplete pencarian
 ```
 
-**For subdirectories:**
-```yaml
-url: "https://yoursite.com"
-baseurl: "/notes"
+Direktori `_site/` dibuat otomatis saat proses build; isi folder ini tidak perlu dikomit karena bersifat artifact.
+
+## Penulisan Konten
+
+### Catatan (`_notes/`)
+
+- Setiap file markdown wajib memiliki front matter YAML minimal `title`.
+- Gunakan `[[Nama Catatan]]` untuk membuat tautan internal; ketika build, sistem akan membuat relasi dan backlink otomatis.
+- Front matter tambahan:
+  - `aliases`: array string untuk nama alternatif catatan.
+  - `date` dan `updated`: membantu menyinkronkan catatan dengan penulisan manual.
+  - `permalink`: override URL default jika diperlukan.
+
+### Tulisan Blog (`_posts/`)
+
+- Ikuti penamaan Jekyll: `YYYY-MM-DD-judul.md`.
+- Front matter default memanfaatkan `layout: Post` dan `content-type: post` sehingga tampil dengan gaya blog.
+- URL hasil sesuai pola `_config.yml` → `/writing/:title/`.
+
+### Halaman Statis (`pages/`)
+
+- Digunakan untuk halaman khusus (`/notes`, `/writing`, `/about`, dsb).
+- Front matter `layout` dapat disesuaikan dengan layout yang tersedia atau custom layout baru.
+- Konten mendukung Liquid tags dan include komponen (_includes).
+
+## Kustomisasi Tampilan
+
+- CSS utama berada di `assets/css/style.css`. Gunakan file ini untuk override warna, tipografi, spacing, dan layout.
+- `assets/css/ie-target.css` disertakan untuk kompatibilitas IE lama; bisa diabaikan bila tidak dibutuhkan.
+- Komponen HTML modular berada di `_includes/` (misal `Content.html` dan `Head.html`). Modifikasi komponen di sini agar perubahan reuse antar halaman.
+- Layout `Post.html` menentukan struktur artikel. Tambahkan blok Liquid di sini bila perlu menampilkan metadata tambahan.
+
+## Konfigurasi Utama (`_config.yml`)
+
+- `preferences`: mengaktifkan/menonaktifkan fitur (homepage khusus, pencarian, backlinks, dsb).
+- `menu`: mengatur tautan navigasi utama.
+- `collections.notes`: memastikan catatan dirender ke `/notes/<nama>`.
+- `katex: true`: mengaktifkan rendering matematika; jika tidak perlu, set ke false.
+- `plugins`: default `jekyll-feed` (RSS) dan `jekyll-sitemap`. Tambah plugin lain dengan menambah daftar dan memperbarui `Gemfile`.
+
+Setiap perubahan plugin atau dependensi wajib diikuti dengan `bundle install`.
+
+## Build & Deploy
+
+### GitHub Pages
+
+1. Push branch utama ke GitHub.
+2. Aktifkan GitHub Pages dari pengaturan repository, sumber branch `main` / folder `/ (root)`.
+3. Pastikan `baseurl` di `_config.yml` sesuai (misal kosong untuk situs utama, atau `/notes` untuk subdirektori).
+
+### Build Manual
+
+```bash
+bundle exec jekyll build
+# hasil build tersedia di _site/
 ```
 
-See `SUBDOMAIN_SETUP.md` for more details.
+Salin isi `_site/` ke layanan hosting statis lain (Netlify, Vercel, Cloudflare Pages). Sesuaikan environment variable `JEKYLL_ENV=production` saat build jika ingin mengaktifkan optimisasi tertentu.
 
-## Writing Notes
+## Pencarian & Autocomplete
 
-### Creating a Note
+- `SearchData.json` dan `autocomplete.txt` dihasilkan selama proses build; file ini digunakan oleh JavaScript pencarian untuk menyediakan hasil instan.
+- Jika menambah field metadata khusus, perbarui generator search (lihat `_includes` terkait pencarian) agar indeks memuat data baru.
+- Hapus file-file tersebut sebelum commit apabila ingin memaksa rebuild indeks pada server.
 
-Each note is just a markdown file with a title. You write your content in markdown format, just like you would in Obsidian or any other markdown editor.
+## Troubleshooting
 
-```yaml
----
-title: "My First Note"
-date: 2025-01-15
----
-```
+- `bundle exec jekyll serve` gagal karena ketergantungan Ruby → jalankan `bundle install` atau periksa versi Ruby (`ruby -v`).
+- Perubahan CSS tidak muncul → bersihkan cache browser atau pakai `jekyll serve --livereload`.
+- Broken link `[[...]]` → pastikan nama file target publik dan cocok dengan nama catatan tanpa ekstensi.
+- Build GitHub Pages gagal → cek log Actions, pastikan `Gemfile.lock` tersinkronisasi dengan environment Ruby 3.x.
 
-## Features
+## Lisensi
 
-### Linking Notes Together
-Connect your notes by using `[[note title]]` to link to other notes. This creates the same kind of connections you're used to in Obsidian, but now they work on your website too.
-
-
-### Simple Linking
-The linking system works just like Obsidian. Write `[[note title]]` and the links are created automatically. When you hover over a link, you'll see a preview of the connected note.
-
-### Search
-Finding content is easy with the built-in search. It searches through all your notes instantly as you type, looking at both titles and content to help you find exactly what you need.
-
-### Backlinks
-See which notes link to the current one you're reading. This helps you discover related content and explore the connections between your ideas, just like the backlinks feature in Obsidian.
-
-### Math
-If you need to write mathematical expressions, the theme supports it. Use `$x = y$` for inline math and `$$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$` for complex equations.
-
-## How to Publishing Your Site
-
-### GitHub Pages (Free)
-GitHub Pages is the easiest way to get started. Upload your files to GitHub, enable GitHub Pages in the repository settings, and your site goes live automatically.
-
-### Netlify (Free)
-Netlify is another great option. Connect your GitHub repository to Netlify, and it will build and host your site. Every time you update your files, your site updates automatically.
-
-### Local Testing
-Test your site locally before publishing. Run `bundle install` to install dependencies, then `bundle exec jekyll serve` to start a local server and see your site in action.
-
-### Customization
-Change the look of your site by editing the `assets/css/style.css` file. You can modify colors, fonts, and other visual elements to match your preferences. If you want to customize the layout, you can modify files in the `_layouts/` folder. Add your own CSS and JavaScript as needed, but remember to keep it simple.
-
-## Contributing
-Found a bug or have an idea for improvement? Contributions are welcome. Fork the repository, make your changes, and submit a pull request.
-
-## License
-
-MIT License - use it freely for any project.
+Konten kode berada di bawah lisensi MIT (lihat `LICENSE`). Konten catatan dapat menggunakan lisensi berbeda sesuai pernyataan hak cipta pada `_config.yml`.
