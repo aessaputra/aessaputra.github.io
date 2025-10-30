@@ -56,23 +56,24 @@ document.addEventListener('DOMContentLoaded', function() {
         if (rows.length !== 1) return null;
 
         const cells = rows[0].querySelectorAll('td');
-        if (cells.length !== 2) return null;
+        if (cells.length < 2) return null;
 
         const firstCell = cells[0].textContent || '';
         const secondCell = cells[1].textContent || '';
 
-        const trimmedFirst = firstCell.trim();
+        const openingIndex = firstCell.indexOf('[[');
         const closingIndex = secondCell.indexOf(']]');
 
-        if (!trimmedFirst.startsWith('[[') || closingIndex === -1) return null;
+        if (openingIndex === -1 || closingIndex === -1) return null;
 
-        const target = trimmedFirst.replace(/^\[\[/, '').trim();
+        const prefix = firstCell.slice(0, openingIndex);
+        const target = firstCell.slice(openingIndex + 2).trim();
         const alias = secondCell.slice(0, closingIndex).trim();
         const remainder = secondCell.slice(closingIndex + 2);
 
-        if (!target) return null;
+        if (!target || !alias) return null;
 
-        const reconstructed = `[[${target}|${alias}]]${remainder}`;
+        const reconstructed = `${prefix}[[${target}|${alias}]]${remainder}`;
         const textNode = document.createTextNode(reconstructed);
         table.parentNode.replaceChild(textNode, table);
         return textNode;
