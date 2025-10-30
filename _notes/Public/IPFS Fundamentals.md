@@ -5,19 +5,13 @@ tags:
   - posts
 author:
   - "[[Aes Saputra]]"
-url:
+url: https://aessaputra.github.io/notes/ipfs-fundamentals
 created: 2025-10-30
 published: 2025-10-30
 topics:
   - "[[Decentralization]]"
 status:
   - "[[Published]]"
-  - "[[Peer-to-peer networks]]"
-  - "[[Content addressing]]"
-  - "[[Web3 fundamentals]]"
-  - "[[Cryptographic hashing]]"
-  - "[[DAGs]]"
-  - "[[DHTs]]"
 feed: show
 title: IPFS Fundamentals
 date: 2025-10-30
