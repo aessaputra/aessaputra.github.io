@@ -20,9 +20,9 @@ rating: 6
 ---
 **Solusi Lengkap Buat:**
 
-- Hosting file di [[Publish/_notes/Public/InterPlanetary File System|IPFS]] dengan performa enterprise
+- Hosting file di [[InterPlanetary File System|IPFS]] dengan performa enterprise
 - Bikin dedicated gateway kenceng
-- Manage versi konten pakai [[Publish/_notes/Public/InterPlanetary Name System|IPNS]]
+- Manage versi konten pakai [[InterPlanetary Name System|IPNS]]
 
 ---
 
