@@ -1,5 +1,3 @@
-ini adalah dokumentasi hal2 teknis
-
 # Dokumentasi Teknis
 
 Repositori ini menyajikan catatan Obsidian ke dalam situs statis berbasis Jekyll Garden. Dokumen ini merangkum informasi teknis untuk setup lokal, struktur konten, penyesuaian tampilan, serta proses build dan deploy.
@@ -71,7 +69,7 @@ Direktori `_site/` dibuat otomatis saat proses build; isi folder ini tidak perlu
 
 - Digunakan untuk halaman khusus (`/notes`, `/writing`, `/about`, dsb).
 - Front matter `layout` dapat disesuaikan dengan layout yang tersedia atau custom layout baru.
-- Konten mendukung Liquid tags dan include komponen (_includes).
+- Konten mendukung Liquid tags dan include komponen (\_includes).
 
 ## Kustomisasi Tampilan
 
