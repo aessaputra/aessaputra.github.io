@@ -49,6 +49,10 @@ ie_css: '/assets/css/ie-target.css'
 
 # Menu Items
 menu:
+  - title: 'Notes'
+    url: '/notes'
+  - title: 'Writing'
+    url: '/writing'
   - title: 'About'
     url: '/about'
 
@@ -82,7 +86,7 @@ defaults:
       layout: 'Post'
       content-type: 'post'
       feed: 'show'
-      permalink: /blog/:title/
+      permalink: /writing/:title/
 
 # Plugins
 plugins:

@@ -27,8 +27,8 @@ menu:
     url: "/notes"
   - title: "About"
     url: "/about"
-  - title: "Blog"
-    url: "/blog"
+  - title: "Writing"
+    url: "/writing"
 ```
 
 ## Preferensi Tema

@@ -146,8 +146,8 @@
                 {%- include Content.html -%}
             {%- endif -%}
             
-            <!--- Blog Feed Layout-->
-            {%- if page.permalink == "/blog" -%}
+            <!--- Writing Feed Layout-->
+            {%- if page.permalink == "/writing" -%}
                 <div class="related-wrapper">
                 {% assign post_items = site.posts | sort: "date" | reverse %}
                 {% for post_items in post_items %}
