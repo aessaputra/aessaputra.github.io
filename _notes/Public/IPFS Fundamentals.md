@@ -5,7 +5,7 @@ tags:
   - posts
 author:
   - "[[Aes Saputra]]"
-url: https://aessaputra.github.io/notes/ipfs-fundamentals
+url: https://writing.aes.my.id/notes/ipfs-fundamentals
 created: 2025-10-30
 published: 2025-10-30
 topics:
