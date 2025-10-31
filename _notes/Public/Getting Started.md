@@ -3,7 +3,6 @@ title: Getting Started
 feed: show
 date: 2024-01-15
 ---
-
 Jekyll Garden memudahkan kamu mengubah catatan Obsidian menjadi sebuah situs web. Berikut langkah awal yang bisa diikuti:
 
 ## Penyiapan Cepat
