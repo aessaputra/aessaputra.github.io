@@ -11,7 +11,7 @@ Welcome to my writing space, I'm Aes Saputra. Here I collect lessons, experiment
 
 Start exploring:
 
-- [Short notes](/notes) for quick captures: tech tips, book highlights, workflows, and whatever else I'm tinkering with.
-- [Long-form articles](/writing) where I explore projects, personal ideas, and the practices that help me grow.
+- [Notes](/notes) for quick captures: tech tips, book highlights, workflows, and whatever else I'm tinkering with.
+- [Writing](/writing) where I explore projects, personal ideas, and the practices that help me grow.
 
 Each page evolves along with my projects, curiosities, and ongoing experiments.
