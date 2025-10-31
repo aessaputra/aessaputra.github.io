@@ -19,6 +19,9 @@ GEM
     google-protobuf (4.33.0)
       bigdecimal
       rake (>= 13)
+    google-protobuf (4.33.0-x64-mingw-ucrt)
+      bigdecimal
+      rake (>= 13)
     google-protobuf (4.33.0-x86_64-darwin)
       bigdecimal
       rake (>= 13)
@@ -89,6 +92,8 @@ GEM
     sass-embedded (1.93.2)
       google-protobuf (~> 4.31)
       rake (>= 13)
+    sass-embedded (1.93.2-x64-mingw-ucrt)
+      google-protobuf (~> 4.31)
     sass-embedded (1.93.2-x86_64-darwin)
       google-protobuf (~> 4.31)
     sass-embedded (1.93.2-x86_64-linux-gnu)
@@ -101,10 +106,11 @@ GEM
     tzinfo-data (1.2021.1)
       tzinfo (>= 1.0.0)
     unicode-display_width (2.6.0)
-    wdm (0.1.1)
+    wdm (0.2.0)
     webrick (1.7.0)
 
 PLATFORMS
+  x64-mingw-ucrt
   x64-mingw32
   x86_64-darwin-19
   x86_64-darwin-21
@@ -118,7 +124,7 @@ DEPENDENCIES
   kramdown-math-katex
   tzinfo (~> 1.2)
   tzinfo-data
-  wdm (~> 0.1.1)
+  wdm (~> 0.2.0)
   webrick (~> 1.7)
 
 BUNDLED WITH
