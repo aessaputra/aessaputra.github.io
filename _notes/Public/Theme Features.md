@@ -3,7 +3,6 @@ title: Theme Features
 feed: show
 date: 2024-01-15
 ---
-
 Jekyll Garden comes with several features that make it easy to create and navigate your digital garden.
 
 ## Wiki-Style Links

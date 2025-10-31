@@ -3,7 +3,6 @@ title: Deployment
 feed: show
 date: 2024-01-15
 ---
-
 Setelah situs Jekyll Garden selesai disiapkan, berikut cara memublikasikannya secara daring.
 
 ## GitHub Pages (Gratis)

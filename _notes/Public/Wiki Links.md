@@ -3,7 +3,6 @@ title: Wiki Links
 feed: show
 date: 2024-01-15
 ---
-
 Wiki links memungkinkan kamu menghubungkan catatan dengan tanda kurung ganda seperti `[[Judul Catatan]]`. Fungsinya sama persis seperti menautkan catatan di Obsidian.
 
 ## Cara Menggunakan

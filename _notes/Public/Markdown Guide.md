@@ -3,7 +3,6 @@ title: Markdown Guide
 feed: show
 date: 2024-01-15
 ---
-
 Panduan ini menampilkan format Markdown penting yang dapat kamu gunakan dalam catatan.
 
 ## Judul

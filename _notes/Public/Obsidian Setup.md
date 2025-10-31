@@ -3,7 +3,6 @@ title: Obsidian Setup
 feed: show
 date: 2024-01-15
 ---
-
 Here's how to set up Jekyll Garden to work seamlessly with Obsidian.
 
 ## Use `_notes` as Your Vault
@@ -16,7 +15,7 @@ The simplest approach is to use the `_notes` folder as your Obsidian vault:
 
 This way, all your notes are automatically part of your website.
 
-## Front Matter Requirements
+## Front Matter Requirements[[Markdown Guide]]
 
 All notes must use the proper front matter format:
 

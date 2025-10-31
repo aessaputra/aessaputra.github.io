@@ -3,7 +3,6 @@ title: Customization
 feed: show
 date: 2024-01-15
 ---
-
 Kamu bisa melakukan customization pada situs Jekyll Garden dengan mengedit beberapa berkas penting.
 
 ## Pengaturan Dasar
