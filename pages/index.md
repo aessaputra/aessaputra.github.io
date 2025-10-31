@@ -7,7 +7,7 @@ permalink: /
 title: Home
 ---
 
-Welcome to my writing space, I'm Aes Saputra. Here I collect lessons, experiments, personal reflections, and any ideas that feel worth sharing.
+Welcome to my writing space, I'm [Aes Saputra](/about). Here I collect lessons, experiments, personal reflections, and any ideas that feel worth sharing.
 
 Start exploring:
 

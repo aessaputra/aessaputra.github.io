@@ -143,8 +143,12 @@ h1 {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  margin-top: calc(-1 * var(--space-sm));
-  margin-bottom: var(--space-md);
+  margin-top: calc(-0.5 * var(--space-sm));
+  margin-bottom: 0;
+}
+
+.post-meta + .content {
+  margin-top: var(--space-lg);
 }
 
 .post-meta span[aria-hidden="true"] {
