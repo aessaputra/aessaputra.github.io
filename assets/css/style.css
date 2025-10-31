@@ -21,12 +21,12 @@
   --max-width: 48rem;
   --line-height: 1.7;      /* Slightly taller line height to match larger text */
   
-  /* 5-level typography scale (1rem = 17px) */
-  --scale-xs: 0.9rem;      /* ~15px */
-  --scale-sm: 1rem;        /* ~17px */
-  --scale-base: 1.2rem;    /* ~20px */
-  --scale-lg: 1.5rem;      /* ~26px */
-  --scale-xl: 1.85rem;     /* ~31px */
+  /* 5-level typography scale (1rem = 16px) */
+  --scale-xs: 0.85rem;     /* ~14px */
+  --scale-sm: 0.95rem;     /* ~15px */
+  --scale-base: 1.1rem;    /* ~18px */
+  --scale-lg: 1.35rem;     /* ~22px */
+  --scale-xl: 1.65rem;     /* ~26px */
 }
 
 /* Dark theme variables */
@@ -52,7 +52,7 @@ body.theme-transition {
 }
 
 html {
-  font-size: 17px;         /* Larger base size for more comfortable reading */
+  font-size: 16px;         /* Standard base size keeps typography compact */
 }
 
 body {
