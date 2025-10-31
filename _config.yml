@@ -49,10 +49,6 @@ ie_css: '/assets/css/ie-target.css'
 
 # Menu Items
 menu:
-  - title: 'Notes'
-    url: '/notes'
-  - title: 'Writing'
-    url: '/writing'
   - title: 'About'
     url: '/about'
 
