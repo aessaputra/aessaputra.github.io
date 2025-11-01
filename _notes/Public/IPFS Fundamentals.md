@@ -87,7 +87,7 @@ DAGs menawarkan cara yang elegan untuk mewakili hubungan kompleks tanpa risiko l
 ## Hubungan dengan Konsep Lain
 
 - [[Decentralization]]
-- [[Peer to Peer Networks Explained]]
+- [[Peer to Peer Networks Explained|Peer-to-peer networks]]
 - [[Content addressing]]
 - [[Distributed systems]]
 - [[Web3 fundamentals]]
