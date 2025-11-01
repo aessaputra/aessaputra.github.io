@@ -4,7 +4,6 @@ layout: Post
 content-type: 'static'
 permalink: /about
 ---
-
 Hi, I'm **Aes Saputra** - a Full Stack Developer and Cloud Engineer who enjoys shipping products, automating infrastructure, and documenting the process for future me.
 
 ### About This Site

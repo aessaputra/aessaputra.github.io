@@ -6,7 +6,6 @@ layout: Post
 permalink: /
 title: 🪶
 ---
-
 Welcome to my writing space, I'm [Aes Saputra](/about). Here I collect lessons, experiments, personal reflections, and any ideas that feel worth sharing.
 
 Start exploring:
@@ -15,4 +14,6 @@ Start exploring:
 - [Writing](/writing) where I explore projects, personal ideas, and the practices that help me grow.
 
 Each page evolves along with my projects, curiosities, and ongoing experiments.
+
+---
 
