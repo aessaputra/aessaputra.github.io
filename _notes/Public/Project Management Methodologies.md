@@ -85,7 +85,7 @@ Setiap anggota tim memiliki perintah yang jelas, harapan dipahami, dan pemangku 
 
 ## [[Software-Project-Specific Notes]]
 
-Mayoritas [[project management methodologies]] diterapkan di sektor seperti pengembangan perangkat lunak, R&D, dan pengembangan produk. Namun, prinsip-prinsipnya dapat diadaptasi untuk industri apa pun yang membutuhkan struktur dan organisasi.
+Mayoritas project management methodologies diterapkan di sektor seperti pengembangan perangkat lunak, R&D, dan pengembangan produk. Namun, prinsip-prinsipnya dapat diadaptasi untuk industri apa pun yang membutuhkan struktur dan organisasi.
 
 > "Metodologi mana pun yang Anda pilih, hal yang paling penting adalah konsistensi dalam penerapannya dan kemampuan untuk beradaptasi dengan kebutuhan spesifik proyek Anda."
 
