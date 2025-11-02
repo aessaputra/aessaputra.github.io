@@ -38,6 +38,7 @@ Melalui siklus ini, kualitas perangkat lunak dapat ditingkatkan secara berkelanj
 ## Tahapan dalam SDLC
 
 SDLC memiliki enam tahapan utama yang saling berhubungan. Setiap tahap bukan sekadar urutan linear, melainkan bagian dari siklus yang saling memengaruhi.
+![Stages of SDLC](/assets/img/img-rbvsc7ztec6mul28.webp)
 
 ### 1. Perencanaan dan Analisis Kebutuhan
 
@@ -106,8 +107,6 @@ Pemeliharaan menjadi bagian penting dari SDLC, karena perangkat lunak hidup seir
 Tidak ada satu model yang cocok untuk semua proyek.  
 Beberapa pendekatan umum antara lain *Waterfall*, *Agile*, *V-Model*, *Spiral*, *Incremental*, dan *RAD*.  
 Setiap model menawarkan keseimbangan antara ketertiban dan fleksibilitas, tergantung pada skala, risiko, dan sifat proyek yang dikerjakan.
-
-![Stages of SDLC](/assets/img/img-i00xkto2utpokb31.webp)
 
 ---
 
