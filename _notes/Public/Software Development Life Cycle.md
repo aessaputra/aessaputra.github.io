@@ -13,6 +13,7 @@ tags:
 rating: 6
 date: 2025-11-02
 created: 2025-11-02
+feed: show
 ---
 > “Software is not built — it evolves through disciplined iteration.”
 
