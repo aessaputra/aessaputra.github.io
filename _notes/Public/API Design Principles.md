@@ -1,5 +1,5 @@
 ---
-title: Prinsip Desain API
+title: API Design Principles
 categories:
   - "[[Posts]]"
 tags:
