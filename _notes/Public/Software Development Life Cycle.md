@@ -87,7 +87,7 @@ Produk yang telah dibangun diuji secara menyeluruh.
 Setiap celah dan bug dicari, diperbaiki, lalu diuji ulang untuk memastikan sistem berfungsi seperti yang dijanjikan dalam SRS.  
 Tahap ini juga mencakup dokumentasi dan pelatihan, agar pengguna maupun tim teknis memahami sistem dengan baik.
 
-![Stage 5](/assets/img/img-k6ccdy63uafqh1z1.webp)
+![Stage 5](/assets/img/img-xdcmzaxfjh8f7rye.webp)
 
 ---
 
@@ -97,7 +97,7 @@ Setelah melewati pengujian, produk mulai dilepas ke lingkungan nyata secara bert
 Tim memantau kinerjanya, menerima umpan balik, lalu melakukan perbaikan berkelanjutan.  
 Pemeliharaan menjadi bagian penting dari SDLC, karena perangkat lunak hidup seiring kebutuhan pengguna yang terus berkembang.
 
-![Stage 6](/assets/img/img-s646x7avplv8sdbx.webp)
+![Stage 6](/assets/img/img-juz1kt3s3qmf1aw5.webp)
 
 ---
 
