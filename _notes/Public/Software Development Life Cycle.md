@@ -23,7 +23,7 @@ Ia menjadi fondasi bagi organisasi perangkat lunak untuk menghasilkan produk yan
 SDLC membagi perjalanan pengembangan menjadi beberapa tahap yang jelas — dari ide hingga pemeliharaan — agar setiap langkah memiliki arah dan tanggung jawab yang terdefinisi.  
 Dengan demikian, setiap tahap dapat dijalankan dengan efisiensi waktu, biaya, dan kualitas.
 
-![SDLC](/assets/img/img-qsa28zsnulg1m5yh)
+![SDLC](/assets/img/img-qsa28zsnulg1m5yh.webp)
 
 ---
 
@@ -56,7 +56,7 @@ Setelah analisis selesai, kebutuhan sistem dituangkan dalam dokumen *Software Re
 Dokumen ini disetujui oleh pengguna, analis pasar, dan para pemangku kepentingan.  
 SRS menjadi kontrak teknis yang menjembatani komunikasi antara tim bisnis dan tim pengembang.
 
-![Stage 2](/assets/img/img-ueg5is9ydjqui9xx)
+![Stage 2](/assets/img/img-ueg5is9ydjqui9xx.webp)
 
 ---
 
