@@ -17,7 +17,7 @@ rating: 2
 date: 2025-11-02
 feed: show
 ---
-![[img-6hqehpg4cd2jltoa 1.webp]]
+(Alur Kerja Pembuatan Aplikasi)[assets/img/img-6hqehpg4cd2jltoa 1.webp]
 > "Pembuatan aplikasi bukan sekadar menulis kode, melainkan proses kolaboratif yang melibatkan berbagai disiplin."
 
 ## Pendahuluan: Gambaran Umum dan Signifikansi Software Development Life Cycle
@@ -34,7 +34,7 @@ feed: show
 - **Maintenance dan Improvement**: Proses berkelanjutan untuk perbaikan dan pengembangan aplikasi
 
 ## 1. Tahap Awal: Pengumpulan dan Penyusunan Business Requirement Document (BRD)
-![[Publish/assets/img/img-34kngh2a5pvl3m20.webp]]
+(BRD)[/assets/img/img-34kngh2a5pvl3m20.webp]
 Tahapan pertama adalah memperoleh dokumen *Business Requirement Document* dari tim non-teknologi. Dokumen ini berisi deskripsi aplikasi, fitur utama, alur bisnis, dan estimasi timeline. Pentingnya BRD adalah agar developer tidak mengembangkan aplikasi secara sembarangan tanpa arah yang jelas. Tanpa dokumen ini, tim teknologi kesulitan memahami kebutuhan dan risiko salah pengembangan.
 
 > *Catatan penting*: BRD harus dipahami dan disepakati bersama oleh semua pihak sehingga fitur yang diminta realistis dan dapat diimplementasikan secara teknis.
