@@ -17,7 +17,7 @@ rating: 2
 date: 2025-11-02
 feed: show
 ---
-!(Alur Kerja Pembuatan Aplikasi)[assets/img/img-6hqehpg4cd2jltoa 1.webp]
+!(Alur Kerja Pembuatan Aplikasi)[/assets/img/img-6hqehpg4cd2jltoa1.webp]
 > "Pembuatan aplikasi bukan sekadar menulis kode, melainkan proses kolaboratif yang melibatkan berbagai disiplin."
 
 ## Pendahuluan: Gambaran Umum dan Signifikansi Software Development Life Cycle
