@@ -13,13 +13,15 @@ published: 2025-11-03
 topics:
   - api-design
   - software-architecture
-status: published
 rating: 7
 themes:
   - "[[Api First]]"
   - "[[System Design]]"
   - "[[Collaboration]]"
 created: 2025-11-03
+feed: show
+status:
+  - "[[Published]]"
 ---
 # Prinsip Desain API
 
