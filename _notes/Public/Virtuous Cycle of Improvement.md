@@ -1,5 +1,5 @@
 ---
-title: Siklus Kebajikan Peningkatan
+title: Virtuous Cycle of Improvement
 categories:
   - "[[Posts]]"
 tags:
