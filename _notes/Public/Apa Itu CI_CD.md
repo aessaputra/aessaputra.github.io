@@ -33,7 +33,7 @@ Continuous Integration (CI) hadir untuk mengatasi masalah umum: banyak developer
 Continuous Delivery (CD) dan Continuous Deployment adalah langkah selanjutnya setelah CI. Jika CI adalah tempat menguji kualitas, maka CD adalah jalur cepat yang mengantar inovasi ke tangan pengguna tanpa hambatan. Konsep [[Infrastructure as Code]] menjadi kunci, mengubah proses penyiapan dan peluncuran software yang rumit menjadi lebih sederhana dan otomatis.
 Ada perbedaan penting: Continuous Delivery berhenti sebentar sebelum software benar-benar dirilis ke pengguna, memungkinkan pengecekan manual terakhir. Sementara Continuous Deployment melangkah lebih jauh, langsung merilis software secara otomatis tanpa campur tangan manusia. Pilihan ini tergantung seberapa siap tim dan seberapa rumit sistemnya, seperti memilih antara pilot otomatis penuh atau sebagian di pesawat.
 
-## Transformasi Budaya DevOps
+## Transformasi Budaya [[DevOps]]
 
 Menerapkan CI/CD dengan benar berarti budaya kerja tim juga harus berubah. Batasan antara tim pengembangan (Dev) dan operasional (Ops) perlu dihilangkan, diganti dengan tanggung jawab bersama atas seluruh proses pembuatan dan pengelolaan aplikasi. Inilah esensi dari [[DevOps Principles]], menyatukan dua bagian yang dulunya terpisah.
 
