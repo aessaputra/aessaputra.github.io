@@ -26,7 +26,7 @@ themes:
 
 CI/CD bukan cuma singkatan teknis. Ini adalah cara baru berpikir dalam membuat software. Di dunia digital yang serba cepat, kita perlu berubah tanpa merusak stabilitas. CI/CD adalah jawabannya. Bayangkan orkestra: setiap musisi (developer) terus menyelaraskan diri, tapi musiknya tetap indah. Begitulah CI/CD bekerja.
 
-Continuous Integration (CI) hadir untuk mengatasi masalah umum: banyak developer menulis kode berbeda, lalu saat digabungkan, kode mereka sering bentrok ([[Code Integration Pain]]). Daripada menunggu lama dan menghadapi masalah besar saat penggabungan akhir, CI menyarankan agar kode digabungkan sedikit-sedikit, setiap beberapa jam. Setiap kali kode baru dimasukkan (commit), tes otomatis langsung berjalan. Ini seperti sistem kekebalan tubuh yang cepat menemukan masalah atau kerusakan sejak awal.
+Continuous Integration (CI) hadir untuk mengatasi masalah umum: banyak developer menulis kode berbeda, lalu saat digabungkan, kode mereka sering bentrok [[Code Integration Pain]]. Daripada menunggu lama dan menghadapi masalah besar saat penggabungan akhir, CI menyarankan agar kode digabungkan sedikit-sedikit, setiap beberapa jam. Setiap kali kode baru dimasukkan (commit), tes otomatis langsung berjalan. Ini seperti sistem kekebalan tubuh yang cepat menemukan masalah atau kerusakan sejak awal.
 
 ## Aliran Nilai Continuous Delivery/Deployment
 
