@@ -105,4 +105,16 @@ exclude:
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
+# Markdown Configuration
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: text
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
   - vendor/ruby/
