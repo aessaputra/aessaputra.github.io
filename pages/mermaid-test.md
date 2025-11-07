@@ -3,6 +3,7 @@ layout: default
 title: "Mermaid Diagram Test"
 content-type: static
 mermaid: true
+permalink: /about
 ---
 
 # Testing Mermaid Diagrams
