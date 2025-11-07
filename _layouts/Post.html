@@ -65,9 +65,6 @@
     <![endif]-->
     <!--<link href="/assets/css/prism.css" rel="stylesheet" />-->
     <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
-    {%- if page.mermaid -%}
-        {%- include mermaid.html -%}
-    {%- endif -%}
 </head>
 
 <body>
@@ -167,5 +164,8 @@
             {%- include Footer.html -%}
         </div>
     </div>
+    {%- if page.mermaid -%}
+        {%- include mermaid.html -%}
+    {%- endif -%}
 </body>
-</html> 
+</html>

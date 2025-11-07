@@ -1,7 +1,40 @@
 <script type="module">
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-mermaid.initialize({ startOnLoad: true });
-await mermaid.run({
-    querySelector: '.language-mermaid',
+
+// Initialize Mermaid with proper configuration
+mermaid.initialize({
+    startOnLoad: false,
+    theme: 'default',
+    securityLevel: 'loose'
 });
+
+// Function to render Mermaid diagrams
+function renderMermaidDiagrams() {
+    const elements = document.querySelectorAll('.language-mermaid');
+    elements.forEach(element => {
+        // Check if this is a code block
+        if (element.tagName === 'CODE' && element.parentElement.tagName === 'PRE') {
+            const code = element.textContent;
+            const container = element.parentElement;
+            
+            // Create a div for the mermaid diagram
+            const mermaidDiv = document.createElement('div');
+            mermaidDiv.className = 'mermaid';
+            mermaidDiv.textContent = code;
+            
+            // Replace the pre>code with the mermaid div
+            container.parentNode.replaceChild(mermaidDiv, container);
+        }
+    });
+    
+    // Run mermaid on the new divs
+    mermaid.run();
+}
+
+// Wait for DOM to be ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderMermaidDiagrams);
+} else {
+    renderMermaidDiagrams();
+}
 </script>
