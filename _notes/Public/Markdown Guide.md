@@ -2,6 +2,7 @@
 title: Markdown Guide
 feed: show
 date: 2024-01-15
+mermaid: true
 ---
 Panduan ini menampilkan format Markdown penting yang dapat kamu gunakan dalam catatan.
 
@@ -96,6 +97,15 @@ math blok: $$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$
 - Pakai [[Wiki Links]] untuk menghubungkan catatan terkait
 - Jangan berlebihan dalam pemformatan — utamakan keterbacaan
 
+## Diagram Mermaid
+
+```mermaid
+graph TD;
+    A[Markdown] --> B[HTML];
+    A --> C[Jekyll];
+    B --> D[Browser];
+    C --> D;
+```
 ---
 
 _Ini mencakup fitur Markdown paling umum yang kamu perlukan untuk catatan._
