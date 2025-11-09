@@ -105,6 +105,8 @@ exclude:
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
+  - vendor/ruby/
+
 # Markdown Configuration
 markdown: kramdown
 kramdown:
@@ -117,4 +119,3 @@ kramdown:
     block:
       line_numbers: false
       start_line: 1
-  - vendor/ruby/
