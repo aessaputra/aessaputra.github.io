@@ -23,6 +23,8 @@ topics:
 status:
   - "[[Published]]"
 feed: show
+aliases:
+  - DevOps
 ---
 DevOps, sebuah kombinasi dari filosofi budaya, praktik, dan serangkaian alat, hadir untuk menyatukan dunia pengembangan perangkat lunak (Dev) dan operasi IT (Ops) yang sebelumnya sering terpisah. Esensinya adalah memperpendek siklus hidup pengembangan sistem, memungkinkan kita untuk secara konsisten dan اندal memberikan nilai tinggi kepada pengguna. Ini bukan hanya tentang kecepatan, tetapi tentang menciptakan lingkungan di mana organisasi dapat berinovasi lebih cepat bagi pelanggan, beradaptasi dengan dinamika pasar, dan mencapai tujuan bisnis dengan efisiensi yang lebih tinggi. Pada intinya, DevOps memecah dinding tradisional antara tim, mendorong kolaborasi yang mendalam dan rasa akuntabilitas bersama yang melampaui peran spesifik, bahkan merangkul rekayasa kualitas dan keamanan (dikenal sebagai [[DevSecOps]]) ke dalam setiap langkah perjalanan aplikasi.
 
