@@ -164,5 +164,8 @@
             {%- include Footer.html -%}
         </div>
     </div>
+    {%- if page.mermaid or site.mermaid -%}
+    {%- include mermaid.html -%}
+    {%- endif -%}
 </body>
 </html>

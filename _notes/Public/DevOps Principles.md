@@ -12,7 +12,7 @@ author:
   - "[[Aes Saputra]]"
 url:
 created: 2025-11-07
-published:
+published: 2025-11-07
 date: 2025-11-07
 topics:
   - "[[DevOps]]"
@@ -28,12 +28,25 @@ themes:
   - "[[Budaya Organisasi]]"
   - "[[Manajemen Proyek]]"
 rating: 6
+mermaid: true
 ---
 DevOps bukan sekadar serangkaian alat atau metodologi baru; ia adalah pergeseran budaya dan filosofi yang menyatukan pengembangan perangkat lunak (Dev) dan operasi IT (Ops). Intinya adalah menciptakan [[alur kerja]] yang mulus dan responsif, memastikan pengiriman nilai yang berkelanjutan. Memahami prinsip-prinsip intinya membantu kita membangun [[sistem berpikir]] yang adaptif dan terus-menerus meningkatkan diri.
 
 ### 1. Kolaborasi dan Komunikasi
 
-Prinsip fundamental pertama adalah meruntuhkan sekat antar tim. [[Kolaborasi intens]] dan [[komunikasi terbuka]] menjadi kunci. Ini bukan lagi tentang "melempar kode ke seberang dinding", melainkan tanggung jawab bersama atas [[stabilitas sistem]] dan kecepatan pengiriman. Tim pengembang, pengujian, dan operasi bekerja sebagai satu kesatuan, memastikan setiap orang memahami tujuan bersama dan saling mendukung.
+Prinsip fundamental pertama adalah meruntuhkan sekat antar tim. [[Kolaborasi intens]] dan [[komunikasi terbuka]] menjadi kunci. Ini bukan lagi tentang "melempar kode ke seberang dinding", melainkan tanggung jawab bersama atas [[stabilitas sistem]] dan kecepatan pengiriman. Tim pengembang, pengujian, dan operasi bekerja sebagai satu kesatuan, memastikan setiap orang memahami tujuan bersama dan saling mendukung.
+
+```mermaid
+graph TD
+    A[Tim Development] --> B[Kolaborasi]
+    C[Tim Operations] --> B
+    D[Tim QA] --> B
+    B --> E[Pengiriman Nilai]
+    E --> F[Umpan Balik]
+    F --> A
+    F --> C
+    F --> D
+```
 
 ### 2. Otomasi dan Proses Berkelanjutan
 

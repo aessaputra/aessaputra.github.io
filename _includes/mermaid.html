@@ -1,0 +1,57 @@
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+mermaid.initialize({ 
+    startOnLoad: false,
+    theme: 'default'
+});
+
+// Function to initialize Mermaid
+async function initMermaid() {
+    // Find all code blocks with language-mermaid class
+    const mermaidCodeBlocks = document.querySelectorAll('code.language-mermaid');
+    
+    if (mermaidCodeBlocks.length === 0) {
+        return;
+    }
+    
+    // Convert each code block to pre.mermaid format that Mermaid expects
+    mermaidCodeBlocks.forEach((codeElement) => {
+        const preElement = codeElement.parentElement;
+        if (preElement && preElement.tagName === 'PRE') {
+            // Get the text content from the code element
+            const mermaidText = codeElement.textContent || codeElement.innerText;
+            
+            // Clear the pre element and set it up for Mermaid
+            preElement.innerHTML = '';
+            preElement.className = 'mermaid';
+            preElement.textContent = mermaidText;
+        }
+    });
+    
+    // Run Mermaid on all .mermaid elements
+    try {
+        await mermaid.run({
+            querySelector: '.mermaid',
+        });
+    } catch (error) {
+        console.error('Mermaid rendering error:', error);
+    }
+}
+
+// Wait for DOM to be fully loaded and all scripts executed
+function waitForMermaid() {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait a bit more to ensure all content is rendered
+            setTimeout(initMermaid, 100);
+        });
+    } else {
+        // DOM already loaded, but wait a bit for content to be fully rendered
+        setTimeout(initMermaid, 100);
+    }
+}
+
+waitForMermaid();
+</script>
+
