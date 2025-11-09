@@ -2,8 +2,29 @@
 <script>
   document.addEventListener('DOMContentLoaded', async function() {
     mermaid.initialize({ startOnLoad: false });
+    
+    // Find all code blocks with language-mermaid class
+    const mermaidCodeBlocks = document.querySelectorAll('code.language-mermaid');
+    
+    mermaidCodeBlocks.forEach(function(codeBlock) {
+      // Get the parent <pre> element
+      const preElement = codeBlock.parentElement;
+      if (preElement && preElement.tagName === 'PRE') {
+        // Get the mermaid code content
+        const mermaidCode = codeBlock.textContent;
+        
+        // Remove the code block
+        codeBlock.remove();
+        
+        // Add mermaid class to pre element and set content
+        preElement.className = 'mermaid';
+        preElement.textContent = mermaidCode;
+      }
+    });
+    
+    // Now run mermaid on all elements with class 'mermaid'
     await mermaid.run({
-      querySelector: '.language-mermaid',
+      querySelector: '.mermaid',
     });
   });
 </script>
