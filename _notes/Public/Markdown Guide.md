@@ -2,7 +2,6 @@
 title: Markdown Guide
 feed: show
 date: 2024-01-15
-mermaid: true
 ---
 Panduan ini menampilkan format Markdown penting yang dapat kamu gunakan dalam catatan.
 
