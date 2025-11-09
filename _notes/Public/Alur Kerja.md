@@ -15,6 +15,8 @@ status:
   - "[[Published]]"
 feed: show
 mermaid: true
+aliases:
+  - alur kerja
 ---
 Alur kerja, pada intinya, adalah cara kita menyelesaikan pekerjaan, langkah demi langkah, dari awal hingga akhir. Ini adalah urutan tugas dan kondisi yang berulang, sebuah peta jalan yang memandu proses. Baik itu dalam skala besar di sistem komputasi _cloud_ atau dalam rutinitas harian kita sendiri, alur kerja menjelaskan bagaimana sesuatu bergerak dari satu keadaan ke keadaan berikutnya hingga selesai.
 
