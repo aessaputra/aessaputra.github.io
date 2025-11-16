@@ -32,7 +32,7 @@ Beberapa ancaman yang sering muncul antara lain:
 - **[[Malware]]**: Perangkat lunak berbahaya yang dirancang untuk mendapatkan akses tidak sah atau menyebabkan kerusakan.
 - **[[Ransomware]]**: Model serangan yang mengenkripsi data korban dan meminta tebusan.
 - **[[Phishing]]**: Teknik rekayasa sosial untuk menipu pengguna agar memberikan informasi sensitif.
-- **Serangan DDoS**: Upaya untuk melumpuhkan server dengan membanjirinya dengan lalu lintas palsu.
+- **[[Serangan DDoS]]**: Upaya untuk melumpuhkan server dengan membanjirinya dengan lalu lintas palsu.
 
 ### Tiga Pilar Keamanan Siber
 

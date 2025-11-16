@@ -1,5 +1,5 @@
 ---
-title: Apa itu Phising?
+title: Apa itu Phishing?
 categories:
   - "[[Posts]]"
 tags:
@@ -17,8 +17,8 @@ status:
   - "[[Published]]"
 feed: show
 aliases:
-  - phising
-  - Phising
+  - phishing
+  - Phishing
 ---
 Phishing adalah metode penipuan siber di mana penyerang mencoba mendapatkan informasi sensitif dengan menyamar sebagai entitas terpercaya. Metode ini lazim digunakan melalui email, dan korban sering kali diarahkan untuk memasukkan data pribadi di situs palsu yang terlihat asli.
 
