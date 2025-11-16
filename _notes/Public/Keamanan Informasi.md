@@ -20,7 +20,6 @@ status:
   - "[[Published]]"
 feed: show
 ---
-
 Keamanan informasi adalah upaya melindungi aset paling berharga di era digital: informasi itu sendiri. Ini bukan hanya tentang mencegah akses ilegal, tetapi tentang membangun fondasi kepercayaan pada sistem yang kita andalkan setiap hari.
 
 ### Triad Keamanan Informasi (CIA Triad)

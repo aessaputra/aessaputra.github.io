@@ -20,7 +20,6 @@ status:
   - "[[Published]]"
 feed: show
 ---
-
 Keamanan siber adalah praktik untuk melindungi aset digital mulai dari komputer, jaringan, hingga data dari potensi ancaman. Ini bukan sekadar tentang teknologi, tetapi tentang menjaga kepercayaan, stabilitas operasional, dan kepatuhan terhadap regulasi.
 
 ### Mengapa Penting?
