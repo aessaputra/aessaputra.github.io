@@ -50,3 +50,6 @@ Visi [[SPBE]] menargetkan terciptanya pemerintahan yang tidak hanya efisien, tet
 ## Kesimpulan
 
 Singkatnya, inisiatif [[SPBE]] adalah langkah esensial dalam modernisasi [[tata kelola]] Indonesia. Dengan secara proaktif mengatasi berbagai tantangan, serta berfokus pada [[integrasi sistem]], [[adopsi teknologi]], dan [[pengembangan SDM]], kita dapat membentuk pemerintahan yang lebih efektif dan bertanggung jawab. Keberhasilan [[implementasi SPBE]] akan secara langsung berkontribusi pada peningkatan [[layanan publik]] dan penguatan [[proses demokrasi]] di masa depan.
+
+Sumber:
+* PERATURAN PRESIDEN REPUBLIK INDONESIA NOMOR 98 TAHUN 2018 TENTANG SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK
