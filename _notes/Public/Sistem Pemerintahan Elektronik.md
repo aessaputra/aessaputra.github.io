@@ -19,6 +19,8 @@ topics:
   - "[[Teknologi Informasi]]"
 status: published
 feed: show
+aliases:
+  - Sistem Pemerintahan Elektronik
 ---
 **Sistem Pemerintahan Berbasis Elektronik (SPBE)**, atau Pemerintahan elektronik, adalah penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan komunikasi untuk memberikan layanan yang lebih efisien dan terpadu.
 
