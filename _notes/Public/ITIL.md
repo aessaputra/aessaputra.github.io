@@ -20,6 +20,8 @@ topics:
 status:
   - "[[Published]]"
 feed:
+aliases:
+  - Information Technology Infrastructure Library
 ---
 Pikiran saya mengenai ITIL, atau _Information Technology Infrastructure Library_, seringkali mengarah pada gagasan tentang fondasi yang kokoh dalam dunia [[Manajemen Layanan TI]] (ITSM). Ia bukan sekadar serangkaian aturan kaku, melainkan sebuah kerangka kerja yang menawarkan praktik terbaik untuk membantu organisasi merencanakan, memberikan, dan mendukung layanan TI secara lebih efektif dan efisien. Awalnya dikembangkan oleh pemerintah Inggris di tahun 1980-an, ITIL dirancang untuk meningkatkan kualitas dan efisiensi layanan TI, sebuah kebutuhan yang semakin mendesak seiring dengan ketergantungan kita pada teknologi.
 
