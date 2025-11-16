@@ -17,6 +17,8 @@ topics:
 status:
   - "[[Active]]"
 feed: show
+aliases:
+  - Ancaman Siber
 ---
 
 Ancaman siber adalah setiap upaya jahat untuk mendapatkan akses tidak sah ke sebuah sistem, merusak data, atau mengganggu layanan digital. Ini adalah sisi gelap dari konektivitas yang selalu aktif, sebuah risiko yang melekat dalam kehidupan modern.
