@@ -8,7 +8,7 @@ author:
   - "[[Aes Saputra]]"
 url:
 created: 2025-11-16
-published:
+published: 2025-11-16
 date: 2025-11-16
 topics:
   - "[[Keamanan Jaringan]]"
