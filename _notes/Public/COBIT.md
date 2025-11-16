@@ -19,6 +19,7 @@ topics:
 status:
   - "[[Published]]"
 feed:
+artist: COBIT
 ---
 COBIT, atau **Control Objectives for Information and Related Technologies**, adalah kerangka kerja yang dirancang oleh ISACA untuk tata kelola dan manajemen teknologi informasi (TI). Dalam lebih dari 25 tahun pengembangannya, COBIT telah beradaptasi dari fokus awalnya pada audit TI menjadi panduan komprehensif untuk manajemen dan tata kelola informasi dalam dunia bisnis modern.
 
