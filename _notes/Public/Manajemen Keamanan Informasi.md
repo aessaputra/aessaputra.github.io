@@ -17,7 +17,8 @@ topics:
   - "[[Keamanan Informasi]]"
   - "[[Manajemen Risiko]]"
   - "[[Tata Kelola TI]]"
-status: done
+status:
+  - "[[Published]]"
 feed: show
 ---
 
