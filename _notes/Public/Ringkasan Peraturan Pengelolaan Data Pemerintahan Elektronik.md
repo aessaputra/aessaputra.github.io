@@ -20,7 +20,7 @@ feed: show
 ## Definisi dan Konsep Utama
 
 *Memahami terminologi penting untuk implementasi efektif:*
-- **Sistem Pemerintahan Elektronik (SPBE)**: Penggunaan teknologi informasi untuk memfasilitasi layanan pemerintah.
+- **Sistem Pemerintahan Elektronik ([[SPBE]])**: Penggunaan teknologi informasi untuk memfasilitasi layanan pemerintah.
 - **Pengelolaan Data**: Proses perencanaan, pengumpulan, verifikasi, dan penyebaran data.
 - **Interoperabilitas**: Kemampuan bertukar informasi di berbagai platform pemerintah.
 - **Referensi Data dan Metadata**: Informasi terstruktur yang menggambarkan data.
