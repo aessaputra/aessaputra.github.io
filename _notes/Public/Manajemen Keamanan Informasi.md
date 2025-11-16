@@ -9,7 +9,7 @@ tags:
   - iso27001
 author:
   - "[[Aes Saputra]]"
-url: https://id.wikipedia.org/wiki/Manajemen_keamanan_informasi
+url:
 created: 2025-11-16
 published: 2025-11-16
 date: 2025-11-16
