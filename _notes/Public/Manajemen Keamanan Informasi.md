@@ -29,9 +29,9 @@ Tujuan utamanya adalah untuk merancang, menerapkan, dan memelihara serangkaian p
 ### Prinsip Inti (CIA Triad)
 
 SMKI dibangun di atas tiga pilar utama untuk melindungi aset informasi:
-- **[[Kerahasiaan]] (Confidentiality)**: Memastikan informasi hanya dapat diakses oleh pihak yang berwenang.
-- **[[Integritas]] (Integrity)**: Menjaga keakuratan dan kelengkapan informasi.
-- **[[Ketersediaan]] (Availability)**: Memastikan informasi dapat diakses oleh pihak yang berwenang saat dibutuhkan.
+- **Kerahasiaan (Confidentiality)**: Memastikan informasi hanya dapat diakses oleh pihak yang berwenang.
+- **Integritas (Integrity)**: Menjaga keakuratan dan kelengkapan informasi.
+- **Ketersediaan (Availability)**: Memastikan informasi dapat diakses oleh pihak yang berwenang saat dibutuhkan.
 
 ### Kerangka Kerja Umum
 
