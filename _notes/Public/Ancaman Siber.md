@@ -27,7 +27,7 @@ Memahami ragam serangan adalah langkah awal untuk membangun pertahanan. Berikut 
 
 - **[[Malware]]**: Perangkat lunak berbahaya yang dirancang untuk merusak.
     - **[[Ransomware]]**: Mengenkripsi data dan meminta tebusan.
-    - **[[Trojan Horse**]]: Menyamar sebagai program yang sah untuk menyusup ke sistem.
+    - **[[Trojan Horse]]**: Menyamar sebagai program yang sah untuk menyusup ke sistem.
     - **[[Spyware]]**: Mengumpulkan informasi sensitif tanpa sepengetahuan korban.
     - **[[Worm**]]: Mereplikasi diri dan menyebar ke seluruh jaringan secara otomatis.
 
