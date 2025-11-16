@@ -4,6 +4,10 @@ categories:
   - "[[Posts]]"
 tags:
   - posts
+  - spbe
+  - TransformasiDigital
+  - kebijakan-publik
+  - one-data-indonesia
 author:
   - "[[Aes Saputra]]"
 url:
