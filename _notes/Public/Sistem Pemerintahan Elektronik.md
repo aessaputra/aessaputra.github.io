@@ -20,7 +20,6 @@ topics:
 status: published
 feed: show
 ---
-
 **Sistem Pemerintahan Berbasis Elektronik (SPBE)**, atau Pemerintahan elektronik, adalah penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan komunikasi untuk memberikan layanan yang lebih efisien dan terpadu.
 
 Ini bukan sekadar digitalisasi dokumen, melainkan perubahan paradigma dalam cara pemerintah bekerja dan melayani publik.
