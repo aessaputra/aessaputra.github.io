@@ -27,7 +27,6 @@ rating: 6
 aliases:
   - Agile
 ---
-
 Memahami Metode Agile adalah tentang merangkul sebuah pendekatan yang dinamis dan berpusat pada manusia dalam menghadapi kompleksitas pengembangan. Ini bukan sekadar serangkaian aturan, melainkan sebuah pola pikir yang mengedepankan adaptasi, kolaborasi, dan pengiriman nilai secara berkelanjutan. Berbeda dengan model tradisional seperti "waterfall" yang sekuensial dan kaku, Agile memecah pekerjaan menjadi fase-fase kecil yang berulang, dikenal sebagai iterasi atau sprint, memungkinkan tim untuk terus belajar dan menyesuaikan diri.
 
 Inti dari Agile terletak pada [[Agile Manifesto]], yang menekankan individu dan interaksi di atas proses dan alat, perangkat lunak yang berfungsi di atas dokumentasi yang komprehensif, kolaborasi pelanggan di atas negosiasi kontrak, dan menanggapi perubahan di atas mengikuti rencana. Ini berarti tim didorong untuk memiliki komunikasi terbuka, kerja sama, dan kepercayaan, memberdayakan mereka untuk mengatur diri sendiri dalam menentukan bagaimana pekerjaan akan diselesaikan.
