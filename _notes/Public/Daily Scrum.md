@@ -21,6 +21,8 @@ topics:
 status:
   - "[[Published]]"
 feed:
+aliases:
+  - Daily Scrum
 ---
 ![Daily Scrum](https://scrumorg-website-prod.s3.amazonaws.com/drupal/s3fs-public/styles/cke_media_resize_medium/public/2023-11/The-Daily-Scrum-2.0.png?itok=-F-lrW-U)
 Daily Scrum merupakan jantung dari inspeksi dan adaptasi dalam _Sprint_. Bukan sekadar laporan status, melainkan kesempatan bagi _Developer_ untuk menyelaraskan diri, memeriksa progres menuju _Sprint Goal_, dan merencanakan kerja hari itu.

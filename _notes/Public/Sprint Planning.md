@@ -23,6 +23,8 @@ topics:
 status:
   - published
 feed:
+aliases:
+  - Sprint Planning
 ---
 Sprint Planning bukan sekadar rapat, tapi awal dari komitmen. Sebelum memulai pekerjaan di sebuah Sprint, seluruh tim Scrum berkumpul untuk menyelaraskan tujuan dan rencana.
 

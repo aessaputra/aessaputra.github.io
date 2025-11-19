@@ -19,7 +19,9 @@ topics:
   - "[[Definisi Selesai]]"
 status:
   - "[[Published]]"
-feed: show
+feed:
+aliases:
+  - Increment
 ---
 Dalam _Scrum_, sebuah _Increment_ lebih dari sekadar potongan pekerjaan yang selesai. Ia adalah representasi yang terverifikasi dari kemajuan yang dibuat tim menuju _Product Goal_. Bayangkan sebuah bangunan yang bertambah lantai demi lantai, setiap lantai adalah _Increment_.
 

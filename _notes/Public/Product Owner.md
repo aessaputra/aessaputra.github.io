@@ -18,6 +18,8 @@ topics:
 status:
   - "[[Published]]"
 feed:
+aliases:
+  - Product Owner
 ---
 Peran Product Owner (PO) terasa sentral dalam keberhasilan implementasi Scrum. Lebih dari sekadar mengelola _Product Backlog_, inti dari tanggung jawab PO adalah memaksimalkan nilai produk yang dihasilkan oleh tim Scrum. Ini berarti memahami visi produk secara menyeluruh, menerjemahkannya ke dalam tujuan yang jelas, dan memastikan setiap upaya tim selaras dengan tujuan tersebut.
 
