@@ -21,6 +21,8 @@ topics:
 status:
   - "[[Published]]"
 feed:
+aliases:
+  - Scrum Master
 ---
 _Scrum Master_ seringkali disalahpahami sebagai seorang manajer proyek. Namun, peran ini jauh lebih dalam dan berfokus pada pemberdayaan tim. _Scrum Master_ adalah seseorang yang bertanggung jawab untuk memastikan bahwa _Scrum_ dipahami dan diterapkan dengan benar, baik oleh tim maupun organisasi secara keseluruhan.
 
