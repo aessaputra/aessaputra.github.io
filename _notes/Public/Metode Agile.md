@@ -24,6 +24,8 @@ themes:
   - Pengembangan Perangkat Lunak
   - Fleksibilitas
 rating: 6
+aliases:
+  - Agile
 ---
 
 Memahami Metode Agile adalah tentang merangkul sebuah pendekatan yang dinamis dan berpusat pada manusia dalam menghadapi kompleksitas pengembangan. Ini bukan sekadar serangkaian aturan, melainkan sebuah pola pikir yang mengedepankan adaptasi, kolaborasi, dan pengiriman nilai secara berkelanjutan. Berbeda dengan model tradisional seperti "waterfall" yang sekuensial dan kaku, Agile memecah pekerjaan menjadi fase-fase kecil yang berulang, dikenal sebagai iterasi atau sprint, memungkinkan tim untuk terus belajar dan menyesuaikan diri.
