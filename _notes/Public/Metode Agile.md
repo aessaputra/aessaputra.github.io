@@ -39,4 +39,6 @@ Namun, seperti halnya pendekatan lainnya, Agile juga memiliki tantangannya. Terk
 Pada akhirnya, Agile adalah tentang menumbuhkan pola pikir adaptif dan berpusat pada orang. Ini adalah perjalanan menuju peningkatan berkelanjutan, di mana setiap catatan dan setiap interaksi adalah bagian dari upaya untuk memahami lebih baik, membangun lebih baik, dan beradaptasi lebih cepat.
 
 ### Referensi
-* [[Pengertian Metode Agile Tujua, Jenis, Kelebihan dan Kekurangan::https://bie.telkomuniversity.ac.id/pengertian-metode-agile-tujuan-jenis-kelebihan-dan-kekurangan/]]
+* [[Pengertian Metode Agile Tujuan, Jenis, Kelebihan dan Kekurangan::https://bie.telkomuniversity.ac.id/pengertian-metode-agile-tujuan-jenis-kelebihan-dan-kekurangan/]]
+* [[Apa Itu Agile?::https://www.atlassian.com/agile]]
+* [[Agile Software Development::https://en.wikipedia.org/wiki/Agile_software_development]]
