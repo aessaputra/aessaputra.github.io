@@ -19,6 +19,8 @@ topics:
   - "[[Kolaborasi Tim]]"
   - "[[Refinemt Backlog]]"
 feed:
+status:
+  - "[[Published]]"
 ---
 _Product Backlog_ itu seperti daftar keinginan untuk sebuah produk, tapi bukan sekadar keinginan. Ini adalah daftar terurut dari semua hal yang _mungkin_ dibutuhkan untuk meningkatkan produk tersebut. Daftar ini terus berkembang seiring waktu, bukan sesuatu yang statis.
 
