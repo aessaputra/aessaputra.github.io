@@ -40,3 +40,6 @@ Refleksi singkat untuk dicatat dalam jurnal atau catatan tim:
 - Tindakan sederhana apa yang akan kami coba minggu depan?
 
 Retrospective bukan tujuan akhir, ia adalah praktik berulang untuk memperbaiki cara tim bekerja seiring waktu. Evaluasi perubahan itu sendiri menjadi bahan pembelajaran berkelanjutan.
+## Referensi
+* [What is a Sprint Retrospective?::https://www.scrum.org/resources/what-is-a-sprint-retrospective]
+* [Search](https://www.scrum.org/resources?field_resource_tags_target_id=146&type=All) Semua sumber daya yang terkait dengan Sprint Retrospectives.
