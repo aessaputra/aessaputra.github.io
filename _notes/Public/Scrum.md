@@ -42,7 +42,7 @@ Dalam sebuah tim Scrum, ada tiga peran kunci yang berinteraksi untuk mencapai tu
 Sepanjang siklus Sprint, ada beberapa "ritual" atau [Scrum Events](app://obsidian.md/Scrum%20Events) yang terstruktur untuk memfasilitasi komunikasi dan adaptasi:
 
 - **[[Sprint Planning]]**: Ini adalah awal dari setiap Sprint, di mana seluruh tim berkumpul untuk menentukan tujuan Sprint dan memilih item-item dari [[Product Backlog]] yang akan dikerjakan, membentuk [[Sprint Backlog]].
-- **[[Daily Scrum]]: Sebuah pertemuan harian yang singkat, sekitar 15 menit, di mana Developers menyinkronkan pekerjaan mereka. Mereka membahas apa yang sudah dilakukan, apa yang akan dilakukan, dan hambatan apa pun. Ini menjaga transparansi dan fokus.
+- **[[Daily Scrum]]**: Sebuah pertemuan harian yang singkat, sekitar 15 menit, di mana Developers menyinkronkan pekerjaan mereka. Mereka membahas apa yang sudah dilakukan, apa yang akan dilakukan, dan hambatan apa pun. Ini menjaga transparansi dan fokus.
 - **[[Product Backlog Refinement]]**: Ini adalah aktivitas berkelanjutan di mana tim, terutama Product Owner, secara rutin meninjau, merinci, dan memprioritaskan item-item di Product Backlog untuk Sprint-Sprint mendatang.
 - **[[Sprint Review]]**: Di akhir setiap Sprint, tim mendemonstrasikan [[Increment]] yang telah selesai kepada para _stakeholder_. Ini adalah kesempatan untuk mendapatkan umpan balik langsung dan mengadaptasi rencana produk selanjutnya.
 - **[[Sprint Retrospective]]**: Segera setelah Sprint Review, tim mengadakan pertemuan internal ini untuk merefleksikan bagaimana Sprint berjalan. Mereka mengidentifikasi apa yang berhasil, apa yang perlu diperbaiki dalam proses mereka, dan membuat rencana aksi untuk Sprint berikutnya.
