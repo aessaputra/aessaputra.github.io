@@ -81,7 +81,7 @@ Setiap anggota tim memiliki perintah yang jelas, harapan dipahami, dan pemangku 
 
 ## [[Extreme Programming Context]]
 
-[[Extreme Programming (XP)]] adalah jenis pengembangan perangkat lunak agile dengan siklus pengembangan pendek dan beberapa rilis untuk meningkatkan produktivitas. Persyaratan pelanggan dicari dan dapat beradaptasi dengan jalannya proyek. Baik ketika persyaratan sering berubah.
+[[Extreme Programming]] adalah jenis pengembangan perangkat lunak agile dengan siklus pengembangan pendek dan beberapa rilis untuk meningkatkan produktivitas. Persyaratan pelanggan dicari dan dapat beradaptasi dengan jalannya proyek. Baik ketika persyaratan sering berubah.
 
 ## [[Software-Project-Specific Notes]]
 
