@@ -37,7 +37,7 @@ Dalam sebuah tim Scrum, ada tiga peran kunci yang berinteraksi untuk mencapai tu
 
 - **[[Product Owner]]**: Ini adalah suara pelanggan, yang bertanggung jawab memaksimalkan nilai produk. Mereka mengelola [[Product Backlog]], daftar prioritas semua fitur dan perbaikan yang perlu dikembangkan, memastikan urutan item mencerminkan nilai bisnis tertinggi.
 - **Developers**: Mereka adalah inti dari tim, individu-individu lintas fungsi yang bertanggung jawab membangun [[Increment]] yang berfungsi di setiap Sprint. Tim ini bersifat mandiri dan mengatur pekerjaannya sendiri, tanpa diatur oleh manajer proyek tradisional.
-- **[[Scrum Master]]: Peran ini bertindak sebagai fasilitator dan pelatih, memastikan tim memahami dan mengikuti prinsip-prinsip Scrum. Mereka juga bertugas menghilangkan hambatan yang mungkin menghalangi kemajuan tim, menciptakan lingkungan yang kondusif untuk kerja produktif.
+- **[[Scrum Master]]**: Peran ini bertindak sebagai fasilitator dan pelatih, memastikan tim memahami dan mengikuti prinsip-prinsip Scrum. Mereka juga bertugas menghilangkan hambatan yang mungkin menghalangi kemajuan tim, menciptakan lingkungan yang kondusif untuk kerja produktif.
 
 Sepanjang siklus Sprint, ada beberapa "ritual" atau [Scrum Events](app://obsidian.md/Scrum%20Events) yang terstruktur untuk memfasilitasi komunikasi dan adaptasi:
 
