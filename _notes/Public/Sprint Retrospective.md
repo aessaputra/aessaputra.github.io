@@ -24,6 +24,7 @@ status:
   - "[[Published]]"
 feed:
 ---
+![Sprint Resropective](https://scrumorg-website-prod.s3.amazonaws.com/drupal/s3fs-public/styles/cke_media_resize_medium/public/2023-11/Sprint-Retrospective.png?itok=RNJKC2NK)
 Sprint Retrospective adalah momen hening dan jujur untuk tim Scrum meninjau cara mereka bekerja. Bukan untuk menyalahkan, melainkan mengamati: apa yang membantu, apa yang menghambat, dan asumsi mana yang perlu diuji ulang. Tujuannya sederhana, menemukan perubahan kecil yang meningkatkan kualitas kerja dan kenyamanan tim pada sprint berikutnya.
 
 Acara ini menutup sprint. Biasanya dimoderasi oleh Scrum Master, tetapi kepemilikan perbaikan ada pada seluruh tim. Waktu dibatasi (timebox): maksimal tiga jam untuk sprint satu bulan; untuk sprint lebih pendek, durasinya dipersingkat. Hasilnya bukan laporan panjang, melainkan satu atau dua tindakan konkret yang masuk ke Sprint Backlog atau dijalankan segera.
