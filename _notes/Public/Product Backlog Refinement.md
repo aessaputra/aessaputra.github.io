@@ -4,15 +4,20 @@ categories:
   - "[[Posts]]"
 tags:
   - posts
+  - scrum
+  - agile
 author:
   - "[[Aes Saputra]]"
 url:
 created: 2025-11-19
 published:
 date: 2025-11-19
-topics: []
+topics:
+  - "[[Product Backlog]]"
+  - "[[Refinemt Backlog]]"
 status:
-feed: show
+  - "[[Published]]"
+feed:
 ---
 Item-item Product Backlog (PBI) berkembang seiring waktu. Mereka dimulai sebagai ide-ide yang masih kabur dan terus diperbaiki seiring dengan penemuan informasi tambahan. Pada akhirnya, mereka menjadi cukup jelas sehingga dapat dimasukkan ke dalam Sprint Backlog.
 
