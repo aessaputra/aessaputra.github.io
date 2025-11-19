@@ -1,5 +1,5 @@
 ---
-title:
+title: Product Backlog Refinement
 categories:
   - "[[Posts]]"
 tags:
@@ -10,7 +10,7 @@ author:
   - "[[Aes Saputra]]"
 url:
 created: 2025-11-19
-published:
+published: 2025-11-19
 date: 2025-11-19
 topics:
   - "[[Product Backlog]]"
