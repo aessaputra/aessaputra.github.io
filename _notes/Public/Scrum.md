@@ -24,6 +24,8 @@ topics:
 status:
   - "[[Published]]"
 feed:
+aliases:
+  - Scrum
 ---
 Scrum, bagi saya, adalah sebuah kerangka kerja yang melampaui sekadar metodologi, ia mewakili filosofi [[Agile]] dalam menghadapi kompleksitas pengembangan produk. Intinya terletak pada adaptasi dan responsivitas, mengakui bahwa kebutuhan akan terus berubah, dan kita perlu siap untuk itu. Ini bukan tentang perencanaan yang kaku di awal, melainkan tentang belajar dan menyesuaikan diri seiring waktu.
 
