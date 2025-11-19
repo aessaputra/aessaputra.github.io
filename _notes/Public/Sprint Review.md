@@ -21,6 +21,8 @@ topics:
 status:
   - "[[Published]]"
 feed:
+aliases:
+  - Sprint Review
 ---
 ## Apa itu Sprint Review?
 ![Sprint Review](https://scrumorg-website-prod.s3.amazonaws.com/drupal/s3fs-public/styles/cke_media_resize_medium/public/2023-11/Sprint-Review-v2.jpg?itok=Eet6b9gX)
