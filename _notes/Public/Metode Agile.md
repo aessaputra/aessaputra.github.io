@@ -37,3 +37,6 @@ Berbagai kerangka kerja telah muncul dari filosofi Agile, seperti [[Scrum]], [[K
 Namun, seperti halnya pendekatan lainnya, Agile juga memiliki tantangannya. Terkadang, perencanaan awal yang fleksibel dapat membuat gambaran akhir produk terasa kurang jelas bagi sebagian pihak. Selain itu, keberhasilan metode ini sangat bergantung pada komitmen tinggi dari setiap anggota tim dan komunikasi yang efektif. Tanpa tim yang solid dan berkomitmen, potensi kendala dapat muncul. Meskipun demikian, dengan fokus pada prinsip-prinsip inti dan adaptasi, kekurangan ini dapat diminimalkan.
 
 Pada akhirnya, Agile adalah tentang menumbuhkan pola pikir adaptif dan berpusat pada orang. Ini adalah perjalanan menuju peningkatan berkelanjutan, di mana setiap catatan dan setiap interaksi adalah bagian dari upaya untuk memahami lebih baik, membangun lebih baik, dan beradaptasi lebih cepat.
+
+### Referensi
+* [[Pengertian Metode Agile Tujua, Jenis, Kelebihan dan Kekurangan::https://bie.telkomuniversity.ac.id/pengertian-metode-agile-tujuan-jenis-kelebihan-dan-kekurangan/]]
