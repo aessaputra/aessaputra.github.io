@@ -15,7 +15,7 @@ The simplest approach is to use the `_notes` folder as your Obsidian vault:
 
 This way, all your notes are automatically part of your website.
 
-## Front Matter Requirements[[Markdown Guide]]
+## Front Matter Requirements [[Markdown Guide]]
 
 All notes must use the proper front matter format:
 
