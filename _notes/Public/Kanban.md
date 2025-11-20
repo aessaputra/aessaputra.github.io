@@ -14,7 +14,7 @@ author:
   - "[[Aes Saputra]]"
 url:
 created: 2025-11-19
-published:
+published: 2025-11-19
 date: 2025-11-19
 topics:
   - "[[Manajemen Proyek]]"
@@ -24,10 +24,10 @@ topics:
 status:
   - "[[Published]]"
 rating: 6
+feed:
 aliases:
   - Kanban
 ---
-
 Kanban, yang secara harfiah berarti "papan sinyal" atau "kartu visual" dalam bahasa Jepang, adalah konsep manajemen kerja yang lahir dari [[Lean Manufacturing]] dan [[Sistem Just In Time (JIT)]] di Toyota pada akhir 1940-an, dipelopori oleh Taiichi Ohno. Awalnya, ini adalah sistem kartu fisik yang memberi sinyal kebutuhan akan material atau produksi, mengubah alur kerja dari sistem "dorong" menjadi sistem "tarik" — di mana produksi dimulai berdasarkan permintaan aktual.
 
 Inti dari Kanban modern adalah visualisasi pekerjaan. Ini diwujudkan melalui [[Papan Kanban]], sebuah representasi visual dari alur kerja tim. Papan ini biasanya terdiri dari beberapa kolom yang mewakili tahapan pekerjaan, seperti "Untuk Dikerjakan", "Sedang Berlangsung", dan "Selesai". Setiap tugas atau item pekerjaan direpresentasikan sebagai "kartu" yang bergerak melintasi kolom-kolom ini, memberikan gambaran jelas tentang status dan progres pekerjaan secara real-time.
