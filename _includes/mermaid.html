@@ -1,38 +1,83 @@
 <script type="module">
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
 
-// Detect dark mode preference
-const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+// Store original mermaid content for re-rendering
+let mermaidContents = [];
 
-mermaid.initialize({ 
-    startOnLoad: false,
-    theme: isDarkMode ? 'dark' : 'default'
-});
+/**
+ * Get current theme from data-theme attribute or fallback to system preference
+ * Best practice: Check site's theme toggle first, then system preference
+ */
+function getCurrentTheme() {
+    const dataTheme = document.documentElement.getAttribute('data-theme');
+    if (dataTheme) {
+        return dataTheme === 'dark' ? 'dark' : 'default';
+    }
+    // Fallback to system preference
+    return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+}
 
-// Function to initialize Mermaid
-async function initMermaid() {
-    // Find all code blocks with language-mermaid class
+/**
+ * Initialize Mermaid with best practices configuration
+ * - startOnLoad: false - manual control for dynamic content
+ * - securityLevel: 'loose' - allow more diagram features
+ * - theme: dynamic based on current theme
+ */
+function initializeMermaid() {
+    mermaid.initialize({ 
+        startOnLoad: false,
+        securityLevel: 'loose',
+        theme: getCurrentTheme(),
+        logLevel: 'error',
+        flowchart: {
+            htmlLabels: true,
+            curve: 'basis'
+        }
+    });
+}
+
+// Initial configuration
+initializeMermaid();
+
+/**
+ * Convert code blocks with language-mermaid class to mermaid format
+ * Stores original content for theme re-rendering
+ */
+function prepareMermaidBlocks() {
     const mermaidCodeBlocks = document.querySelectorAll('code.language-mermaid');
     
     if (mermaidCodeBlocks.length === 0) {
-        return;
+        return false;
     }
     
-    // Convert each code block to pre.mermaid format that Mermaid expects
-    mermaidCodeBlocks.forEach((codeElement) => {
+    mermaidContents = []; // Reset stored contents
+    
+    mermaidCodeBlocks.forEach((codeElement, index) => {
         const preElement = codeElement.parentElement;
         if (preElement && preElement.tagName === 'PRE') {
-            // Get the text content from the code element
             const mermaidText = codeElement.textContent || codeElement.innerText;
             
-            // Clear the pre element and set it up for Mermaid
+            // Store original content for re-rendering
+            mermaidContents.push({
+                element: preElement,
+                content: mermaidText
+            });
+            
+            // Setup for Mermaid rendering
             preElement.innerHTML = '';
             preElement.className = 'mermaid';
+            preElement.setAttribute('data-mermaid-index', index);
             preElement.textContent = mermaidText;
         }
     });
     
-    // Run Mermaid on all .mermaid elements
+    return mermaidContents.length > 0;
+}
+
+/**
+ * Run Mermaid rendering on all prepared blocks
+ */
+async function runMermaid() {
     try {
         await mermaid.run({
             querySelector: '.mermaid',
@@ -42,19 +87,83 @@ async function initMermaid() {
     }
 }
 
-// Wait for DOM to be fully loaded and all scripts executed
+/**
+ * Re-render all Mermaid diagrams with new theme
+ * Called when user toggles theme
+ */
+async function reRenderMermaid() {
+    const mermaidElements = document.querySelectorAll('.mermaid');
+    
+    if (mermaidElements.length === 0) {
+        return;
+    }
+    
+    // Re-initialize with new theme
+    initializeMermaid();
+    
+    // Restore original content and re-render
+    mermaidElements.forEach((element, index) => {
+        // Remove rendered SVG and restore text content
+        if (mermaidContents[index]) {
+            element.innerHTML = '';
+            element.removeAttribute('data-processed');
+            element.textContent = mermaidContents[index].content;
+        }
+    });
+    
+    // Re-run Mermaid
+    await runMermaid();
+}
+
+/**
+ * Initial Mermaid setup
+ */
+async function initMermaid() {
+    if (prepareMermaidBlocks()) {
+        await runMermaid();
+    }
+}
+
+/**
+ * Watch for theme changes via data-theme attribute
+ * Best practice: Use MutationObserver for reactive theme updates
+ */
+function watchThemeChanges() {
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === 'data-theme') {
+                // Debounce re-render to avoid rapid consecutive calls
+                setTimeout(reRenderMermaid, 50);
+            }
+        });
+    });
+
+    observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['data-theme']
+    });
+}
+
+/**
+ * Wait for DOM to be fully loaded before initializing
+ */
 function waitForMermaid() {
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
-            // Wait a bit more to ensure all content is rendered
-            setTimeout(initMermaid, 100);
+            setTimeout(() => {
+                initMermaid();
+                watchThemeChanges();
+            }, 100);
         });
     } else {
-        // DOM already loaded, but wait a bit for content to be fully rendered
-        setTimeout(initMermaid, 100);
+        setTimeout(() => {
+            initMermaid();
+            watchThemeChanges();
+        }, 100);
     }
 }
 
 waitForMermaid();
 </script>
+
 
