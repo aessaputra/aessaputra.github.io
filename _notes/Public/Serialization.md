@@ -24,7 +24,7 @@ feed: show
 
 Bayangkan Serialization sebagai **sistem pengepakan canggih untuk perjalanan lintas dimensi** - seperti teknologi di film sci-fi yang dapat mengubah objek 3D menjadi data digital, mengirimkannya melalui portal, dan merekonstruksinya kembali dengan sempurna di dimensi lain. Setiap detail, struktur, dan relationship harus dipertahankan selama proses transformasi bolak-balik.
 
-Serialization adalah proses mengkonversi data structures atau objects menjadi format yang dapat disimpan atau ditransmisikan, kemudian direkonstruksi kembali (deserialization) di tempat atau waktu yang berbeda. Ini adalah fondasi komunikasi antar sistem, persistent storage, dan distributed computing. Dalam modern web development, serialization berkaitan erat dengan [[Performance Optimization]], [[JSON]] processing, dan [[Zero-Copy]] operations untuk efficient data transfer.
+Serialization adalah proses mengkonversi data structures atau objects menjadi format yang dapat disimpan atau ditransmisikan, kemudian direkonstruksi kembali (deserialization) di tempat atau waktu yang berbeda. Ini adalah fondasi komunikasi antar sistem, persistent storage, dan distributed computing. Dalam modern web development, serialization berkaitan erat dengan [[Performance Optimization]], [[JSON]] processing, dan efficient [[Memory Management]] untuk optimal data transfer.
 
 **Mengapa Serialization Fundamental?**
 - **Cross-System Communication**: Memungkinkan data exchange antar platform berbeda
