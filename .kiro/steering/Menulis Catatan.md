@@ -18,8 +18,6 @@ Setiap catatan yang dibuat harus mengikuti metodologi **Mind Mapping + Analogi M
 
 ### Template Struktur
 ```markdown
-# [Topik Utama] - [Analogi Utama]
-
 ## Pengantar: [Metafora Pembuka]
 [Penjelasan konsep dengan analogi yang kuat]
 
@@ -33,6 +31,12 @@ Setiap catatan yang dibuat harus mengikuti metodologi **Mind Mapping + Analogi M
 
 ## Refleksi: [Kesimpulan dengan metafora]
 ```
+
+### Aturan Judul
+- **JANGAN gunakan H1 (#)** dalam konten karena judul sudah ada di metadata
+- **Mulai langsung dengan H2 (##)** untuk bagian utama
+- **Judul di metadata** sudah cukup, tidak perlu diulang dalam konten
+- **Konsistensi**: Semua catatan mengikuti pola ini
 
 ## 2. Analogi dan Metafora Wajib
 
