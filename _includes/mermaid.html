@@ -1,57 +1,28 @@
 <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
 
-    // Store original mermaid content for re-rendering
+    // Store original mermaid content for re-rendering on theme change
     let mermaidContents = [];
 
     /**
-     * Get current theme from data-theme attribute or fallback to system preference
-     * Best practice: Check site's theme toggle first, then system preference
+     * Get current theme - returns 'dark' or 'neutral' based on site theme
      */
     function getCurrentTheme() {
         const dataTheme = document.documentElement.getAttribute('data-theme');
         if (dataTheme) {
-            return dataTheme === 'dark' ? 'dark' : 'default';
+            return dataTheme === 'dark' ? 'dark' : 'neutral';
         }
-        // Fallback to system preference
-        return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+        return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'neutral';
     }
 
     /**
-     * Initialize Mermaid with best practices configuration
-     * - startOnLoad: false - manual control for dynamic content
-     * - securityLevel: 'loose' - allow more diagram features
-     * - theme: dynamic based on current theme
-     * - themeVariables: custom colors for better contrast
+     * Initialize Mermaid with dynamic theme
      */
     function initializeMermaid() {
-        const currentTheme = getCurrentTheme();
-
-        // Theme variables for better contrast in both modes
-        // For dark mode: nodes with custom fill colors need dark text
-        // For light mode: use default settings
-        const themeVariables = currentTheme === 'dark' ? {
-            // Dark mode: ensure text is readable on light-colored styled nodes
-            nodeTextColor: '#1a1a1a',
-            primaryTextColor: '#ffffff',
-            secondaryTextColor: '#1a1a1a',
-            tertiaryTextColor: '#1a1a1a',
-            // Improve overall contrast
-            lineColor: '#ffffff',
-            textColor: '#ffffff',
-            mainBkg: '#2d2d2d',
-            nodeBorder: '#ffffff'
-        } : {
-            // Light mode defaults work well
-            nodeTextColor: '#333333',
-            primaryTextColor: '#333333'
-        };
-
         mermaid.initialize({
             startOnLoad: false,
             securityLevel: 'loose',
-            theme: currentTheme,
-            themeVariables: themeVariables,
+            theme: getCurrentTheme(),
             logLevel: 'error',
             flowchart: {
                 htmlLabels: true,
@@ -60,13 +31,8 @@
         });
     }
 
-
-    // Initial configuration
-    initializeMermaid();
-
     /**
      * Convert code blocks with language-mermaid class to mermaid format
-     * Stores original content for theme re-rendering
      */
     function prepareMermaidBlocks() {
         const mermaidCodeBlocks = document.querySelectorAll('code.language-mermaid');
@@ -75,20 +41,15 @@
             return false;
         }
 
-        mermaidContents = []; // Reset stored contents
+        mermaidContents = [];
 
         mermaidCodeBlocks.forEach((codeElement, index) => {
             const preElement = codeElement.parentElement;
             if (preElement && preElement.tagName === 'PRE') {
                 const mermaidText = codeElement.textContent || codeElement.innerText;
 
-                // Store original content for re-rendering
-                mermaidContents.push({
-                    element: preElement,
-                    content: mermaidText
-                });
+                mermaidContents.push({ element: preElement, content: mermaidText });
 
-                // Setup for Mermaid rendering
                 preElement.innerHTML = '';
                 preElement.className = 'mermaid';
                 preElement.setAttribute('data-mermaid-index', index);
@@ -100,103 +61,26 @@
     }
 
     /**
-     * Run Mermaid rendering on all prepared blocks
+     * Run Mermaid rendering
      */
     async function runMermaid() {
         try {
-            await mermaid.run({
-                querySelector: '.mermaid',
-            });
+            await mermaid.run({ querySelector: '.mermaid' });
         } catch (error) {
             console.error('Mermaid rendering error:', error);
         }
     }
 
     /**
-     * Apply custom CSS for better text visibility on styled nodes
-     * Mermaid inline styles can override theme colors, so we need CSS overrides
-     */
-    function applyThemeCSS() {
-        const styleId = 'mermaid-theme-overrides';
-        let styleElement = document.getElementById(styleId);
-
-        if (!styleElement) {
-            styleElement = document.createElement('style');
-            styleElement.id = styleId;
-            document.head.appendChild(styleElement);
-        }
-
-        const isDarkTheme = getCurrentTheme() === 'dark';
-
-        // CSS to ensure text visibility on styled nodes
-        // In dark mode, nodes with light fill colors need dark text
-        styleElement.textContent = isDarkTheme ? `
-        /* Dark mode: ensure text is visible on light-filled nodes */
-        .mermaid .node rect[style*="fill: rgb(255"],
-        .mermaid .node rect[style*="fill:#ff"],
-        .mermaid .node rect[style*="fill: #ff"],
-        .mermaid .node polygon[style*="fill: rgb(255"],
-        .mermaid .node polygon[style*="fill:#ff"],
-        .mermaid .node polygon[style*="fill: #ff"] {
-            stroke: #333333 !important;
-        }
-        
-        /* Force dark text on light-filled nodes in dark mode */
-        .mermaid .node .nodeLabel,
-        .mermaid .node .label {
-            color: inherit !important;
-        }
-        
-        /* Ensure edges and arrows are visible in dark mode */
-        .mermaid .edgePath .path {
-            stroke: #e6e6e6 !important;
-        }
-        
-        .mermaid .arrowheadPath {
-            fill: #e6e6e6 !important;
-        }
-        
-        /* Ensure subgraph labels are visible */
-        .mermaid .cluster-label .nodeLabel {
-            color: #ffffff !important;
-        }
-        
-        /* Ensure flowchart labels are visible */
-        .mermaid .flowchart-link {
-            stroke: #e6e6e6 !important;
-        }
-    ` : `
-        /* Light mode: default styles work well */
-        .mermaid .edgePath .path {
-            stroke: #333333 !important;
-        }
-        
-        .mermaid .arrowheadPath {
-            fill: #333333 !important;
-        }
-    `;
-    }
-
-    /**
-     * Re-render all Mermaid diagrams with new theme
-     * Called when user toggles theme
+     * Re-render diagrams when theme changes
      */
     async function reRenderMermaid() {
         const mermaidElements = document.querySelectorAll('.mermaid');
+        if (mermaidElements.length === 0) return;
 
-        if (mermaidElements.length === 0) {
-            return;
-        }
-
-        // Re-initialize with new theme
         initializeMermaid();
 
-        // Apply theme-specific CSS
-        applyThemeCSS();
-
-        // Restore original content and re-render
         mermaidElements.forEach((element, index) => {
-            // Remove rendered SVG and restore text content
             if (mermaidContents[index]) {
                 element.innerHTML = '';
                 element.removeAttribute('data-processed');
@@ -204,30 +88,16 @@
             }
         });
 
-        // Re-run Mermaid
         await runMermaid();
     }
 
     /**
-     * Initial Mermaid setup
-     */
-    async function initMermaid() {
-        if (prepareMermaidBlocks()) {
-            applyThemeCSS(); // Apply theme CSS on initial load
-            await runMermaid();
-        }
-    }
-
-
-    /**
-     * Watch for theme changes via data-theme attribute
-     * Best practice: Use MutationObserver for reactive theme updates
+     * Watch for theme changes
      */
     function watchThemeChanges() {
         const observer = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
                 if (mutation.attributeName === 'data-theme') {
-                    // Debounce re-render to avoid rapid consecutive calls
                     setTimeout(reRenderMermaid, 50);
                 }
             });
@@ -240,21 +110,22 @@
     }
 
     /**
-     * Wait for DOM to be fully loaded before initializing
+     * Initial setup - initialize AFTER DOM ready so data-theme is available
      */
+    async function initMermaid() {
+        initializeMermaid(); // Initialize here after DOM is ready
+        if (prepareMermaidBlocks()) {
+            await runMermaid();
+        }
+    }
+
     function waitForMermaid() {
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', function () {
-                setTimeout(() => {
-                    initMermaid();
-                    watchThemeChanges();
-                }, 100);
+            document.addEventListener('DOMContentLoaded', () => {
+                setTimeout(() => { initMermaid(); watchThemeChanges(); }, 100);
             });
         } else {
-            setTimeout(() => {
-                initMermaid();
-                watchThemeChanges();
-            }, 100);
+            setTimeout(() => { initMermaid(); watchThemeChanges(); }, 100);
         }
     }
 
