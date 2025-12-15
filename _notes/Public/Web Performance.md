@@ -332,7 +332,7 @@ console.log('Data fetch took:', measures[0].duration, 'ms')
 
 ## Next.js Specific Optimizations
 
-### 1. [[Static Site Generation]] (SSG)
+### 1. [[SSG|Static Site Generation]] (SSG)
 ```typescript
 // Pre-generate pages at build time
 export async function getStaticProps() {
@@ -345,7 +345,7 @@ export async function getStaticProps() {
 }
 ```
 
-### 2. [[Server Side Rendering]] (SSR)
+### 2. [[SSR|Server Side Rendering]] (SSR)
 ```typescript
 // Server-side rendering for dynamic content
 export async function getServerSideProps(context) {
@@ -646,10 +646,13 @@ Performance yang baik = Better UX = Higher conversions = Business success
 ---
 
 **Related Notes:**
-- [[NextJS]] - Framework dengan built-in optimizations
-- [[Server Side Rendering]] - SSR untuk performance
-- [[Static Site Generation]] - SSG untuk speed
-- [[React Framework]] - Framework considerations
+- [[NextJS|Next.js]] - Framework dengan built-in optimizations
+- [[SSR|Server Side Rendering]] - SSR untuk performance
+- [[SSG|Static Site Generation]] - SSG untuk speed
+- [[App Router|App Router]] - Modern routing dengan performance benefits
+- [[Pages Router|Pages Router]] - Traditional routing
+- [[React Framework|Framework React]] - Framework considerations
+- [[SEO Optimization|SEO]] - Performance impact pada SEO
 
 **External Links:**
 - [[Web Vitals::https://web.dev/vitals/]]

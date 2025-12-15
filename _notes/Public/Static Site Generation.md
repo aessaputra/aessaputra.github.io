@@ -31,9 +31,7 @@ aliases:
   - Incremental Static Regeneration
 ---
 
-# Static Site Generation (SSG)
-
-Static Site Generation (SSG) adalah teknik pre-rendering dimana HTML pages di-generate pada build time, bukan pada request time seperti [[Server Side Rendering]]. Hasil berupa static files yang dapat di-serve dari CDN.
+Static Site Generation (SSG) adalah teknik pre-rendering dimana HTML pages di-generate pada build time, bukan pada request time seperti [[SSR|Server Side Rendering]]. Hasil berupa static files yang dapat di-serve dari CDN. SSG adalah salah satu kekuatan utama [[NextJS|Next.js]] untuk mencapai [[Web Performance|performance]] maksimal.
 
 ## Apa itu SSG?
 
@@ -570,10 +568,12 @@ SSG adalah pilihan excellent untuk websites yang mengutamakan performance, SEO, 
 ---
 
 **Related Notes:**
-- [[NextJS]] - Framework dengan SSG support excellent
-- [[Server Side Rendering]] - Alternative rendering strategy
-- [[Jamstack]] - Architecture pattern untuk modern web
-- [[Web Performance]] - Optimasi performa web
+- [[NextJS|Next.js]] - Framework dengan SSG support excellent
+- [[SSR|Server Side Rendering]] - Alternative rendering strategy
+- [[App Router|App Router]] - SSG implementation modern
+- [[Pages Router|Pages Router]] - SSG dengan getStaticProps
+- [[Web Performance|Performance Optimization]] - Optimasi performa web
+- [[SEO Optimization|SEO]] - SEO benefits dari SSG
 
 **External Links:**
 - [[Next.js SSG Guide::https://nextjs.org/docs/basic-features/data-fetching]]

@@ -26,9 +26,6 @@ aliases:
   - React Library vs Framework
   - React Ecosystem
 ---
-
-# Apa itu React Framework?
-
 React Framework adalah layer tambahan di atas React library yang menyediakan struktur, konvensi, dan fitur-fitur tambahan untuk membangun aplikasi web yang lebih kompleks dan production-ready.
 
 ## Perbedaan React Library vs React Framework
@@ -80,9 +77,9 @@ Framework menyediakan best practices secara default:
 
 ## Popular React Frameworks
 
-### [[NextJS]]
-- **Full-stack framework** dengan SSR/SSG
-- **File-based routing**
+### [[NextJS|Next.js]]
+- **Full-stack framework** dengan [[SSR]]/[[SSG]]
+- **File-based routing** dengan [[App Router]] dan [[Pages Router]]
 - **API routes** untuk backend functionality
 - **Built-in optimizations** (images, fonts, scripts)
 - **Deployment** terintegrasi dengan Vercel
@@ -358,10 +355,11 @@ React Framework menyediakan foundation yang solid untuk membangun aplikasi React
 ---
 
 **Related Notes:**
-- [[NextJS]] - Framework React yang populer
-- [[Server Side Rendering]] - Rendering di server
-- [[Static Site Generation]] - Generate static files
-- [[Web Development]] - Pengembangan web modern
+- [[NextJS|Next.js]] - Framework React yang populer
+- [[SSR|Server Side Rendering]] - Rendering di server
+- [[SSG|Static Site Generation]] - Generate static files
+- [[Web Performance|Performance Optimization]] - Optimasi performa web
+- [[SEO Optimization|SEO]] - Search engine optimization
 
 **External Links:**
 - [[React Documentation::https://react.dev]]

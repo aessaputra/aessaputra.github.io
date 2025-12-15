@@ -28,9 +28,7 @@ aliases:
   - Next.js SSR
 ---
 
-# Server Side Rendering (SSR)
-
-Server Side Rendering (SSR) adalah teknik rendering dimana HTML halaman web di-generate di server sebelum dikirim ke browser client, berbeda dengan Client Side Rendering yang me-render di browser.
+Server Side Rendering (SSR) adalah teknik rendering dimana HTML halaman web di-generate di server sebelum dikirim ke browser client, berbeda dengan Client Side Rendering yang me-render di browser. SSR adalah salah satu fitur utama [[NextJS|Next.js]] untuk meningkatkan [[SEO Optimization|SEO]] dan [[Web Performance|performance]].
 
 ## Apa itu SSR?
 
@@ -301,7 +299,7 @@ export async function getServerSideProps(context) {
 ## Kapan Menggunakan SSR
 
 ### ✅ Gunakan SSR Ketika:
-- SEO sangat penting
+- [[SEO Optimization|SEO]] sangat penting
 - Content berubah frequently
 - Personalized content per user
 - Real-time data requirements
@@ -309,7 +307,7 @@ export async function getServerSideProps(context) {
 
 ### ❌ Hindari SSR Ketika:
 - Aplikasi internal/dashboard
-- Content mostly static
+- Content mostly static (gunakan [[SSG|Static Site Generation]])
 - High traffic dengan budget terbatas
 - Complex client-side interactions
 - Real-time collaborative apps
@@ -400,10 +398,12 @@ SSR adalah teknik powerful untuk meningkatkan SEO dan perceived performance, tap
 ---
 
 **Related Notes:**
-- [[NextJS]] - Framework dengan SSR support
-- [[Static Site Generation]] - Alternative rendering strategy
-- [[Web Performance]] - Optimasi performa web
-- [[SEO Optimization]] - Search engine optimization
+- [[NextJS|Next.js]] - Framework dengan SSR support excellent
+- [[SSG|Static Site Generation]] - Alternative rendering strategy
+- [[App Router|App Router]] - SSR implementation di Next.js 13+
+- [[Pages Router|Pages Router]] - SSR dengan getServerSideProps
+- [[Web Performance|Performance Optimization]] - Optimasi performa web
+- [[SEO Optimization|SEO]] - Search engine optimization
 
 **External Links:**
 - [[Next.js SSR Guide::https://nextjs.org/docs/basic-features/pages]]

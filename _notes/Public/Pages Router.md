@@ -31,7 +31,7 @@ aliases:
 
 # Next.js Pages Router
 
-Pages Router adalah sistem routing original di [[NextJS]] yang menggunakan direktori `pages/` untuk mendefinisikan routes. Meskipun [[App Router]] adalah sistem yang lebih baru, Pages Router masih didukung dan banyak digunakan.
+Pages Router adalah sistem routing original di [[NextJS|Next.js]] yang menggunakan direktori `pages/` untuk mendefinisikan routes. Meskipun [[App Router|App Router]] adalah sistem yang lebih baru, Pages Router masih didukung dan banyak digunakan untuk implementasi [[SSR]] dan [[SSG]].
 
 ## Apa itu Pages Router?
 
@@ -768,10 +768,12 @@ Pages Router adalah sistem routing yang mature dan stabil di Next.js. Meskipun [
 ---
 
 **Related Notes:**
-- [[NextJS]] - Framework utama
-- [[App Router]] - Sistem routing baru
-- [[Server Side Rendering]] - SSR implementation
-- [[Static Site Generation]] - SSG implementation
+- [[NextJS|Next.js]] - Framework utama
+- [[App Router|App Router]] - Sistem routing baru
+- [[getServerSideProps|SSR]] - Server Side Rendering implementation
+- [[getStaticProps|SSG]] - Static Site Generation implementation
+- [[Web Performance|Performance]] - Optimasi performa
+- [[SEO Optimization|SEO]] - Search engine optimization
 
 **External Links:**
 - [[Pages Router Documentation::https://nextjs.org/docs/pages]]

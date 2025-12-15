@@ -50,13 +50,13 @@ Next.js adalah framework React yang powerful untuk membangun aplikasi web full-s
 
 ### Apa itu Next.js?
 
-Next.js adalah **[[React Framework]]** yang menyediakan building blocks untuk membuat aplikasi web yang cepat dan user-friendly. Framework ini menangani tooling dan konfigurasi yang diperlukan untuk React, serta menyediakan struktur, fitur, dan optimisasi tambahan untuk aplikasi Anda.
+Next.js adalah **[[React Framework|framework React]]** yang menyediakan building blocks untuk membuat aplikasi web yang cepat dan user-friendly. Framework ini menangani tooling dan konfigurasi yang diperlukan untuk React, serta menyediakan struktur, fitur, dan optimisasi tambahan untuk aplikasi Anda.
 
 ### Mengapa Memilih Next.js?
 
 - **Zero Configuration**: Setup otomatis untuk bundling, compiling, dan lainnya
-- **[[Server Side Rendering]] (SSR)**: Performa loading yang lebih cepat
-- **[[Static Site Generation]] (SSG)**: Pre-rendering untuk performa optimal
+- **[[SSR|Server Side Rendering]] (SSR)**: Performa loading yang lebih cepat
+- **[[SSG|Static Site Generation]] (SSG)**: Pre-rendering untuk performa optimal
 - **API Routes**: Backend functionality dalam satu aplikasi
 - **File-based Routing**: Routing otomatis berdasarkan struktur file
 - **Built-in Optimizations**: Image, font, dan script optimization
@@ -151,8 +151,8 @@ Next.js memiliki dua sistem routing:
 > **Rekomendasi**: Gunakan **[[App Router]]** untuk proyek baru
 
 Untuk detail lengkap, lihat:
-- [[App Router]] - Sistem routing terbaru dengan React Server Components
-- [[Pages Router]] - Sistem routing original yang masih didukung
+- [[App Router|App Router]] - Sistem routing terbaru dengan [[RSC|React Server Components]]
+- [[Pages Router|Pages Router]] - Sistem routing original yang masih didukung
 
 ### 2. File Conventions
 
@@ -891,12 +891,13 @@ Next.js adalah framework yang powerful dan fleksibel untuk membangun aplikasi we
 ---
 
 **Related Notes:**
-- [[React Framework]] - Konsep framework React
-- [[App Router]] - Sistem routing terbaru
-- [[Pages Router]] - Sistem routing original
-- [[Server Side Rendering]] - SSR implementation
-- [[Static Site Generation]] - SSG implementation
-- [[Web Performance]] - Optimasi performa web
+- [[React Framework|Framework React]] - Konsep framework React
+- [[App Router|App Router]] - Sistem routing terbaru dengan RSC
+- [[Pages Router|Pages Router]] - Sistem routing original
+- [[SSR|Server Side Rendering]] - SSR implementation
+- [[SSG|Static Site Generation]] - SSG implementation  
+- [[Web Performance|Performance Optimization]] - Optimasi performa web
+- [[SEO Optimization|SEO]] - Search engine optimization
 - [[Markdown Guide]] - Format penulisan untuk catatan
 - [[deepwiki-guide]] - Tool untuk eksplorasi repository
 

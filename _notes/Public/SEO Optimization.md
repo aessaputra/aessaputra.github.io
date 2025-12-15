@@ -634,10 +634,13 @@ Dengan [[NextJS]], banyak SEO best practices sudah built-in, tapi tetap perlu im
 ---
 
 **Related Notes:**
-- [[NextJS]] - Framework dengan SEO features
-- [[Web Performance]] - Performance optimization
-- [[Server Side Rendering]] - SSR untuk SEO
-- [[Static Site Generation]] - SSG untuk speed
+- [[NextJS|Next.js]] - Framework dengan SEO features excellent
+- [[Web Performance|Performance Optimization]] - Performance impact pada SEO
+- [[SSR|Server Side Rendering]] - SSR untuk SEO optimal
+- [[SSG|Static Site Generation]] - SSG untuk speed dan SEO
+- [[App Router|App Router]] - Modern SEO implementation
+- [[Pages Router|Pages Router]] - Traditional SEO approach
+- [[React Framework|Framework React]] - SEO considerations
 
 **External Links:**
 - [[Google Search Console::https://search.google.com/search-console]]

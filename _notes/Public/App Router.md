@@ -29,7 +29,7 @@ aliases:
   - App Dir
 ---
 
-App Router adalah sistem routing terbaru di [[NextJS]] yang diperkenalkan di versi 13, menggantikan [[Pages Router]]. App Router dibangun di atas React Server Components dan menyediakan fitur-fitur modern untuk aplikasi web.
+App Router adalah sistem routing terbaru di [[NextJS|Next.js]] yang diperkenalkan di versi 13, menggantikan [[Pages Router|Pages Router]]. App Router dibangun di atas [[RSC|React Server Components]] dan menyediakan fitur-fitur modern untuk aplikasi web dengan dukungan [[SSR]] dan [[SSG]] yang lebih baik.
 
 ## Apa itu App Router?
 
@@ -667,10 +667,14 @@ App Router adalah evolusi besar dalam Next.js yang membawa:
 ---
 
 **Related Notes:**
-- [[NextJS]] - Framework utama
-- [[Pages Router]] - Sistem routing lama
-- [[Server Side Rendering]] - Rendering strategy
-- [[React Framework]] - Konsep framework React
+- [[NextJS|Next.js]] - Framework utama
+- [[Pages Router|Pages Router]] - Sistem routing lama
+- [[RSC|React Server Components]] - Komponen server React
+- [[SSR|Server Side Rendering]] - Rendering strategy
+- [[SSG|Static Site Generation]] - Static generation
+- [[React Framework|Framework React]] - Konsep framework React
+- [[Web Performance|Performance]] - Optimasi performa
+- [[SEO Optimization|SEO]] - Search engine optimization
 
 **External Links:**
 - [[App Router Documentation::https://nextjs.org/docs/app]]
