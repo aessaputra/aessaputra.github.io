@@ -19,6 +19,12 @@ topics:
   - frontend-framework
 status: published
 feed: show
+aliases:
+  - React Framework
+  - React Frameworks
+  - Framework React
+  - React Library vs Framework
+  - React Ecosystem
 ---
 
 # Apa itu React Framework?

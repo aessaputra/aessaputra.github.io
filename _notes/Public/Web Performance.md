@@ -19,9 +19,17 @@ topics:
   - user-experience
 status: published
 feed: show
+aliases:
+  - Web Performance
+  - Performance Optimization
+  - Core Web Vitals
+  - LCP
+  - FID
+  - CLS
+  - Performance Metrics
+  - Web Vitals
+  - Site Speed
 ---
-
-# Web Performance Optimization
 
 Web Performance adalah kecepatan loading dan responsivitas website yang secara langsung mempengaruhi user experience, SEO ranking, dan conversion rates. Optimasi performa web adalah aspek kritis dalam pengembangan aplikasi modern.
 

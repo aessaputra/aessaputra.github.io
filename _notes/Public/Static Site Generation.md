@@ -20,6 +20,15 @@ topics:
   - jamstack
 status: published
 feed: show
+aliases:
+  - Static Site Generation
+  - SSG
+  - Static Generation
+  - Static Sites
+  - SSG Next.js
+  - Next.js SSG
+  - ISR
+  - Incremental Static Regeneration
 ---
 
 # Static Site Generation (SSG)

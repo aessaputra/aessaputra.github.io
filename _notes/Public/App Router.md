@@ -19,9 +19,15 @@ topics:
   - web-development
 status: published
 feed: show
+aliases:
+  - App Router
+  - Next.js App Router
+  - App Directory
+  - Next 13 Router
+  - React Server Components
+  - RSC
+  - App Dir
 ---
-
-# Next.js App Router
 
 App Router adalah sistem routing terbaru di [[NextJS]] yang diperkenalkan di versi 13, menggantikan [[Pages Router]]. App Router dibangun di atas React Server Components dan menyediakan fitur-fitur modern untuk aplikasi web.
 

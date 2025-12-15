@@ -19,6 +19,14 @@ topics:
   - web-development
 status: published
 feed: show
+aliases:
+  - Pages Router
+  - Next.js Pages Router
+  - Pages Directory
+  - Legacy Router
+  - getStaticProps
+  - getServerSideProps
+  - getStaticPaths
 ---
 
 # Next.js Pages Router

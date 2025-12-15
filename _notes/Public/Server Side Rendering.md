@@ -19,6 +19,13 @@ topics:
   - rendering-strategies
 status: published
 feed: show
+aliases:
+  - Server Side Rendering
+  - SSR
+  - Server-Side Rendering
+  - Server Rendering
+  - SSR Next.js
+  - Next.js SSR
 ---
 
 # Server Side Rendering (SSR)

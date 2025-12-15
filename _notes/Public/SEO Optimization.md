@@ -19,9 +19,16 @@ topics:
   - web-development
 status: published
 feed: show
+aliases:
+  - SEO Optimization
+  - SEO
+  - Search Engine Optimization
+  - Technical SEO
+  - SEO Next.js
+  - Meta Tags
+  - Structured Data
+  - Schema.org
 ---
-
-# SEO Optimization untuk Web Development
 
 Search Engine Optimization (SEO) adalah praktik mengoptimalkan website agar mendapat ranking yang lebih baik di search engine results pages (SERPs). Untuk developer, SEO melibatkan technical implementation dan performance optimization.
 
