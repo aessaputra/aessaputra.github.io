@@ -1,5 +1,7 @@
 ---
 title: Code Generation - Pabrik Otomatis Pembuat Kode
+aliases:
+  - Code Generation
 categories:
   - "[[Posts]]"
 tags:

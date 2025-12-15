@@ -30,7 +30,7 @@ Repository golang/go bukan sekadar kumpulan kode, melainkan sebuah **perpustakaa
 
 Struktur repository Go dapat diibaratkan sebagai **peta kota yang terorganisir dengan sempurna**. Setiap direktori memiliki tujuan spesifik, seperti distrik bisnis, area residensial, dan zona industri dalam sebuah kota. Dokumentasi ini menjelaskan bagaimana kode sumber Go diorganisir secara logis, mulai dari [[Go Compiler|kompiler]] hingga [[Standard Library|pustaka standar]].
 
-Organisasi ini bukan kebetulan, melainkan hasil dari **perencanaan arsitektur yang matang**. Tim Go memahami bahwa struktur yang baik adalah kunci untuk maintainability dan skalabilitas jangka panjang. Setiap file dan direktori ditempatkan berdasarkan fungsi dan keterkaitannya dengan komponen lain seperti [[Go Runtime|runtime system]] dan [[Build System|build tools]].
+Organisasi ini bukan kebetulan, melainkan hasil dari **perencanaan arsitektur yang matang**. Tim Go memahami bahwa struktur yang baik adalah kunci untuk maintainability dan skalabilitas jangka panjang. Setiap file dan direktori ditempatkan berdasarkan fungsi dan keterkaitannya dengan komponen lain seperti [[Go Runtime|runtime system]] dan build tools.
 
 ### Development Workflow - Jalur Kontribusi
 

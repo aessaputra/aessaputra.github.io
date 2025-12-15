@@ -1,5 +1,7 @@
 ---
 title: GitHub - Perpustakaan Kolaborasi Global
+aliases:
+  - GitHub
 categories:
   - "[[Posts]]"
 tags:

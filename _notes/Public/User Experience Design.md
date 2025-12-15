@@ -1,5 +1,8 @@
 ---
 title: User Experience Design
+aliases:
+  - User Experience Design
+  - UX Design
 categories:
   - "[[Posts]]"
 tags:

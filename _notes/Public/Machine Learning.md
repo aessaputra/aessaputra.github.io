@@ -1,5 +1,7 @@
 ---
 title: Machine Learning - Sistem Pembelajaran Otomatis
+aliases:
+  - Machine Learning
 categories:
   - "[[Posts]]"
 tags:

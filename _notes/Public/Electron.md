@@ -1,5 +1,7 @@
 ---
 title: Electron - Jembatan Web ke Desktop Native
+aliases:
+  - Electron
 categories:
   - "[[Posts]]"
 tags:

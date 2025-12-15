@@ -1,5 +1,7 @@
 ---
 title: Concurrent Features - Sistem Multitasking Orkestra Digital
+aliases:
+  - Concurrent Features
 categories:
   - "[[Posts]]"
 tags:

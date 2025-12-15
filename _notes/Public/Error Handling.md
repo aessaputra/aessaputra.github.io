@@ -1,5 +1,7 @@
 ---
 title: Error Handling - Sistem Keamanan dan Recovery Digital
+aliases:
+  - Error Handling
 categories:
   - "[[Posts]]"
 tags:

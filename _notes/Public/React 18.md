@@ -1,5 +1,7 @@
 ---
 title: React 18 - Revolusi Orkestra dengan Concurrent Symphony
+aliases:
+  - React 18
 categories:
   - "[[Posts]]"
 tags:

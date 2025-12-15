@@ -1,5 +1,7 @@
 ---
 title: React Native - Sistem Transportasi Lintas Platform
+aliases:
+  - React Native
 categories:
   - "[[Posts]]"
 tags:

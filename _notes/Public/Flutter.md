@@ -1,5 +1,7 @@
 ---
 title: Flutter - Pabrik Mainan Modern dengan Jalur Produksi Otomatis
+aliases:
+  - Flutter
 categories:
   - "[[Posts]]"
 tags:

@@ -1,5 +1,7 @@
 ---
 title: Server Components - Orkestra Hybrid Server-Client
+aliases:
+  - Server Components
 categories:
   - "[[Posts]]"
 tags:

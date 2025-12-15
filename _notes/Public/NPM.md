@@ -1,5 +1,7 @@
 ---
 title: NPM - Sistem Logistik Global untuk JavaScript
+aliases:
+  - NPM
 categories:
   - "[[Posts]]"
 tags:

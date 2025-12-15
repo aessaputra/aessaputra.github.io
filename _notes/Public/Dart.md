@@ -1,5 +1,7 @@
 ---
 title: Dart - Bahasa Universal Pabrik dengan Translator Pintar
+aliases:
+  - Dart
 categories:
   - "[[Posts]]"
 tags:

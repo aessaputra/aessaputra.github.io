@@ -1,5 +1,8 @@
 ---
 title: SEO Optimization untuk Web Development
+aliases:
+  - SEO Optimization
+  - SEO
 categories:
   - "[[Posts]]"
 tags:

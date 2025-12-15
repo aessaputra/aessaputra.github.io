@@ -1,5 +1,7 @@
 ---
 title: Suspense - Tirai Teater yang Cerdas dan Responsif
+aliases:
+  - Suspense
 categories:
   - "[[Posts]]"
 tags:

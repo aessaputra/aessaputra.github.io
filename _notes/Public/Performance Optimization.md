@@ -1,5 +1,7 @@
 ---
 title: Performance Optimization - Tuning Mesin Balap Digital
+aliases:
+  - Performance Optimization
 categories:
   - "[[Posts]]"
 tags:

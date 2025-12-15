@@ -1,5 +1,7 @@
 ---
 title: WebView - Jendela Web dalam Aplikasi Native
+aliases:
+  - WebView
 categories:
   - "[[Posts]]"
 tags:

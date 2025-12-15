@@ -1,5 +1,7 @@
 ---
 title: Node.js - Runtime JavaScript di Luar Browser
+aliases:
+  - Node.js
 categories:
   - "[[Posts]]"
 tags:

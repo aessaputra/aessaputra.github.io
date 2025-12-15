@@ -1,5 +1,7 @@
 ---
 title: Native Code - Bahasa Asli Mesin
+aliases:
+  - Native Code
 categories:
   - "[[Posts]]"
 tags:

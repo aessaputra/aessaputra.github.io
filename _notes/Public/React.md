@@ -1,5 +1,7 @@
 ---
 title: React - Perpustakaan Komponen Interaktif
+aliases:
+  - React
 categories:
   - "[[Posts]]"
 tags:
@@ -692,7 +694,7 @@ const AppRouter = () => (
 
 ### Perbandingan dengan Framework Lain
 
-| Aspek | React | [[Vue]] | [[Angular]] | [[Svelte]] |
+| Aspek | React | Vue | Angular | Svelte |
 |-------|-------|---------|-------------|------------|
 | **Learning Curve** | Medium | Easy | Steep | Easy |
 | **Bundle Size** | Medium | Small | Large | Smallest |

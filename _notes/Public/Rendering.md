@@ -1,5 +1,7 @@
 ---
 title: Rendering - Studio Produksi Visual Digital
+aliases:
+  - Rendering
 categories:
   - "[[Posts]]"
 tags:

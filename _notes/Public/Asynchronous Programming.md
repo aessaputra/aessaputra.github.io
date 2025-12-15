@@ -1,5 +1,7 @@
 ---
 title: Asynchronous Programming - Orkestra Multitasking
+aliases:
+  - Asynchronous Programming
 categories:
   - "[[Posts]]"
 tags:

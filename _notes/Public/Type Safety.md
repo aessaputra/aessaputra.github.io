@@ -1,5 +1,7 @@
 ---
 title: Type Safety - Sistem Keamanan Berlapis
+aliases:
+  - Type Safety
 categories:
   - "[[Posts]]"
 tags:
@@ -481,10 +483,10 @@ const config = {
 
 ## Studi Kasus: Type Safety dalam Production
 
-**Airbnb**: Migrasi dari [[JavaScript]] ke [[TypeScript]] mengurangi production bugs 38%
+**Airbnb**: Migrasi dari [[JavaScript]] ke TypeScript mengurangi production bugs 38%
 **Slack**: Type safety membantu refactoring besar tanpa breaking changes
-**Microsoft**: [[TypeScript]] adoption meningkatkan developer productivity 20%
-**Facebook**: [[Flow]] type checker mencegah ribuan potential runtime errors
+**Microsoft**: TypeScript adoption meningkatkan developer productivity 20%
+**Facebook**: Flow type checker mencegah ribuan potential runtime errors
 
 **Lessons Learned:**
 - Gradual adoption lebih sustainable daripada big bang rewrite

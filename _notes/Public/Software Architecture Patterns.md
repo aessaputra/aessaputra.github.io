@@ -1,5 +1,7 @@
 ---
 title: Software Architecture Patterns
+aliases:
+  - Software Architecture Patterns
 author:
   - "[[Aes Saputra]]"
 categories:

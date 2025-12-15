@@ -1,5 +1,7 @@
 ---
 title: Hot Reloading - Sistem Renovasi Instan
+aliases:
+  - Hot Reloading
 categories:
   - "[[Posts]]"
 tags:

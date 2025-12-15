@@ -1,5 +1,7 @@
 ---
 title: State Management Patterns - Sistem Kontrol Pabrik dengan Berbagai Protokol Komunikasi
+aliases:
+  - State Management Patterns
 categories:
   - "[[Posts]]"
 tags:

@@ -1,5 +1,7 @@
 ---
 title: Lazy Loading - Sistem Restoran Ala Carte
+aliases:
+  - Lazy Loading
 categories:
   - "[[Posts]]"
 tags:

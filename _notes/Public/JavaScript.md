@@ -1,5 +1,7 @@
 ---
 title: JavaScript - Bahasa Universal Programmer
+aliases:
+  - JavaScript
 categories:
   - "[[Posts]]"
 tags:
@@ -35,7 +37,7 @@ JavaScript adalah bahasa pemrograman dinamis yang awalnya diciptakan untuk membu
 
 ### Dynamic Typing - Fleksibilitas Tanpa Batas
 
-JavaScript menggunakan [[Dynamic Typing|dynamic typing]], seperti percakapan casual yang tidak perlu deklarasi formal di awal.
+JavaScript menggunakan dynamic typing, seperti percakapan casual yang tidak perlu deklarasi formal di awal.
 
 ```mermaid
 graph TD
@@ -65,7 +67,7 @@ graph TD
 
 ### Prototype-Based Inheritance - Warisan Fleksibel
 
-Berbeda dengan [[Class-Based Inheritance|class-based inheritance]], JavaScript menggunakan prototype chain seperti sistem mentorship di dunia nyata.
+Berbeda dengan class-based inheritance, JavaScript menggunakan prototype chain seperti sistem mentorship di dunia nyata.
 
 ```javascript
 // Prototype Chain Example
@@ -93,7 +95,7 @@ JavaScriptDeveloper.prototype.buildApp = function() {
 
 ### Event-Driven Programming - Orkestra Asynchronous
 
-JavaScript menggunakan [[Event Loop]] untuk menangani operasi asynchronous, seperti konduktor orkestra yang mengatur timing berbagai instrumen.
+JavaScript menggunakan Event Loop untuk menangani operasi asynchronous, seperti konduktor orkestra yang mengatur timing berbagai instrumen.
 
 ```mermaid
 graph LR
@@ -142,7 +144,7 @@ graph LR
 
 ### Modern JavaScript Features - Evolusi Berkelanjutan
 
-JavaScript terus berevolusi melalui [[ECMAScript]] specifications, seperti bahasa hidup yang terus berkembang mengikuti zaman.
+JavaScript terus berevolusi melalui ECMAScript specifications, seperti bahasa hidup yang terus berkembang mengikuti zaman.
 
 ```javascript
 // ES6+ Modern Features
@@ -174,7 +176,7 @@ export { greet, fetchUserData };
 
 ### Type Safety dengan TypeScript
 
-Untuk mengatasi keterbatasan dynamic typing, [[TypeScript]] hadir sebagai "sistem keamanan berlapis" untuk JavaScript.
+Untuk mengatasi keterbatasan dynamic typing, TypeScript hadir sebagai "sistem keamanan berlapis" untuk JavaScript.
 
 ```typescript
 // TypeScript - JavaScript with Type Safety
@@ -266,7 +268,7 @@ module.exports = {
 
 ### Perbandingan dengan Bahasa Lain
 
-| Aspek | JavaScript | [[Python]] | [[Java]] | [[Go]] |
+| Aspek | JavaScript | Python | Java | Go |
 |-------|------------|------------|----------|--------|
 | **Learning Curve** | Easy | Easy | Medium | Medium |
 | **Performance** | Good (V8) | Slow | Fast | Very Fast |
@@ -329,14 +331,14 @@ export const userService = {
 
 **Lessons Learned:**
 - JavaScript ecosystem memungkinkan rapid scaling dari startup ke enterprise
-- Type safety dengan [[TypeScript]] crucial untuk large codebases
+- Type safety dengan TypeScript crucial untuk large codebases
 - Performance optimization perlu attention khusus di production scale
 
 ## Refleksi: Masa Depan Bahasa Universal
 
 JavaScript telah berevolusi dari "bahasa mainan" di browser menjadi bahasa pemrograman paling influential di dunia. Seperti bahasa Inggris yang terus berkembang dengan vocabulary baru, JavaScript terus berinovasi dengan fitur-fitur modern sambil mempertahankan backward compatibility.
 
-Masa depan JavaScript terletak pada **universality** dan **performance**. Dengan [[WebAssembly]] untuk performance-critical tasks, [[Deno]] untuk secure runtime, dan [[TypeScript]] untuk type safety, JavaScript ecosystem terus berkembang menjadi platform yang semakin mature dan powerful.
+Masa depan JavaScript terletak pada **universality** dan **performance**. Dengan WebAssembly untuk performance-critical tasks, Deno untuk secure runtime, dan TypeScript untuk type safety, JavaScript ecosystem terus berkembang menjadi platform yang semakin mature dan powerful.
 
 Investasi dalam menguasai JavaScript adalah investasi jangka panjang - seperti belajar bahasa Inggris yang membuka pintu ke seluruh dunia, menguasai JavaScript membuka akses ke hampir semua domain programming modern.
 

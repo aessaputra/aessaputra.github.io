@@ -1,5 +1,7 @@
 ---
 title: Concurrent React - Orkestra Multitasking yang Responsif
+aliases:
+  - Concurrent React
 categories:
   - "[[Posts]]"
 tags:

@@ -1,5 +1,7 @@
 ---
 title: Developer Experience - Ergonomi Workspace Digital
+aliases:
+  - Developer Experience
 categories:
   - "[[Posts]]"
 tags:

@@ -1,5 +1,8 @@
 ---
 title: Learn Next.js
+aliases:
+  - NextJS
+  - Next.js
 categories:
   - "[[Posts]]"
 tags:

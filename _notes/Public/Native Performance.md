@@ -1,5 +1,7 @@
 ---
 title: Native Performance - Mesin Balap Formula 1
+aliases:
+  - Native Performance
 categories:
   - "[[Posts]]"
 tags:

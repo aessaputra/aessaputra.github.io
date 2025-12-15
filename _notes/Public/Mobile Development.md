@@ -1,5 +1,7 @@
 ---
 title: Mobile Development - Arsitektur Kota Digital
+aliases:
+  - Mobile Development
 categories:
   - "[[Posts]]"
 tags:
@@ -505,7 +507,7 @@ const loadUsers = async (): Promise<User[]> => {
 
 Mobile development terus berevolusi dari "aplikasi sederhana" menjadi "ekosistem digital kompleks" yang menghubungkan miliaran pengguna. Seperti kota yang berkembang dari settlement kecil menjadi metropolis modern, mobile apps kini menjadi platform untuk commerce, communication, entertainment, dan productivity.
 
-Masa depan mobile development terletak pada **convergence** - batas antara mobile, web, dan desktop semakin blur. Dengan [[Progressive Web Apps]], [[WebAssembly]], dan cloud computing, developer dapat membangun "kota digital universal" yang accessible di mana saja, kapan saja.
+Masa depan mobile development terletak pada **convergence** - batas antara mobile, web, dan desktop semakin blur. Dengan Progressive Web Apps, WebAssembly, dan cloud computing, developer dapat membangun "kota digital universal" yang accessible di mana saja, kapan saja.
 
 Investasi dalam mobile development skills adalah investasi dalam masa depan digital - seperti belajar urban planning di era urbanisasi global, menguasai mobile development membuka peluang untuk membangun pengalaman digital yang meaningful bagi miliaran pengguna.
 

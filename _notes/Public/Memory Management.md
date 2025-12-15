@@ -1,5 +1,7 @@
 ---
 title: Memory Management - Tukang Kebun Digital
+aliases:
+  - Memory Management
 categories:
   - "[[Posts]]"
 tags:

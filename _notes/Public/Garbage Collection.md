@@ -1,5 +1,7 @@
 ---
 title: Garbage Collection - Petugas Kebersihan Pintar Go
+aliases:
+  - Garbage Collection
 categories:
   - "[[Posts]]"
 tags:

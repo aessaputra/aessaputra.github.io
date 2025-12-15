@@ -1,5 +1,7 @@
 ---
 title: Cross-Platform Development - Jembatan Penghubung Benua Digital
+aliases:
+  - Cross-Platform Development
 categories:
   - "[[Posts]]"
 tags:
@@ -14,7 +16,7 @@ created: 2025-12-15
 published: 2025-12-15
 date: 2025-12-15
 topics: []
-status: "[[Published]]"
+status: "[[Published"
 feed: show
 ---
 
