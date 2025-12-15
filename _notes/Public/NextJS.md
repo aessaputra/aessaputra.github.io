@@ -18,7 +18,8 @@ topics:
   - web-development
   - react-framework
   - full-stack
-status: published
+status:
+  - "[[Published]]"
 feed: show
 aliases:
   - Next.js
