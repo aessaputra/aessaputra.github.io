@@ -16,6 +16,9 @@ date: 2025-12-15
 topics: []
 status: "[[Published]]"
 feed: show
+aliases:
+  - JavaScript Interface
+
 ---
 
 ## Pengantar: Telepon Langsung Tanpa Operator
