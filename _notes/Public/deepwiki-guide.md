@@ -19,9 +19,6 @@ topics:
 status: published
 feed: show
 ---
-
-# Panduan Menggunakan DeepWiki
-
 DeepWiki adalah tool yang memungkinkan Anda mengeksplorasi dan memahami repository GitHub dengan mudah melalui dokumentasi yang dihasilkan AI.
 
 ## Fungsi Utama
