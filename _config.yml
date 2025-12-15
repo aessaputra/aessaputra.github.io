@@ -96,6 +96,7 @@ privatelinks:
 
 # Math rendering
 katex: true
+mermaid: true
 
 # Exclude from processing
 exclude:
