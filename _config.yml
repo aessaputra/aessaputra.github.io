@@ -94,7 +94,7 @@ privatelinks:
   title: 'Private Note'
   msg: "This note hasn't been published yet."
 
-# Math rendering
+# Math + Diagram rendering
 katex: true
 mermaid: true
 
