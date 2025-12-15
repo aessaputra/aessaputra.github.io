@@ -31,6 +31,24 @@ Alias tampilan: [[InterPlanetary File System|IPFS]] menjelaskan teknologi.
 
 Saat kamu membuat Wiki Link ke catatan lain, catatan tersebut otomatis menampilkan bagian "Backlinks". Misalnya, ketika membuka [[Getting Started]], kamu akan melihat catatan ini tercantum di sana karena kita menautkannya.
 
+## Best Practice: Gunakan Aliases
+
+Jika judul catatan panjang, tambahkan `aliases` di front matter agar wikilink tetap sederhana:
+
+```yaml
+---
+title: JSON - Bahasa Diplomatik Data
+aliases:
+  - JSON
+  - json
+feed: show
+---
+```
+
+Dengan cara ini:
+- `[[JSON]]` akan terhubung ke catatan "JSON - Bahasa Diplomatik Data"
+- Backlinks akan terdeteksi dengan benar
+- Lebih mudah menulis wikilink
 
 ## Pemecahan Masalah
 

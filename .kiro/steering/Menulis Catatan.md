@@ -56,7 +56,7 @@ Setiap catatan yang dibuat harus mengikuti metodologi **Mind Mapping + Analogi M
 
 ### Aturan Wiki Links
 - **Wajib**: Gunakan `[[Topic Name]]` untuk setiap konsep yang memiliki catatan terpisah
-- **Konsisten**: Nama link harus sama dengan judul file catatan
+- **Konsisten**: Nama link harus sama dengan alias atau judul file catatan
 - **Kontekstual**: Link ditempatkan secara natural dalam kalimat
 - **Bidirectional**: Pastikan backlinks terbentuk otomatis
 
@@ -66,6 +66,25 @@ Setiap catatan yang dibuat harus mengikuti metodologi **Mind Mapping + Analogi M
 - Dengan alias: [[Nama Catatan|Teks Tampilan]]
 - External: [[Situs Web::https://example.com]]
 ```
+
+### Best Practice Backlinks
+
+**Masalah**: Jika title catatan panjang (misal: `JSON - Bahasa Diplomatik Data`), wikilink `[[JSON]]` tidak akan menghasilkan backlink.
+
+**Solusi**: Selalu tambahkan `aliases` di front matter:
+
+```yaml
+---
+title: JSON - Bahasa Diplomatik Data
+aliases:
+  - JSON
+---
+```
+
+Dengan cara ini:
+- `[[JSON]]` akan terhubung ke catatan dengan title panjang
+- Backlinks terdeteksi dengan benar
+- Lebih mudah menulis wikilink
 
 ## 4. Visualisasi Wajib
 
@@ -99,6 +118,8 @@ Gunakan tabel untuk:
 ```yaml
 ---
 title: [Judul Catatan] - [Analogi Utama]
+aliases:
+  - [Nama Pendek untuk Wikilink]
 categories:
   - "[[Posts]]"
 tags:

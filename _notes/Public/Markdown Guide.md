@@ -5,6 +5,26 @@ date: 2024-01-15
 ---
 Panduan ini menampilkan format Markdown penting yang dapat kamu gunakan dalam catatan.
 
+## Frontmatter
+
+Setiap catatan harus memiliki frontmatter YAML di awal file:
+
+```yaml
+---
+title: Judul Catatan
+aliases:
+  - Alias1
+  - alias2
+feed: show
+date: 2024-01-15
+---
+```
+
+- **title**: Judul yang ditampilkan di halaman
+- **aliases**: Nama alternatif untuk wikilink (opsional, tapi direkomendasikan)
+- **feed**: `show` agar catatan muncul di feed
+- **date**: Tanggal publikasi
+
 ## Judul
 
 ```markdown
