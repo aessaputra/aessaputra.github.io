@@ -1,28 +1,85 @@
+{%- comment -%}
+Backlinks: Find notes that link to the current page
+Supports both page.title and page.aliases for matching
+{%- endcomment -%}
+
 {%- assign link_count = 0 -%}
-{%- assign wiki_link_title = '[[' | append: page.title | append: ']]' -%}
+
+{%- comment -%} Count backlinks from site.notes {%- endcomment -%}
 {%- for note in site.notes -%}
 {%- if note.url != page.url -%}
-{%- if note.content contains wiki_link_title -%}
+{%- assign found = false -%}
+
+{%- comment -%} Check title {%- endcomment -%}
+{%- assign title_link = '[[' | append: page.title | append: ']]' -%}
+{%- if note.content contains title_link -%}
+{%- assign found = true -%}
+{%- endif -%}
+
+{%- comment -%} Check aliases if not found by title {%- endcomment -%}
+{%- unless found -%}
+{%- for alias in page.aliases -%}
+{%- assign alias_link = '[[' | append: alias | append: ']]' -%}
+{%- if note.content contains alias_link -%}
+{%- assign found = true -%}
+{%- break -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endunless -%}
+
+{%- if found -%}
 {%- assign link_count = link_count | plus:1 -%}
 {%- endif -%}
 {%- endif -%}
 {%- endfor -%}
+
+{%- comment -%} Count backlinks from site.posts {%- endcomment -%}
 {%- for note in site.posts -%}
 {%- if note.url != page.url -%}
-{%- if note.content contains wiki_link_title -%}
+{%- assign found = false -%}
+{%- assign title_link = '[[' | append: page.title | append: ']]' -%}
+{%- if note.content contains title_link -%}
+{%- assign found = true -%}
+{%- endif -%}
+{%- unless found -%}
+{%- for alias in page.aliases -%}
+{%- assign alias_link = '[[' | append: alias | append: ']]' -%}
+{%- if note.content contains alias_link -%}
+{%- assign found = true -%}
+{%- break -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endunless -%}
+{%- if found -%}
 {%- assign link_count = link_count | plus:1 -%}
 {%- endif -%}
 {%- endif -%}
 {%- endfor -%}
+
+{%- comment -%} Count backlinks from site.pages {%- endcomment -%}
 {%- for note in site.pages -%}
 {%- if note.url != page.url -%}
-{%- if note.content contains wiki_link_title -%}
+{%- assign found = false -%}
+{%- assign title_link = '[[' | append: page.title | append: ']]' -%}
+{%- if note.content contains title_link -%}
+{%- assign found = true -%}
+{%- endif -%}
+{%- unless found -%}
+{%- for alias in page.aliases -%}
+{%- assign alias_link = '[[' | append: alias | append: ']]' -%}
+{%- if note.content contains alias_link -%}
+{%- assign found = true -%}
+{%- break -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endunless -%}
+{%- if found -%}
 {%- assign link_count = link_count | plus:1 -%}
 {%- endif -%}
 {%- endif -%}
 {%- endfor -%}
+
 {%- if link_count > 0 -%}
-{%- assign wiki_link_title = '[[' | append: page.title | append: ']]' -%}
 {%- assign display_class = 'hide' -%}
 {%- if site.preferences.backlinks.enabled -%}
 {%- assign display_class = 'show' -%}
@@ -32,21 +89,63 @@
     <ul class="links-grid">
         {%- for note in site.notes -%}
         {%- if note.url != page.url -%}
-        {%- if note.content contains wiki_link_title -%}
+        {%- assign found = false -%}
+        {%- assign title_link = '[[' | append: page.title | append: ']]' -%}
+        {%- if note.content contains title_link -%}
+        {%- assign found = true -%}
+        {%- endif -%}
+        {%- unless found -%}
+        {%- for alias in page.aliases -%}
+        {%- assign alias_link = '[[' | append: alias | append: ']]' -%}
+        {%- if note.content contains alias_link -%}
+        {%- assign found = true -%}
+        {%- break -%}
+        {%- endif -%}
+        {%- endfor -%}
+        {%- endunless -%}
+        {%- if found -%}
         <li><a href="{{ site.baseurl }}{{note.url}}">{{ note.title }}</a></li>
         {%- endif -%}
         {%- endif -%}
         {%- endfor -%}
         {%- for note in site.posts -%}
         {%- if note.url != page.url -%}
-        {%- if note.content contains wiki_link_title -%}
+        {%- assign found = false -%}
+        {%- assign title_link = '[[' | append: page.title | append: ']]' -%}
+        {%- if note.content contains title_link -%}
+        {%- assign found = true -%}
+        {%- endif -%}
+        {%- unless found -%}
+        {%- for alias in page.aliases -%}
+        {%- assign alias_link = '[[' | append: alias | append: ']]' -%}
+        {%- if note.content contains alias_link -%}
+        {%- assign found = true -%}
+        {%- break -%}
+        {%- endif -%}
+        {%- endfor -%}
+        {%- endunless -%}
+        {%- if found -%}
         <li><a href="{{ site.baseurl }}{{note.url}}">{{ note.title }}</a></li>
         {%- endif -%}
         {%- endif -%}
         {%- endfor -%}
         {%- for note in site.pages -%}
         {%- if note.url != page.url -%}
-        {%- if note.content contains wiki_link_title -%}
+        {%- assign found = false -%}
+        {%- assign title_link = '[[' | append: page.title | append: ']]' -%}
+        {%- if note.content contains title_link -%}
+        {%- assign found = true -%}
+        {%- endif -%}
+        {%- unless found -%}
+        {%- for alias in page.aliases -%}
+        {%- assign alias_link = '[[' | append: alias | append: ']]' -%}
+        {%- if note.content contains alias_link -%}
+        {%- assign found = true -%}
+        {%- break -%}
+        {%- endif -%}
+        {%- endfor -%}
+        {%- endunless -%}
+        {%- if found -%}
         <li><a href="{{ site.baseurl }}{{note.url}}">{{ note.title }}</a></li>
         {%- endif -%}
         {%- endif -%}

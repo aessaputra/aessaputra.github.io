@@ -1,5 +1,7 @@
 ---
 title: JSON - Bahasa Diplomatik Data
+aliases:
+  - JSON
 categories:
   - "[[Posts]]"
 tags:

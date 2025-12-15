@@ -1,5 +1,7 @@
 ---
 title: Serialization - Sistem Pengepakan Universal
+aliases:
+  - Serialization
 categories:
   - "[[Posts]]"
 tags:
