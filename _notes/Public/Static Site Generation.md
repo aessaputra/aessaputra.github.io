@@ -1,5 +1,8 @@
 ---
 title: Static Site Generation (SSG)
+aliases:
+  - Static Site Generation
+  - SSG
 categories:
   - "[[Posts]]"
 tags:

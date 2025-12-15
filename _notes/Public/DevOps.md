@@ -1,5 +1,7 @@
 ---
 title: " Apa itu DevOps?"
+aliases:
+  - DevOps
 categories:
   - "[[Posts]]"
 tags:

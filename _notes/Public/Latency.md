@@ -1,5 +1,7 @@
 ---
 title: Latency - Waktu Perjalanan Digital
+aliases:
+  - Latency
 categories:
   - "[[Posts]]"
 tags:

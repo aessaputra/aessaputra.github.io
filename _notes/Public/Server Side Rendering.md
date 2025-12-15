@@ -1,5 +1,8 @@
 ---
 title: Server Side Rendering (SSR)
+aliases:
+  - Server Side Rendering
+  - SSR
 categories:
   - "[[Posts]]"
 tags:
