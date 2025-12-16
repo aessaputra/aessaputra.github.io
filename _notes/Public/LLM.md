@@ -74,7 +74,7 @@ graph TD
     Router -- Topik Umum --> Expert2[Expert B: Bahasa]
     Expert1 --> Attention[Self-Attention Layers]
     Expert2 --> Attention
-    Attention --> CoT[Chain of Thought\n(Berpikir Langkah demi Langkah)]
+    Attention --> CoT[Chain of Thought - Berpikir Langkah demi Langkah]
     CoT --> Prob[Probabilitas Token Selanjutnya]
     Prob --> Output[Output Token]
 ```
