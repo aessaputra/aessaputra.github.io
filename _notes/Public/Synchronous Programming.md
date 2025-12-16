@@ -3,6 +3,7 @@ title: Synchronous Programming - Antrian Bank Tradisional
 aliases:
   - Synchronous Programming
   - synchronous programming
+  - synchronous
 categories:
   - "[[Posts]]"
 tags:

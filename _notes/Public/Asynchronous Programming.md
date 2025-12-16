@@ -6,6 +6,7 @@ aliases:
   - Non-blocking Programming
   - Event-driven Programming
   - Concurrent Programming
+  - asynchronous
 categories:
   - "[[Posts]]"
 tags:
