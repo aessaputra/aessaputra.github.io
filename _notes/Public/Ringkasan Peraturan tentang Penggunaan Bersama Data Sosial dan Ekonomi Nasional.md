@@ -14,13 +14,14 @@ tags:
   - posts
 created: 2025-11-16
 published: 2025-11-16
+date: 2025-11-16
 status:
   - "[[Published]]"
 topics:
   - data
   - kebijakan publik
   - pengelolaan data
-feed: hide
+feed:
 ---
 **Tema utama peraturan ini adalah untuk menetapkan kerangka kerja komprehensif dalam pengelolaan dan penggunaan bersama Data Sosial dan Ekonomi Nasional (DTSEN) di Indonesia.** Peraturan ini bertujuan untuk meningkatkan integrasi dan akurasi data yang digunakan dalam perencanaan pembangunan nasional, memastikan bahwa berbagi data dilakukan secara aman dan transparan.
 
