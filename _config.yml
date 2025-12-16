@@ -35,9 +35,9 @@ preferences:
     enabled: true
 
 # Site Configuration
-title: 'My Notes'
+title: 'Aes Saputra'
 heading: 'Aes Saputra'
-description: 'Obsidian Notes Published'
+description: 'Learn, build, discover — insights from real projects and experiments'
 url: 'https://writing.aes.my.id'
 baseurl: ''
 

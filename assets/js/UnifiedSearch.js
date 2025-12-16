@@ -458,6 +458,7 @@
 
     }
 
+
     function searchInitListener() {
         document.onkeyup = function (e) {
             var evt = window.event || e;
@@ -472,6 +473,25 @@
 
     sj.onReady(function () {
         searchInitListener();
-        searchInit();
+
+        //  Lazy load search data - only init when user interacts
+        var searchInput = document.getElementById('unified-search-input');
+        if (searchInput) {
+            // Load search data on first focus
+            searchInput.addEventListener('focus', function () {
+                if (!searchDataLoaded) {
+                    searchDataLoaded = true;
+                    searchInit();
+                }
+            }, { once: false });
+
+            // Also load on first input for better UX
+            searchInput.addEventListener('input', function () {
+                if (!searchDataLoaded) {
+                    searchDataLoaded = true;
+                    searchInit();
+                }
+            }, { once: true });
+        }
     });
 })(window.sj = window.sj || {});

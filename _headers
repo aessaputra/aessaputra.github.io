@@ -1,0 +1,34 @@
+# Cache headers for static assets
+# This file is used by Netlify, GitHub Pages (with Actions), or similar hosting
+
+# Static assets - cache for 1 year
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS files
+*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# JavaScript files
+*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images
+/assets/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Fonts
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# JSON data files - cache for 1 day
+*.json
+  Cache-Control: public, max-age=86400
+
+# HTML pages - cache for 1 hour
+/*.html
+  Cache-Control: public, max-age=3600
+
+# Homepage
+/
+  Cache-Control: public, max-age=3600

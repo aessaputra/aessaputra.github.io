@@ -1,133 +1,140 @@
 <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    // Only load Mermaid if diagrams exist on the page
+    if (document.querySelector('code.language-mermaid')) {
+        import('https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs')
+            .then(module => {
+                const mermaid = module.default;
 
-    // Store original mermaid content for re-rendering on theme change
-    let mermaidContents = [];
+                // Store original mermaid content for re-rendering on theme change
+                let mermaidContents = [];
 
-    /**
-     * Get current theme - returns 'dark' or 'neutral' based on site theme
-     */
-    function getCurrentTheme() {
-        const dataTheme = document.documentElement.getAttribute('data-theme');
-        if (dataTheme) {
-            return dataTheme === 'dark' ? 'dark' : 'neutral';
-        }
-        return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'neutral';
-    }
-
-    /**
-     * Initialize Mermaid with dynamic theme
-     */
-    function initializeMermaid() {
-        mermaid.initialize({
-            startOnLoad: false,
-            securityLevel: 'loose',
-            theme: getCurrentTheme(),
-            logLevel: 'error',
-            flowchart: {
-                htmlLabels: true,
-                curve: 'basis'
-            }
-        });
-    }
-
-    /**
-     * Convert code blocks with language-mermaid class to mermaid format
-     */
-    function prepareMermaidBlocks() {
-        const mermaidCodeBlocks = document.querySelectorAll('code.language-mermaid');
-
-        if (mermaidCodeBlocks.length === 0) {
-            return false;
-        }
-
-        mermaidContents = [];
-
-        mermaidCodeBlocks.forEach((codeElement, index) => {
-            const preElement = codeElement.parentElement;
-            if (preElement && preElement.tagName === 'PRE') {
-                const mermaidText = codeElement.textContent || codeElement.innerText;
-
-                mermaidContents.push({ element: preElement, content: mermaidText });
-
-                preElement.innerHTML = '';
-                preElement.className = 'mermaid';
-                preElement.setAttribute('data-mermaid-index', index);
-                preElement.textContent = mermaidText;
-            }
-        });
-
-        return mermaidContents.length > 0;
-    }
-
-    /**
-     * Run Mermaid rendering
-     */
-    async function runMermaid() {
-        try {
-            await mermaid.run({ querySelector: '.mermaid' });
-        } catch (error) {
-            console.error('Mermaid rendering error:', error);
-        }
-    }
-
-    /**
-     * Re-render diagrams when theme changes
-     */
-    async function reRenderMermaid() {
-        const mermaidElements = document.querySelectorAll('.mermaid');
-        if (mermaidElements.length === 0) return;
-
-        initializeMermaid();
-
-        mermaidElements.forEach((element, index) => {
-            if (mermaidContents[index]) {
-                element.innerHTML = '';
-                element.removeAttribute('data-processed');
-                element.textContent = mermaidContents[index].content;
-            }
-        });
-
-        await runMermaid();
-    }
-
-    /**
-     * Watch for theme changes
-     */
-    function watchThemeChanges() {
-        const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                if (mutation.attributeName === 'data-theme') {
-                    setTimeout(reRenderMermaid, 50);
+                /**
+                 * Get current theme - returns 'dark' or 'neutral' based on site theme
+                 */
+                function getCurrentTheme() {
+                    const dataTheme = document.documentElement.getAttribute('data-theme');
+                    if (dataTheme) {
+                        return dataTheme === 'dark' ? 'dark' : 'neutral';
+                    }
+                    return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'neutral';
                 }
-            });
-        });
 
-        observer.observe(document.documentElement, {
-            attributes: true,
-            attributeFilter: ['data-theme']
-        });
+                /**
+                 * Initialize Mermaid with dynamic theme
+                 */
+                function initializeMermaid() {
+                    mermaid.initialize({
+                        startOnLoad: false,
+                        securityLevel: 'loose',
+                        theme: getCurrentTheme(),
+                        logLevel: 'error',
+                        flowchart: {
+                            htmlLabels: true,
+                            curve: 'basis'
+                        }
+                    });
+                }
+
+                /**
+                 * Convert code blocks with language-mermaid class to mermaid format
+                 */
+                function prepareMermaidBlocks() {
+                    const mermaidCodeBlocks = document.querySelectorAll('code.language-mermaid');
+
+                    if (mermaidCodeBlocks.length === 0) {
+                        return false;
+                    }
+
+                    mermaidContents = [];
+
+                    mermaidCodeBlocks.forEach((codeElement, index) => {
+                        const preElement = codeElement.parentElement;
+                        if (preElement && preElement.tagName === 'PRE') {
+                            const mermaidText = codeElement.textContent || codeElement.innerText;
+
+                            mermaidContents.push({ element: preElement, content: mermaidText });
+
+                            preElement.innerHTML = '';
+                            preElement.className = 'mermaid';
+                            preElement.setAttribute('data-mermaid-index', index);
+                            preElement.textContent = mermaidText;
+                        }
+                    });
+
+                    return mermaidContents.length > 0;
+                }
+
+                /**
+                 * Run Mermaid rendering
+                 */
+                async function runMermaid() {
+                    try {
+                        await mermaid.run({ querySelector: '.mermaid' });
+                    } catch (error) {
+                        console.error('Mermaid rendering error:', error);
+                    }
+                }
+
+                /**
+                 * Re-render diagrams when theme changes
+                 */
+                async function reRenderMermaid() {
+                    const mermaidElements = document.querySelectorAll('.mermaid');
+                    if (mermaidElements.length === 0) return;
+
+                    initializeMermaid();
+
+                    mermaidElements.forEach((element, index) => {
+                        if (mermaidContents[index]) {
+                            element.innerHTML = '';
+                            element.removeAttribute('data-processed');
+                            element.textContent = mermaidContents[index].content;
+                        }
+                    });
+
+                    await runMermaid();
+                }
+
+                /**
+                 * Watch for theme changes
+                 */
+                function watchThemeChanges() {
+                    const observer = new MutationObserver((mutations) => {
+                        mutations.forEach((mutation) => {
+                            if (mutation.attributeName === 'data-theme') {
+                                setTimeout(reRenderMermaid, 50);
+                            }
+                        });
+                    });
+
+                    observer.observe(document.documentElement, {
+                        attributes: true,
+                        attributeFilter: ['data-theme']
+                    });
+                }
+
+                /**
+                 * Initial setup - initialize AFTER DOM ready so data-theme is available
+                 */
+                async function initMermaid() {
+                    initializeMermaid(); // Initialize here after DOM is ready
+                    if (prepareMermaidBlocks()) {
+                        await runMermaid();
+                    }
+                }
+
+                function waitForMermaid() {
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', () => {
+                            setTimeout(() => { initMermaid(); watchThemeChanges(); }, 100);
+                        });
+                    } else {
+                        setTimeout(() => { initMermaid(); watchThemeChanges(); }, 100);
+                    }
+                }
+
+                waitForMermaid();
+            })
+            .catch(err => console.error('Failed to load Mermaid:', err));
     }
-
-    /**
-     * Initial setup - initialize AFTER DOM ready so data-theme is available
-     */
-    async function initMermaid() {
-        initializeMermaid(); // Initialize here after DOM is ready
-        if (prepareMermaidBlocks()) {
-            await runMermaid();
-        }
-    }
-
-    function waitForMermaid() {
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => {
-                setTimeout(() => { initMermaid(); watchThemeChanges(); }, 100);
-            });
-        } else {
-            setTimeout(() => { initMermaid(); watchThemeChanges(); }, 100);
-        }
-    }
-
-    waitForMermaid();
 </script>
