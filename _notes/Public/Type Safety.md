@@ -2,6 +2,10 @@
 title: Type Safety - Sistem Keamanan Berlapis
 aliases:
   - Type Safety
+  - Static Typing
+  - Type Security
+  - Safe Types
+  - Type Correctness
 categories:
   - "[[Posts]]"
 tags:

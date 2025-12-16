@@ -1,5 +1,11 @@
 ---
 title: "Proses perbaikan berkelanjutan: langkah-langkah kunci, metodologi, dan manfaatnya"
+aliases:
+  - Perbaikan Berkelanjutan
+  - Continuous Improvement
+  - Kaizen
+  - Process Improvement
+  - Quality Improvement
 categories:
   - "[[Posts]]"
 tags:

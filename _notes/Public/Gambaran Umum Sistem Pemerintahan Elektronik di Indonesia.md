@@ -1,5 +1,11 @@
 ---
 title: Gambaran Umum Sistem Pemerintahan Elektronik di Indonesia
+aliases:
+  - SPBE Indonesia
+  - Sistem Pemerintahan Elektronik
+  - SPBE
+  - E-Government Indonesia
+  - Pemerintahan Elektronik
 tags:
   - SPBE
   - e-Gov

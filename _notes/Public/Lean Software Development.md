@@ -1,5 +1,11 @@
 ---
 title: Lean Software Development
+aliases:
+  - Lean Development
+  - Lean Software
+  - Lean Methodology
+  - Lean Principles
+  - Agile Lean
 categories:
   - "[[Posts]]"
 tags:

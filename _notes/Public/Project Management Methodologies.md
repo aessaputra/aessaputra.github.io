@@ -1,5 +1,11 @@
 ---
 title: Project Management Methodologies
+aliases:
+  - Project Management
+  - PM Methodologies
+  - Project Methodologies
+  - Management Methodologies
+  - Project Management Methods
 author:
   - "[[Aes Saputra]]"
 type: evergreen

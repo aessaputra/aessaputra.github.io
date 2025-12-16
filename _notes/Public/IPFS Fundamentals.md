@@ -1,4 +1,11 @@
 ---
+title: IPFS Fundamentals
+aliases:
+  - IPFS Fundamentals
+  - IPFS Basics
+  - InterPlanetary File System Basics
+  - Distributed Web Fundamentals
+  - Decentralized Storage Basics
 categories:
   - "[[Posts]]"
 tags:
@@ -13,7 +20,6 @@ topics:
 status:
   - "[[Published]]"
 feed: show
-title: IPFS Fundamentals
 date: 2025-10-30
 ---
 > "The InterPlanetary File System - IPFS - is a peer-to-peer distributed system for storing and accessing files, websites, applications, and data. IPFS is designed to power the Distributed Web - DWeb."

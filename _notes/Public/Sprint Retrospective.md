@@ -1,5 +1,11 @@
 ---
 title: Apa itu Sprint Retrospective?
+aliases:
+  - Sprint Retrospective
+  - Retrospective
+  - Scrum Retrospective
+  - Team Retrospective
+  - Agile Retrospective
 categories:
   - "[[Posts]]"
 tags:

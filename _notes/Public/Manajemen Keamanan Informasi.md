@@ -1,5 +1,11 @@
 ---
 title: Manajemen Keamanan Informasi
+aliases:
+  - Manajemen Keamanan Informasi
+  - SMKI
+  - ISMS
+  - Information Security Management
+  - Security Management System
 categories:
   - "[[Posts]]"
 tags:

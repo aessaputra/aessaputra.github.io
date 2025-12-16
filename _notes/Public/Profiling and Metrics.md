@@ -1,5 +1,11 @@
 ---
 title: Profiling and Metrics - Dokter Kesehatan Sistem
+aliases:
+  - Profiling and Metrics
+  - Performance Profiling
+  - System Metrics
+  - Application Profiling
+  - Performance Monitoring
 categories:
   - "[[Posts]]"
 tags:

@@ -1,5 +1,11 @@
 ---
 title: API Design Principles
+aliases:
+  - API Design
+  - API Principles
+  - REST API Design
+  - API Best Practices
+  - Interface Design
 categories:
   - "[[Posts]]"
 tags:

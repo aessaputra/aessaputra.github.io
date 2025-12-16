@@ -1,5 +1,11 @@
 ---
 title: Developer Velocity - Jalur Cepat Produktivitas
+aliases:
+  - Developer Velocity
+  - Dev Velocity
+  - Development Speed
+  - Team Velocity
+  - Engineering Velocity
 categories:
   - "[[Posts]]"
 tags:

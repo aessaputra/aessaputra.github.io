@@ -1,5 +1,11 @@
 ---
 title: Alur Kerja Pembuatan Aplikasi
+aliases:
+  - Alur Kerja Aplikasi
+  - Workflow Pembuatan Aplikasi
+  - Application Development Workflow
+  - App Development Process
+  - Software Development Workflow
 author: "[[Aes Saputra]]"
 type: guide
 themes:

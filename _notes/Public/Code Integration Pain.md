@@ -1,5 +1,11 @@
 ---
 title: Code Integration Pain
+aliases:
+  - Integration Pain
+  - Code Integration
+  - Integration Problems
+  - System Integration
+  - Legacy Integration
 categories:
   - "[[Development Anti-Patterns]]"
   - "[[Posts]]"

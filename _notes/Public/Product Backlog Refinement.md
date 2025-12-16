@@ -1,5 +1,11 @@
 ---
 title: Product Backlog Refinement
+aliases:
+  - Backlog Refinement
+  - Backlog Grooming
+  - Product Refinement
+  - Scrum Refinement
+  - Agile Refinement
 categories:
   - "[[Posts]]"
 tags:

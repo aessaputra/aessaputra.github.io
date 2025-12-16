@@ -1,5 +1,11 @@
 ---
 title: Flutter Performance - Sistem Monitoring dan Tuning Pabrik untuk Efisiensi Maksimal
+aliases:
+  - Flutter Performance
+  - Flutter Optimization
+  - Mobile Performance
+  - App Performance
+  - Flutter Profiling
 categories:
   - "[[Posts]]"
 tags:

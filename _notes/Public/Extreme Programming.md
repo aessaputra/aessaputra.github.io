@@ -1,5 +1,11 @@
 ---
 title: Extreme Programming
+aliases:
+  - XP
+  - Extreme Programming
+  - XP Programming
+  - Agile XP
+  - XP Methodology
 categories:
   - "[[Posts]]"
 tags:

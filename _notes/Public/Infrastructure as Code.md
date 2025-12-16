@@ -1,5 +1,11 @@
 ---
 title: Infrastructure as Code (IaC) - Fondasi Otomasi Infrastruktur
+aliases:
+  - Infrastructure as Code
+  - IaC
+  - Infrastructure Automation
+  - Code Infrastructure
+  - Automated Infrastructure
 categories:
   - "[[Posts]]"
 tags:
@@ -21,8 +27,6 @@ status:
   - "[[Published]]"
 feed: show
 rating: 6
-aliases:
-  - Infrastructure as Code
 ---
 Infrastructure as Code (IaC) adalah sebuah pendekatan fundamental dalam mengelola dan menyediakan infrastruktur komputasi – seperti server virtual, jaringan, database, dan komponen lainnya – melalui file kode, bukan konfigurasi manual atau antarmuka grafis. Ini adalah filosofi yang mengubah cara kita memandang infrastruktur, menjadikannya sebuah entitas yang dapat dikelola versi, diotomatisasi, dan direplikasi dengan presisi yang sama seperti kode aplikasi.
 

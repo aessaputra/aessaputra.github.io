@@ -2,6 +2,10 @@
 title: Garbage Collection - Petugas Kebersihan Pintar Go
 aliases:
   - Garbage Collection
+  - GC
+  - Memory Cleanup
+  - Automatic Memory Management
+  - Go GC
 categories:
   - "[[Posts]]"
 tags:

@@ -1,5 +1,11 @@
 ---
 title: Facebook - Imperium Teknologi Sosial
+aliases:
+  - Facebook
+  - Meta
+  - Meta Platforms
+  - Social Media Platform
+  - Tech Giant
 categories:
   - "[[Posts]]"
 tags:

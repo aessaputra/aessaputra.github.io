@@ -1,5 +1,11 @@
 ---
 title: Navigation & Routing - Sistem Transportasi dan Logistik Pabrik
+aliases:
+  - Navigation & Routing
+  - Flutter Navigation
+  - App Navigation
+  - Routing System
+  - Screen Navigation
 categories:
   - "[[Posts]]"
 tags:

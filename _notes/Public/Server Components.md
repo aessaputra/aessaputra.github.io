@@ -2,6 +2,10 @@
 title: Server Components - Orkestra Hybrid Server-Client
 aliases:
   - Server Components
+  - React Server Components
+  - RSC
+  - Server-Side Components
+  - Hybrid Components
 categories:
   - "[[Posts]]"
 tags:

@@ -1,5 +1,11 @@
 ---
 title: Ringkasan Peraturan Pengelolaan Data Pemerintahan Elektronik
+aliases:
+  - Pengelolaan Data SPBE
+  - Manajemen Data SPBE
+  - Data Pemerintahan Elektronik
+  - Peraturan Data SPBE
+  - Data Management SPBE
 categories:
   - "[[Posts]]"
 tags:

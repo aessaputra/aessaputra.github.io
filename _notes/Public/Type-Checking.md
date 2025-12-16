@@ -1,5 +1,11 @@
 ---
 title: Type Checking - Penerjemah Teliti Kode
+aliases:
+  - Type Checking
+  - Type-Checking
+  - type checking
+  - Static Type Checking
+  - Type Validation
 categories:
   - "[[Posts]]"
 tags:
@@ -16,10 +22,6 @@ date: 2025-12-15
 topics: []
 status: "[[Published]]"
 feed: show
-aliases:
-  - Type Checking
-  - Type-Checking
-  - type checking
 ---
 
 ## Pengantar: Guardian Konsistensi

@@ -1,5 +1,11 @@
 ---
 title: Apa itu Sprint Planning?
+aliases:
+  - Sprint Planning
+  - Scrum Planning
+  - Agile Planning
+  - Sprint Preparation
+  - Team Planning
 categories:
   - "[[Posts]]"
 tags:

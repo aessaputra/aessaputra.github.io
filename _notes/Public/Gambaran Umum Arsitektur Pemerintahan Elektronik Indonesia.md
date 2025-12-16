@@ -1,5 +1,11 @@
 ---
 title: Gambaran Umum Arsitektur Pemerintahan Elektronik Indonesia
+aliases:
+  - Arsitektur SPBE
+  - Arsitektur Pemerintahan Elektronik
+  - SPBE Indonesia
+  - Arsitektur SPBE Indonesia
+  - Arsitektur E-Government
 categories:
   - "[[Posts]]"
 tags:

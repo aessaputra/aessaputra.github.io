@@ -3,6 +3,9 @@ title: Static Site Generation (SSG)
 aliases:
   - Static Site Generation
   - SSG
+  - Static Generation
+  - Pre-rendering
+  - JAMstack Generation
 categories:
   - "[[Posts]]"
 tags:

@@ -1,5 +1,11 @@
 ---
 title: Memory Model - Panduan Keamanan Concurrent
+aliases:
+  - Memory Model
+  - Concurrency Model
+  - Memory Consistency
+  - Threading Model
+  - Synchronization Model
 categories:
   - "[[Posts]]"
 tags:

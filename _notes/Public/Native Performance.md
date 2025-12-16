@@ -2,6 +2,10 @@
 title: Native Performance - Mesin Balap Formula 1
 aliases:
   - Native Performance
+  - Native Speed
+  - Platform Performance
+  - System Performance
+  - Hardware Performance
 categories:
   - "[[Posts]]"
 tags:

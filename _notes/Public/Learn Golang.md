@@ -1,5 +1,11 @@
 ---
 title: Memahami Struktur Dokumentasi Golang - Sebuah Perjalanan Eksplorasi
+aliases:
+  - Learn Golang
+  - Golang Learning
+  - Go Programming
+  - Golang Documentation
+  - Go Language Guide
 categories:
   - "[[Posts]]"
 tags:

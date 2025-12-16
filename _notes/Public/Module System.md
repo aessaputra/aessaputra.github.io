@@ -1,5 +1,11 @@
 ---
 title: Module System - Manajer Logistik Go
+aliases:
+  - Module System
+  - Go Modules
+  - Dependency Management
+  - Package Management
+  - Go Module System
 categories:
   - "[[Posts]]"
 tags:

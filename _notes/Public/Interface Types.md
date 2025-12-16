@@ -1,5 +1,11 @@
 ---
 title: Interface Types - Kontrak Digital Fleksibel
+aliases:
+  - Interface Types
+  - Interfaces
+  - Type Interfaces
+  - Abstract Interfaces
+  - Contract Types
 categories:
   - "[[Posts]]"
 tags:

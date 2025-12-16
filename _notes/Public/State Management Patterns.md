@@ -2,6 +2,10 @@
 title: State Management Patterns - Sistem Kontrol Pabrik dengan Berbagai Protokol Komunikasi
 aliases:
   - State Management Patterns
+  - State Management
+  - Flutter State Management
+  - State Patterns
+  - Data Flow Patterns
 categories:
   - "[[Posts]]"
 tags:

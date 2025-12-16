@@ -2,6 +2,10 @@
 title: Code Generation - Pabrik Otomatis Pembuat Kode
 aliases:
   - Code Generation
+  - Codegen
+  - Automatic Code Generation
+  - Meta Programming
+  - Template Generation
 categories:
   - "[[Posts]]"
 tags:

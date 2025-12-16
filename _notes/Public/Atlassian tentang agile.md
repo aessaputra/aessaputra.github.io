@@ -1,5 +1,11 @@
 ---
 title: Atlassian tentang Fleksibilitas Agile
+aliases:
+  - Atlassian Agile
+  - Fleksibilitas Agile
+  - Agile Flexibility
+  - Atlassian Methodology
+  - Adaptive Agile
 categories:
   - "[[Posts]]"
 tags:

@@ -1,5 +1,11 @@
 ---
 title: Keamanan Informasi
+aliases:
+  - Keamanan Informasi
+  - Information Security
+  - InfoSec
+  - Data Security
+  - Cyber Security
 categories:
   - "[[Posts]]"
 tags:

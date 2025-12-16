@@ -2,6 +2,10 @@
 title: Hot Reloading - Sistem Renovasi Instan
 aliases:
   - Hot Reloading
+  - Hot Reload
+  - Live Reloading
+  - Real-time Updates
+  - Instant Refresh
 categories:
   - "[[Posts]]"
 tags:

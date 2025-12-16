@@ -2,6 +2,10 @@
 title: React Native - Sistem Transportasi Lintas Platform
 aliases:
   - React Native
+  - RN
+  - Cross-Platform React
+  - Native React
+  - Mobile React
 categories:
   - "[[Posts]]"
 tags:

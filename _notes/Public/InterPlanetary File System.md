@@ -1,5 +1,11 @@
 ---
 title: InterPlanetary File System
+aliases:
+  - IPFS
+  - InterPlanetary File System
+  - Distributed File System
+  - P2P File System
+  - Decentralized Storage
 feed: show
 date: 2025-10-28
 author:
@@ -16,9 +22,6 @@ tags:
 rating: 6
 categories:
   - "[[Posts]]"
-aliases:
-  - IPFS
-  - InterPlanetary File System
 ---
 IPFS adalah protokol, hipermedia, dan jaringan peer-to-peer untuk berbagi data menggunakan tabel hash terdistribusi untuk menyimpan informasi penyedia. Melalui penomoran konten, IPFS mengidentifikasi setiap file dalam namespace global yang menghubungkan host IPFS, menciptakan sistem terdistribusi untuk penyimpanan dan berbagi file.
 

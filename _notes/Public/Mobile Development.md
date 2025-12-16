@@ -2,6 +2,10 @@
 title: Mobile Development - Arsitektur Kota Digital
 aliases:
   - Mobile Development
+  - Mobile App Development
+  - App Development
+  - iOS Development
+  - Android Development
 categories:
   - "[[Posts]]"
 tags:

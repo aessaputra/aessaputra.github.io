@@ -3,6 +3,9 @@ title: SEO Optimization untuk Web Development
 aliases:
   - SEO Optimization
   - SEO
+  - Search Engine Optimization
+  - Web SEO
+  - Search Optimization
 categories:
   - "[[Posts]]"
 tags:
@@ -22,7 +25,6 @@ topics:
   - web-development
 status: published
 feed: show
-aliases:
   - SEO Optimization
   - SEO
   - Search Engine Optimization

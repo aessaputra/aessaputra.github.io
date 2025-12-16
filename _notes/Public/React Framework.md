@@ -1,5 +1,11 @@
 ---
 title: Apa itu React Framework?
+aliases:
+  - React Framework
+  - React Frameworks
+  - Framework React
+  - React-based Framework
+  - Frontend Framework
 categories:
   - "[[Posts]]"
 tags:
@@ -19,10 +25,6 @@ topics:
   - frontend-framework
 status: published
 feed: show
-aliases:
-  - React Framework
-  - React Frameworks
-  - Framework React
   - React Library vs Framework
   - React Ecosystem
 ---

@@ -1,5 +1,11 @@
 ---
 title: Concurrency Patterns - Orkestra Koordinasi Paralel
+aliases:
+  - Concurrency Patterns
+  - Parallel Patterns
+  - Concurrent Design Patterns
+  - Threading Patterns
+  - Synchronization Patterns
 categories:
   - "[[Posts]]"
 tags:

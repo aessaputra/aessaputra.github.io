@@ -1,5 +1,8 @@
 ---
 title: Standard Library - Perpustakaan Alat Universal Go
+aliases:
+  - Standard Library
+  - standard library
 categories:
   - "[[Posts]]"
 tags:
@@ -11,11 +14,10 @@ author:
   - "[[Aes Saputra]]"
 url:
 created: 2025-12-15
-published:
+published: 2025-12-15
 date: 2025-12-15
 topics: []
-status:
-  - "[[Published]]"
+status: "[[Published]]"
 feed: show
 ---
 

@@ -1,5 +1,11 @@
 ---
 title: Content Addressing
+aliases:
+  - Content Addressing
+  - Content-Based Addressing
+  - Hash-Based Addressing
+  - Cryptographic Addressing
+  - Content Identification
 categories:
   - "[[Posts]]"
 tags:

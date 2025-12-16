@@ -1,8 +1,11 @@
 ---
 title: User Experience Design
 aliases:
-  - User Experience Design
   - UX Design
+  - User Experience
+  - UX
+  - Experience Design
+  - User-Centered Design
 categories:
   - "[[Posts]]"
 tags:

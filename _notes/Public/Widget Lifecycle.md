@@ -1,5 +1,11 @@
 ---
 title: Widget Lifecycle - Siklus Hidup Komponen Pabrik dari Setup hingga Daur Ulang
+aliases:
+  - Widget Lifecycle
+  - Flutter Lifecycle
+  - Component Lifecycle
+  - UI Lifecycle
+  - Widget Management
 categories:
   - "[[Posts]]"
 tags:

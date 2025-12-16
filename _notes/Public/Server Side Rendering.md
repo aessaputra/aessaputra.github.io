@@ -3,6 +3,9 @@ title: Server Side Rendering (SSR)
 aliases:
   - Server Side Rendering
   - SSR
+  - Server Rendering
+  - Server-Side Rendering
+  - Dynamic Rendering
 categories:
   - "[[Posts]]"
 tags:
@@ -22,7 +25,6 @@ topics:
   - rendering-strategies
 status: published
 feed: show
-aliases:
   - Server Side Rendering
   - SSR
   - Server-Side Rendering

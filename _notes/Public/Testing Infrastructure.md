@@ -1,5 +1,8 @@
 ---
 title: Testing Infrastructure - Laboratorium Quality Assurance Go
+aliases:
+  - Testing Infrastructure
+  - testing infrastructure
 categories:
   - "[[Posts]]"
 tags:
@@ -11,12 +14,10 @@ author:
   - "[[Aes Saputra]]"
 url:
 created: 2025-12-15
-published:
+published: 2025-12-15
 date: 2025-12-15
 topics: []
-status:
-  - "[[Published]]"
-feed: show
+status: "[[Published]]"
 feed: show
 ---
 

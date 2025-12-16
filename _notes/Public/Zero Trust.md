@@ -1,5 +1,11 @@
 ---
 title: Apa itu Zero Trust?
+aliases:
+  - Zero Trust
+  - Zero Trust Security
+  - Never Trust Always Verify
+  - Zero Trust Architecture
+  - ZTA
 categories:
   - "[[Posts]]"
 tags:
@@ -15,8 +21,6 @@ topics:
 status:
   - "[[Published]]"
 feed: show
-aliases:
-  - Zero Trust
 ---
 **Zero Trust** adalah model keamanan yang mengedepankan prinsip bahwa tidak ada entitas yang dapat dipercaya secara default, baik di dalam maupun di luar jaringan. Pendekatan ini lahir sebagai respons terhadap kompleksitas jaringan modern yang melibatkan banyak perangkat dan pengguna, dimana kebijakan tradisional tidak lagi cukup untuk melindungi data sensitif.
 

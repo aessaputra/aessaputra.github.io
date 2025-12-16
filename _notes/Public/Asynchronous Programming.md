@@ -2,6 +2,10 @@
 title: Asynchronous Programming - Orkestra Multitasking
 aliases:
   - Asynchronous Programming
+  - Async Programming
+  - Non-blocking Programming
+  - Event-driven Programming
+  - Concurrent Programming
 categories:
   - "[[Posts]]"
 tags:

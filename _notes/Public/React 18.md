@@ -2,6 +2,10 @@
 title: React 18 - Revolusi Orkestra dengan Concurrent Symphony
 aliases:
   - React 18
+  - React v18
+  - Modern React
+  - Concurrent React
+  - React Latest
 categories:
   - "[[Posts]]"
 tags:

@@ -1,5 +1,11 @@
 ---
 title: Goroutine Scheduler - Konduktor Orkestra Digital
+aliases:
+  - Goroutine Scheduler
+  - Go Scheduler
+  - Goroutine Management
+  - Concurrency Scheduler
+  - Go Runtime Scheduler
 categories:
   - "[[Posts]]"
 tags:

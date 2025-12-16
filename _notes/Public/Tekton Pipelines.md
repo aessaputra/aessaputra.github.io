@@ -1,5 +1,11 @@
 ---
 title: Tekton Pipelines
+aliases:
+  - Tekton Pipelines
+  - Tekton
+  - Cloud Native CI/CD
+  - Kubernetes Pipelines
+  - Container Pipelines
 author: "[[Aes Saputra]]"
 themes:
   - "[[Cloud Native]]"

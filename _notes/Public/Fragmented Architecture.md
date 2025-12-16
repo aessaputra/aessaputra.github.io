@@ -1,5 +1,11 @@
 ---
 title: Fragmented Architecture
+aliases:
+  - Fragmented Architecture
+  - Architecture Fragmentation
+  - System Fragmentation
+  - Distributed Architecture
+  - Decoupled Systems
 categories:
   - "[[Posts]]"
 tags:

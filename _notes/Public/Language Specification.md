@@ -1,5 +1,11 @@
 ---
 title: Language Specification - Konstitusi Digital Go
+aliases:
+  - Language Specification
+  - Go Specification
+  - Language Spec
+  - Go Language Spec
+  - Programming Language Specification
 categories:
   - "[[Posts]]"
 tags:

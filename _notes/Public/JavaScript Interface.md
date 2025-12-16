@@ -1,5 +1,11 @@
 ---
 title: JavaScript Interface - Jembatan Langsung Tanpa Perantara
+aliases:
+  - JavaScript Interface
+  - JS Interface
+  - Native Bridge
+  - JavaScript Bridge
+  - JS Native Interface
 categories:
   - "[[Posts]]"
 tags:
@@ -16,9 +22,6 @@ date: 2025-12-15
 topics: []
 status: "[[Published]]"
 feed: show
-aliases:
-  - JavaScript Interface
-
 ---
 
 ## Pengantar: Telepon Langsung Tanpa Operator

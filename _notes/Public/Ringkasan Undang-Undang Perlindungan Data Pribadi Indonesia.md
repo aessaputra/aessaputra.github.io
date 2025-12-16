@@ -1,5 +1,12 @@
 ---
 title: Ringkasan Undang-Undang Perlindungan Data Pribadi Indonesia (UU PDP)
+aliases:
+  - UU PDP
+  - Perlindungan Data Pribadi
+  - UU Perlindungan Data
+  - Data Privacy Indonesia
+  - PDP Indonesia
+  - Personal Data Protection
 author:
   - "[[Aes Saputra]]"
 categories:

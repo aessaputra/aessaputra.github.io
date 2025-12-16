@@ -2,6 +2,10 @@
 title: Memory Management - Tukang Kebun Digital
 aliases:
   - Memory Management
+  - Memory Allocation
+  - Resource Management
+  - Heap Management
+  - Memory Optimization
 categories:
   - "[[Posts]]"
 tags:

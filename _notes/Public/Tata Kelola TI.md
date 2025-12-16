@@ -1,5 +1,11 @@
 ---
 title: Tata Kelola TI
+aliases:
+  - Tata Kelola TI
+  - IT Governance
+  - Governance TI
+  - IT Management
+  - Technology Governance
 categories:
   - "[[Posts]]"
 tags:

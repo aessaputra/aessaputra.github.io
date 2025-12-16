@@ -1,5 +1,11 @@
 ---
 title: Package Loading - Sistem Transportasi Go
+aliases:
+  - Package Loading
+  - Go Package Loading
+  - Dependency Loading
+  - Module Loading
+  - Import System
 categories:
   - "[[Posts]]"
 tags:

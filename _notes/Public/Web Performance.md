@@ -3,6 +3,9 @@ title: Web Performance Optimization
 aliases:
   - Web Performance
   - Web Performance Optimization
+  - Website Performance
+  - Performance Optimization
+  - Web Speed Optimization
 categories:
   - "[[Posts]]"
 tags:
@@ -22,7 +25,6 @@ topics:
   - user-experience
 status: published
 feed: show
-aliases:
   - Web Performance
   - Performance Optimization
   - Core Web Vitals

@@ -2,6 +2,10 @@
 title: Concurrent Features - Sistem Multitasking Orkestra Digital
 aliases:
   - Concurrent Features
+  - React Concurrent
+  - Concurrent Mode
+  - Parallel Processing
+  - Multitasking Features
 categories:
   - "[[Posts]]"
 tags:

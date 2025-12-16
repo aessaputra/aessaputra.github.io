@@ -1,5 +1,11 @@
 ---
 title: Ringkasan Peraturan tentang Penggunaan Bersama Data Sosial dan Ekonomi Nasional
+aliases:
+  - Data Sosial Ekonomi Nasional
+  - DTSEN
+  - Penggunaan Bersama Data
+  - Data Sosial Ekonomi
+  - Sharing Data Nasional
 author:
   - "[[Aes Saputra]]"
 categories:

@@ -1,5 +1,11 @@
 ---
 title: Go Compiler Architecture - Pabrik Transformasi Kode
+aliases:
+  - Go Compiler
+  - Golang Compiler
+  - Go Compilation
+  - Compiler Architecture
+  - Go Build System
 categories:
   - "[[Posts]]"
 tags:

@@ -1,5 +1,11 @@
 ---
 title: Agile Manifesto
+aliases:
+  - Agile Manifesto
+  - Manifesto Agile
+  - Agile Principles
+  - Agile Values
+  - Software Development Manifesto
 categories:
   - "[[Posts]]"
 tags:

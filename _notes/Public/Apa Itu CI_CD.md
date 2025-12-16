@@ -1,5 +1,11 @@
 ---
 title: Apa Itu CI/CD?
+aliases:
+  - CI/CD
+  - Continuous Integration
+  - Continuous Deployment
+  - DevOps Pipeline
+  - Automation Pipeline
 categories:
   - "[[Posts]]"
 tags:

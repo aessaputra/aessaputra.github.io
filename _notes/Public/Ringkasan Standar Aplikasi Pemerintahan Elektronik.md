@@ -1,5 +1,11 @@
 ---
 title: Ringkasan Standar Aplikasi Pemerintahan Elektronik
+aliases:
+  - Standar Aplikasi SPBE
+  - Standar Aplikasi Pemerintahan
+  - Aplikasi SPBE
+  - Standar SPBE
+  - App Standards SPBE
 author: "[[Aes Saputra]]"
 date: 2025-11-16
 created: 2025-11-16

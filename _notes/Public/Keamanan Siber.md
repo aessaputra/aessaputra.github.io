@@ -1,5 +1,11 @@
 ---
 title: Keamanan Siber
+aliases:
+  - Keamanan Siber
+  - Cybersecurity
+  - Cyber Security
+  - Digital Security
+  - Network Security
 categories:
   - "[[Posts]]"
 tags:

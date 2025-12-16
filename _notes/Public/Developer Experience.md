@@ -2,6 +2,10 @@
 title: Developer Experience - Ergonomi Workspace Digital
 aliases:
   - Developer Experience
+  - DX
+  - Dev Experience
+  - Developer UX
+  - Development Experience
 categories:
   - "[[Posts]]"
 tags:

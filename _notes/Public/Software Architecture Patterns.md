@@ -1,7 +1,11 @@
 ---
 title: Software Architecture Patterns
 aliases:
-  - Software Architecture Patterns
+  - Architecture Patterns
+  - Software Architecture
+  - Design Patterns
+  - System Architecture
+  - Architectural Patterns
 author:
   - "[[Aes Saputra]]"
 categories:

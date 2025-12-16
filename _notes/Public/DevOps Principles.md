@@ -1,5 +1,11 @@
 ---
 title: DevOps Principles
+aliases:
+  - DevOps Principles
+  - DevOps Best Practices
+  - DevOps Culture
+  - Development Operations
+  - DevOps Philosophy
 categories:
   - "[[Posts]]"
 tags:

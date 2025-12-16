@@ -1,5 +1,11 @@
 ---
 title: Go Runtime System - Mesin Penggerak Golang
+aliases:
+  - Go Runtime
+  - Golang Runtime
+  - Go Runtime System
+  - Runtime Environment
+  - Go Execution Environment
 categories:
   - "[[Posts]]"
 tags:

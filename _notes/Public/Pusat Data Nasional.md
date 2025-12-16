@@ -1,5 +1,11 @@
 ---
 title: Pusat Data Nasional (PDN)
+aliases:
+  - Pusat Data Nasional
+  - PDN
+  - National Data Center
+  - Data Center Nasional
+  - Government Data Center
 categories:
   - "[[Posts]]"
 tags:
@@ -20,8 +26,6 @@ topics:
 status:
   - "[[Published]]"
 feed: show
-aliases:
-  - Pusat Data Nasional
 ---
 
 Pusat Data Nasional (PDN) adalah sebuah inisiatif [[pemerintah Indonesia]] untuk membangun fasilitas pusat data terpusat. Tujuannya adalah untuk keperluan penyimpanan, pengolahan, pemulihan, dan bagi pakai data (*data sharing*) antar instansi pusat dan pemerintah daerah.

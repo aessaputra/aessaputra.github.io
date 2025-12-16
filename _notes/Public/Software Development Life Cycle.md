@@ -1,5 +1,11 @@
 ---
 title: Software Development Life Cycle
+aliases:
+  - SDLC
+  - Software Development Lifecycle
+  - Development Life Cycle
+  - Software Lifecycle
+  - Development Process
 author: "[[Aes Saputra]]"
 type: concept
 themes:

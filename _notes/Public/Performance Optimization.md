@@ -2,6 +2,10 @@
 title: Performance Optimization - Tuning Mesin Balap Digital
 aliases:
   - Performance Optimization
+  - Performance Tuning
+  - System Optimization
+  - Speed Optimization
+  - Efficiency Optimization
 categories:
   - "[[Posts]]"
 tags:

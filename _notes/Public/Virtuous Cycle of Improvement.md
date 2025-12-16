@@ -1,5 +1,11 @@
 ---
 title: Virtuous Cycle of Improvement
+aliases:
+  - Virtuous Cycle
+  - Continuous Improvement
+  - Improvement Cycle
+  - Self Improvement
+  - Growth Cycle
 categories:
   - "[[Posts]]"
 tags:

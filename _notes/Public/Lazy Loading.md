@@ -2,6 +2,10 @@
 title: Lazy Loading - Sistem Restoran Ala Carte
 aliases:
   - Lazy Loading
+  - Deferred Loading
+  - On-Demand Loading
+  - Progressive Loading
+  - Dynamic Loading
 categories:
   - "[[Posts]]"
 tags:

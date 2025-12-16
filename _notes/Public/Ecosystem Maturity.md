@@ -1,5 +1,11 @@
 ---
 title: Ecosystem Maturity - Kematangan Hutan Digital
+aliases:
+  - Ecosystem Maturity
+  - Platform Maturity
+  - Technology Ecosystem
+  - Software Ecosystem
+  - Development Ecosystem
 categories:
   - "[[Posts]]"
 tags:

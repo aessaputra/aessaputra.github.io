@@ -2,6 +2,10 @@
 title: Error Handling - Sistem Keamanan dan Recovery Digital
 aliases:
   - Error Handling
+  - Exception Handling
+  - Error Management
+  - Fault Tolerance
+  - Error Recovery
 categories:
   - "[[Posts]]"
 tags:

@@ -1,5 +1,11 @@
 ---
 title: Peer to Peer Networks Explained
+aliases:
+  - Peer-to-peer networks
+  - P2P Networks
+  - P2P
+  - Peer to Peer
+  - Decentralized Networks
 categories:
   - "[[Posts]]"
 tags:
@@ -16,8 +22,6 @@ topics: []
 status:
   - "[[Published]]"
 feed: show
-aliases:
-  - Peer-to-peer networks
 ---
 Peer-to-peer networks adalah kelompok komputer atau perangkat yang berbagi sumber daya dan mengakses sumber daya bersama tanpa kontrol terpusat. Dalam model ini, tidak ada otoritas pusat yang menentukan aturan akses. Semua anggota memiliki hak yang sama.
 

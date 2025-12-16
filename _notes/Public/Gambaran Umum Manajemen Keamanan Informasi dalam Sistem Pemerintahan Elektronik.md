@@ -1,5 +1,11 @@
 ---
 title: Gambaran Umum Manajemen Keamanan Informasi dalam Sistem Pemerintahan Elektronik
+aliases:
+  - Keamanan SPBE
+  - Manajemen Keamanan SPBE
+  - Keamanan Informasi SPBE
+  - Keamanan Pemerintahan Elektronik
+  - Security SPBE
 categories:
   - "[[Posts]]"
 tags:

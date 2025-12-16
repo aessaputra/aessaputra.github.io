@@ -2,6 +2,10 @@
 title: Machine Learning - Sistem Pembelajaran Otomatis
 aliases:
   - Machine Learning
+  - ML
+  - Artificial Intelligence
+  - AI Learning
+  - Automated Learning
 categories:
   - "[[Posts]]"
 tags:

@@ -2,6 +2,10 @@
 title: Cross-Platform Development - Jembatan Penghubung Benua Digital
 aliases:
   - Cross-Platform Development
+  - Cross Platform
+  - Multi-Platform Development
+  - Platform Abstraction
+  - Universal Development
 categories:
   - "[[Posts]]"
 tags:
