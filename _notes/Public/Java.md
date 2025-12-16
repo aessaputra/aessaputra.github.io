@@ -36,7 +36,7 @@ Java menerapkan paradigma pemrograman berorientasi objek secara konsisten, memun
 Melalui [[JVM]] (Java Virtual Machine), Java code dikompilasi menjadi bytecode yang dapat dijalankan di berbagai operating system.
 
 ### Memory Management
-Automatic garbage collection mengelola memory allocation dan deallocation, mengurangi risiko memory leaks.
+Automatic [[garbage collection]] mengelola memory allocation dan deallocation, mengurangi risiko memory leaks.
 
 ### Strong Type System
 Static typing dengan compile-time checking membantu mendeteksi errors lebih awal dalam development cycle.

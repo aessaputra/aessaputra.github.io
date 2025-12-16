@@ -1,88 +1,120 @@
 ---
-title: Garbage Collection - Petugas Kebersihan Pintar Go
+title: Garbage Collection - Petugas Kebersihan Otomatis Memory
 aliases:
   - Garbage Collection
   - GC
   - Memory Cleanup
   - Automatic Memory Management
-  - Go GC
 categories:
   - "[[Posts]]"
 tags:
-  - golang
   - garbage-collection
-  - memory
+  - memory-management
   - runtime
   - performance
+  - programming-languages
 author:
   - "[[Aes Saputra]]"
 url:
-created: 2025-12-15
-published:
-date: 2025-12-15
+created: 2025-12-16
+published: 2025-12-16
+date: 2025-12-16
 topics: []
-status:
-  - "[[Published]]"
+status: "[[Published]]"
 feed: show
 ---
 
-## Pengantar: Robot Pembersih Adaptif
+## Pengantar: Robot Pembersih Universal dalam Dunia Pemrograman
 
-Garbage Collector Go adalah **robot pembersih yang sangat pintar dan adaptif**. Berbeda dengan petugas kebersihan tradisional yang bekerja pada jadwal tetap, GC Go bekerja secara dinamis, tahu kapan harus membersihkan "sampah memori" tanpa mengganggu aktivitas utama program.
+Garbage Collection adalah **sistem manajemen memori otomatis** yang bertindak seperti petugas kebersihan pintar di berbagai bahasa pemrograman modern. Seperti robot vacuum yang tahu kapan dan di mana harus membersihkan tanpa mengganggu aktivitas penghuni rumah, GC secara otomatis mengidentifikasi dan membersihkan objek-objek yang tidak lagi digunakan dalam program.
 
-## Algoritma Tri-Color Mark-and-Sweep
+Konsep ini hadir di berbagai bahasa seperti [[Java]], [[JVM]] languages, Go, C#, Python, JavaScript, dan banyak lagi, masing-masing dengan implementasi dan karakteristik yang unik sesuai dengan filosofi dan kebutuhan bahasa tersebut.
 
-### Konsep Tri-Color: Sistem Pewarnaan Cerdas
+## Algoritma Fundamental Garbage Collection
 
-GC menggunakan **sistem pewarnaan tiga warna** seperti traffic light yang mengatur lalu lintas memori:
+### Mark-and-Sweep: Algoritma Klasik
+
+**Mark-and-Sweep** adalah algoritma foundational yang digunakan dalam berbagai implementasi GC:
 
 ```mermaid
 graph TD
-    A[White Objects<br/>Belum Dikunjungi] --> B[Gray Objects<br/>Sedang Diproses]
-    B --> C[Black Objects<br/>Sudah Diproses]
-    C --> D[Reachable Objects<br/>Tetap Hidup]
-    A --> E[Unreachable Objects<br/>Siap Dibersihkan]
+    A[Root Objects<br/>Stack, Globals] --> B[Mark Phase<br/>Traverse & Mark Reachable]
+    B --> C[Sweep Phase<br/>Reclaim Unmarked Objects]
+    C --> D[Compaction<br/>Optional Defragmentation]
+    
+    E[White Objects<br/>Unmarked] --> F[Gray Objects<br/>Being Processed]
+    F --> G[Black Objects<br/>Marked as Reachable]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style C fill:#e8f5e8
+    style D fill:#fff3e0
 ```
 
-- **White (Putih)**: Objek yang belum dikunjungi, kandidat untuk dibersihkan
-- **Gray (Abu-abu)**: Objek yang sedang diproses, dalam antrian pemeriksaan  
-- **Black (Hitam)**: Objek yang sudah diproses dan confirmed reachable
+**Tri-Color Abstraction** (digunakan dalam Go, beberapa JVM GC):
+- **White**: Objek belum dikunjungi, kandidat untuk dibersihkan
+- **Gray**: Objek sedang diproses, dalam antrian pemeriksaan  
+- **Black**: Objek sudah diproses dan confirmed reachable
 
-## Fase-Fase GC: Siklus Pembersihan Terorganisir
+## Implementasi GC Across Languages
 
-### 1. Sweep Termination - Penyelesaian Tugas Sebelumnya
-- **Menyelesaikan pending sweep work** dari cycle sebelumnya
-- Memastikan tidak ada "pekerjaan setengah jadi" yang tertinggal
-- Seperti petugas kebersihan yang menyelesaikan area terakhir sebelum mulai shift baru
+### Java/JVM Ecosystem
+**HotSpot JVM** menyediakan berbagai GC algorithms:
 
-### 2. Mark Phase - Detektif Pencari Jejak
-- **Concurrent marking** berjalan bersamaan dengan program utama
-- Dimulai dari **root pointers** (global variables, stack variables)
-- Write barriers diaktifkan untuk melacak pointer baru yang dibuat mutator
-- Seperti detektif yang mengikuti jejak untuk menemukan semua objek yang masih "hidup"
+| GC Algorithm | Characteristics | Use Case |
+|--------------|----------------|----------|
+| **Serial GC** | Single-threaded, STW | Small applications |
+| **Parallel GC** | Multi-threaded, throughput-focused | Batch processing |
+| **G1GC** | Low-latency, region-based | Large heaps, interactive apps |
+| **ZGC/Shenandoah** | Ultra-low latency, concurrent | Real-time applications |
 
-### 3. Mark Termination - Checkpoint Kritis
-- **Stop-the-world (STW) phase** yang singkat
-- Finalisasi marking process dan disable write barriers
-- Persiapan untuk sweep phase
-- Seperti traffic light merah yang menghentikan lalu lintas sejenak untuk transisi
+### Go Runtime GC
+- **Tri-color concurrent collector** dengan minimal STW pauses
+- **Write barriers** untuk concurrent marking
+- **Pacing algorithm** untuk adaptive triggering
 
-### 4. Sweep Phase - Pembersihan Sesungguhnya  
-- **Concurrent sweeping** mengembalikan unreachable objects ke heap
-- Memory reclamation berjalan parallel dengan program
-- Seperti robot vacuum yang bekerja di background tanpa mengganggu aktivitas
+### .NET/C# GC
+- **Generational collection** dengan multiple generations
+- **Background GC** untuk server applications
+- **Workstation vs Server modes** untuk different scenarios
 
-## GC Controller: Manajer Pacing Cerdas
+### Python GC
+- **Reference counting** sebagai primary mechanism
+- **Cycle detection** untuk handling circular references
+- **Generational collection** untuk optimization
 
-### Pacing Algorithm
-- **gcController** menentukan kapan trigger GC cycle
-- Mengatur balance antara memory usage dan CPU overhead
-- Adaptive pacing berdasarkan allocation rate dan heap growth
+### JavaScript V8 GC
+- **Orinoco collector** dengan incremental marking
+- **Scavenger** untuk young generation
+- **Mark-Compact** untuk old generation
 
-### Mutator Assists
-- **Goroutines membantu GC** ketika allocation rate tinggi
-- Prevents heap growth yang tidak terkendali
-- Cooperative approach antara application dan GC
+## Strategi dan Teknik GC Universal
+
+### Generational Hypothesis
+**Konsep fundamental** yang digunakan di Java, .NET, Python:
+- **Young objects** cenderung mati lebih cepat
+- **Old objects** cenderung hidup lebih lama
+- **Separate collection strategies** untuk different generations
+
+### Concurrent vs Stop-the-World
+```mermaid
+graph LR
+    A[STW GC] --> B[Application Paused]
+    B --> C[Complete Collection]
+    C --> D[Resume Application]
+    
+    E[Concurrent GC] --> F[Parallel Execution]
+    F --> G[Minimal Pauses]
+    G --> H[Continuous Operation]
+    
+    style A fill:#ffebee
+    style E fill:#e8f5e8
+```
+
+### Write Barriers dan Read Barriers
+- **Write barriers**: Track pointer modifications during concurrent collection
+- **Read barriers**: Ensure consistent view during concurrent phases
+- **Implementation varies** across different runtime systems
 
 ## Integration dengan Runtime Systems
 
