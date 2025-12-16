@@ -7,6 +7,7 @@ aliases:
   - Golang Documentation
   - Go Language Guide
   - GO
+  - Memahami Struktur Dokumentasi Golang
 categories:
   - "[[Posts]]"
 tags:
