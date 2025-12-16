@@ -16,6 +16,10 @@ date: 2025-12-15
 topics: []
 status: "[[Published]]"
 feed: show
+aliases:
+  - Zero-Copy
+  - Zero Copy
+  - zero copy
 ---
 
 ## Pengantar: Sistem Logistik yang Tidak Memindahkan Barang

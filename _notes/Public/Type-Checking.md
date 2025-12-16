@@ -11,12 +11,15 @@ author:
   - "[[Aes Saputra]]"
 url:
 created: 2025-12-15
-published:
+published: 2025-12-15
 date: 2025-12-15
 topics: []
-status:
-  - "[[Published]]"
+status: "[[Published]]"
 feed: show
+aliases:
+  - Type Checking
+  - Type-Checking
+  - type checking
 ---
 
 ## Pengantar: Guardian Konsistensi
