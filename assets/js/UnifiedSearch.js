@@ -1,4 +1,5 @@
 // Copyright (c) 2020-2024 Jekyll Garden. Credits: Raghuveer S
+// Modified for Unified Search (Notes + Posts)
 
 /********************************************************************************************
  * 
@@ -25,26 +26,10 @@
  * SOFTWARE.
  * 
  * 
- * File: Search.js
- * Author: Raghuveer S
+ * File: UnifiedSearch.js
+ * Description: Searches across both Notes and Posts collections
  * 
- * Preface: I take loads of inspiration from just-the-docs to implement this.
- * This can be easily ported to suit your needs. There is very little project specific stuff
- * in this.
- * 
- * How to customize this for your own project:
- * --------------------------------------------
- * 1. Lunr takes json fields for indexing, so create a json file with all the fields
- *      you want searched by Lunr. For eg. In my case, it is title, content, url for my 
- *      blog posts.
- *      Note: In this project, the json gets automatically generated. (SEE: search-data.json)
- * 2. Change the field names below accordingly. (SEE: this.field)
- * 3. Create a HTML Page with an input box(with id='search-input') and a div beneath it
- *     with id='search-results'. Also, don't forget to embed this script using the script
- *     tag.
- * 4. You are good to go. If you need additional customization you can change the boost 
- *      values, layout, colors etc by tinkering with the correponding parts of the code.
- *********************************************************************************************/
+ ********************************************************************************************/
 
 (function (sj) {
     "use strict";
@@ -93,7 +78,7 @@
     }
 
     function searchInit() {
-        var dataUrl = "/SearchData.json";
+        var dataUrl = "/UnifiedSearchData.json";
 
         getSearchData(dataUrl)
             .then(function (responseText) {
@@ -106,28 +91,30 @@
                     this.field('title', { boost: 500 });
                     this.field('content', { boost: 1 });
                     this.field('url');
+                    this.field('type', { boost: 2 }); // Add type field for filtering
                     this.metadataWhitelist = ['position']
 
                     for (var i in docs) {
                         this.add({
-                            id: i,
+                            id: docs[i].id,
                             title: docs[i].title,
                             content: docs[i].content,
-                            url: docs[i].url
+                            url: docs[i].url,
+                            type: docs[i].type
                         });
                     }
                 });
                 searchLoaded(index, docs);
             }).catch(function (err) {
-                console.warn("Error processing the search-data for lunrjs", err);
+                console.warn("Error processing the unified search-data for lunrjs", err);
             });
     }
 
     function searchLoaded(index, docs) {
         var index = index;
         var docs = docs;
-        var searchInput = document.getElementById('search-input');
-        var searchResults = document.getElementById('search-results');
+        var searchInput = document.getElementById('unified-search-input');
+        var searchResults = document.getElementById('unified-search-results');
         var currentInput;
         var currentSearchIndex = 0;
 
@@ -151,8 +138,6 @@
                 hideSearch();
             } else {
                 showSearch();
-                window.scroll(0, -1);
-                setTimeout(function () { window.scroll(0, 0); }, 0);
             }
 
             if (input === currentInput) {
@@ -219,7 +204,9 @@
 
             function addResult(resultsList, result) {
 
-                var doc = docs[result.ref];
+                var doc = docs.find(function (d) { return d.id === result.ref; });
+                if (!doc) return;
+
                 var resultsListItem = document.createElement('li');
                 resultsListItem.classList.add('search-results-list-item');
                 resultsList.appendChild(resultsListItem);
@@ -239,9 +226,15 @@
                 resultTitle.appendChild(resultDocTitle);
                 var resultDocOrSection = resultDocTitle;
 
-                if (doc.doc != doc.title) {
+                // Add type badge (Note or Writing)
+                var typeBadge = document.createElement('span');
+                typeBadge.classList.add('search-result-type-badge');
+                typeBadge.classList.add('type-' + doc.type);
+                typeBadge.innerText = doc.typeLabel;
+                resultDocTitle.appendChild(typeBadge);
 
-                    resultDoc.classList.add('search-result-doc-parent');
+                if (doc.doc != doc.title) {
+                    resultDocTitle.classList.add('search-result-doc-parent');
                     var resultSection = document.createElement('div');
                     resultSection.classList.add('search-result-section');
                     resultSection.innerHTML = doc.title;
@@ -315,6 +308,8 @@
                     titlePositions.sort(function (p1, p2) { return p1[0] - p2[0] });
                     resultDocOrSection.innerHTML = '';
                     addHighlightedText(resultDocOrSection, doc.title, 0, doc.title.length, titlePositions);
+                    // Re-add type badge after highlighting
+                    resultDocOrSection.appendChild(typeBadge);
                 }
 
                 if (contentPositions.length > 0) {
@@ -394,7 +389,7 @@
         sj.addEvent(searchInput, 'keyup', function (e) {
             switch (e.keyCode) {
                 case 27: // When esc key is pressed, hide the results and clear the field
-                    let searchInput = document.getElementById("search-input");
+                    let searchInput = document.getElementById("unified-search-input");
                     searchInput.value = "";
                     searchInput.blur();
                     hideSearch();
@@ -466,7 +461,7 @@
     function searchInitListener() {
         document.onkeyup = function (e) {
             var evt = window.event || e;
-            let searchInput = document.getElementById("search-input");
+            let searchInput = document.getElementById("unified-search-input");
             let key = evt.keyCode || evt.which;
             if (e.shiftKey && key == 83) {
                 searchInput.focus();
@@ -480,6 +475,3 @@
         searchInit();
     });
 })(window.sj = window.sj || {});
-
-
-

@@ -1,0 +1,18 @@
+<!-- Notes Archive List - All notes sorted by date -->
+<section class="archive-list" aria-label="All notes">
+    {% assign notes = site.notes | sort: "date" | reverse %}
+    {% for note in notes %}
+    {%- if note.feed == "show" -%}
+    <article class="archive-item">
+        <a href="{{ site.baseurl }}{{ note.url }}">
+            <span class="archive-title">{{ note.title }}</span>
+            {% if note.date %}
+            <time class="archive-date" datetime="{{ note.date | date_to_xmlschema }}">
+                {{ note.date | date: "%b %d, %Y" }}
+            </time>
+            {% endif %}
+        </a>
+    </article>
+    {%- endif -%}
+    {% endfor %}
+</section>

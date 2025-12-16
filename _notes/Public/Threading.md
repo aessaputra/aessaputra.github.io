@@ -16,6 +16,8 @@ date: 2025-12-15
 topics: []
 status: "[[Published]]"
 feed: show
+aliases:
+  - Threading
 ---
 
 ## Pengantar: Sistem Jalan Tol Multi-Jalur untuk Lalu Lintas Digital

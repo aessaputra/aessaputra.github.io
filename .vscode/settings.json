@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*SearchData.json": "liquid"
+    },
+    "[liquid]": {
+        "editor.formatOnSave": false
+    }
+}

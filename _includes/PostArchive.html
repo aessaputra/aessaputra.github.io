@@ -1,0 +1,18 @@
+<!-- Writing Archive List - All posts sorted by date -->
+<section class="archive-list" aria-label="All writing">
+    {% assign posts = site.posts | sort: "date" | reverse %}
+    {% if posts.size > 0 %}
+    {% for post in posts %}
+    <article class="archive-item">
+        <a href="{{ site.baseurl }}{{ post.url }}">
+            <span class="archive-title">{{ post.title }}</span>
+            <time class="archive-date" datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%b %d, %Y" }}
+            </time>
+        </a>
+    </article>
+    {% endfor %}
+    {% else %}
+    <p class="archive-empty">No posts yet. Check back soon!</p>
+    {% endif %}
+</section>

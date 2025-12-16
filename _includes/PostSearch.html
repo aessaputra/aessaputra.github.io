@@ -1,0 +1,13 @@
+{%- if site.preferences.search.enabled -%}
+<!-- Post Search Bar -->
+<search class="search-container" role="search" aria-label="Search writing">
+    <label for="post-search-input" class="visually-hidden">Search Writing</label>
+    <input class="search-input" type="search" placeholder="Search Writing..." id="post-search-input" autocomplete="off"
+        aria-describedby="post-search-help" aria-controls="post-search-results" aria-expanded="false">
+    <span id="post-search-help" class="visually-hidden">Type to search writing, use arrow keys to navigate
+        results</span>
+    <div id="post-search-results" class="search-results" role="listbox" aria-label="Search results"></div>
+</search>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/vendor/lunr.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/PostSearch.js"></script>
+{%- endif -%}

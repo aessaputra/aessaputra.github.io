@@ -1,13 +1,33 @@
-<!-- Feed with filter -->
-<section class="related-wrapper" aria-label="Notes feed">
-    {% assign note_items = site.notes | sort: "date" | reverse %}
-    {% for note_items in note_items %}
-    {%- if note_items.feed == "show" -%}
+<!-- Two Section Feed: Notes + Writing -->
+
+<!-- Section 1: Recent Notes -->
+<section class="feed-section" aria-label="Recent notes">
+    <h2 class="feed-section-title">📝 Recent Notes</h2>
+    {% assign notes = site.notes | sort: "date" | reverse %}
+    {% assign note_count = 0 %}
+    {% for note in notes limit:10 %}
+    {%- if note.feed == "show" and note_count < 10 -%} <article class="notelist-feed">
+        <a href="{{ site.baseurl }}{{ note.url }}" aria-label="Read {{ note.title }}">
+            <p>{{ note.title }}</p>
+        </a>
+        </article>
+        {% assign note_count = note_count | plus: 1 %}
+        {%- endif -%}
+        {% endfor %}
+        <a href="/notes" class="feed-see-all" aria-label="See all notes">See all notes →</a>
+</section>
+
+<!-- Section 2: Recent Writing (Posts) -->
+{% if site.posts.size > 0 %}
+<section class="feed-section" aria-label="Recent writing">
+    <h2 class="feed-section-title">✍️ Recent Writing</h2>
+    {% for post in site.posts limit:5 %}
     <article class="notelist-feed">
-        <a href="{{ site.baseurl }}{{note_items.url}}" aria-label="Read {{ note_items.title }}">
-            <p>{{ note_items.title }}</p>
+        <a href="{{ site.baseurl }}{{ post.url }}" aria-label="Read {{ post.title }}">
+            <p>{{ post.title }}</p>
         </a>
     </article>
-    {%- endif -%}
-    {%- endfor -%}
+    {% endfor %}
+    <a href="/writing" class="feed-see-all" aria-label="See all writing">See all writing →</a>
 </section>
+{% endif %}

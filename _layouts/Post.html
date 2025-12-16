@@ -73,94 +73,87 @@
     <div class="container">
         <div>
             {%- include Nav.html -%}
-            
+
             <!-- Homepage Layout-->
             {%- if page.permalink == "/" -%}
-                {%- if site.preferences.homepage.enabled -%}
-                    <!--- Show content from index.md when homepage is enabled -->
-                    {%- include Content.html -%}
-                {%- else -%}
-                    <!--- Show content from notes.md + search + feed when homepage is disabled -->
-                    <h1>{{page.title}}</h1>
-                    {%- include Content.html -%}
-                    {%- include Feed.html -%}
-                {%- endif -%}
+            {%- if site.preferences.homepage.enabled -%}
+            <!--- Show content from index.md when homepage is enabled -->
+            {%- include Content.html -%}
+            {%- else -%}
+            <!--- Show content from notes.md + search + feed when homepage is disabled -->
+            <h1>{{page.title}}</h1>
+            {%- include Content.html -%}
+            {%- include UnifiedSearch.html -%}
+            {%- include Feed.html -%}
+            {%- endif -%}
             {%- endif -%}
 
-            <!--- Notes Feed Layout-->
+            <!--- Notes Page Layout (Search + Archive only) -->
             {%- if page.permalink == "/notes" -%}
-                <h1>{{page.title}}</h1>
-                {%- include Content.html -%}
-                {%- include Search.html -%}
-                {%- include Feed.html -%}
+            <h1>{{page.title}}</h1>
+            {%- include Content.html -%}
+            {%- include NoteSearch.html -%}
+            {%- include NotesArchive.html -%}
             {%- endif -%}
 
             <!--- Notes Layout-->
             {%- if page.content-type == "notes" -%}
-                {%- assign words = page.content | number_of_words -%}
-                {%- assign minutes = words | divided_by: 200 -%}
-                {%- if minutes == 0 -%}
-                {%- assign minutes = 1 -%}
-                {%- endif -%}
-                {%- assign minute_label = "minutes" -%}
-                {%- if minutes == 1 -%}
-                {%- assign minute_label = "minute" -%}
-                {%- endif -%}
-                <h1>{{page.title}}</h1>
-                <p class="post-meta">
-                    {{ page.date | date: "%B %-d, %Y" }}
-                    <span aria-hidden="true">·</span>
-                    {{ minutes }} {{ minute_label }} read
-                </p>
-                {%- include Content.html -%}
-                {%- if site.preferences.backlinks.enabled -%}
-                {%- include Backlinks.html -%}
-                {%- endif -%}
+            {%- assign words = page.content | number_of_words -%}
+            {%- assign minutes = words | divided_by: 200 -%}
+            {%- if minutes == 0 -%}
+            {%- assign minutes = 1 -%}
+            {%- endif -%}
+            {%- assign minute_label = "minutes" -%}
+            {%- if minutes == 1 -%}
+            {%- assign minute_label = "minute" -%}
+            {%- endif -%}
+            <h1>{{page.title}}</h1>
+            <p class="post-meta">
+                {{ page.date | date: "%B %-d, %Y" }}
+                <span aria-hidden="true">·</span>
+                {{ minutes }} {{ minute_label }} read
+            </p>
+            {%- include Content.html -%}
+            {%- if site.preferences.backlinks.enabled -%}
+            {%- include Backlinks.html -%}
+            {%- endif -%}
             {%- endif -%}
 
-             <!--- Post Layout-->
-             {%- if page.content-type == "post"  -%}
-                 {%- assign words = page.content | number_of_words -%}
-                 {%- assign minutes = words | divided_by: 200 -%}
-                 {%- if minutes == 0 -%}
-                 {%- assign minutes = 1 -%}
-                 {%- endif -%}
-                 {%- assign minute_label = "minutes" -%}
-                 {%- if minutes == 1 -%}
-                 {%- assign minute_label = "minute" -%}
-                 {%- endif -%}
-                 <h1>{{page.title}}</h1>
-                 <p class="post-meta">
-                    {{ page.date | date: "%B %-d, %Y" }}
-                    <span aria-hidden="true">·</span>
-                    {{ minutes }} {{ minute_label }} read
-                 </p>
-                 {%- include Content.html -%}
-                 {%- if site.preferences.backlinks.enabled -%}
-                 {%- include Backlinks.html -%}
-                 {%- endif -%}
-             {%- endif -%}
+            <!--- Post Layout-->
+            {%- if page.content-type == "post" -%}
+            {%- assign words = page.content | number_of_words -%}
+            {%- assign minutes = words | divided_by: 200 -%}
+            {%- if minutes == 0 -%}
+            {%- assign minutes = 1 -%}
+            {%- endif -%}
+            {%- assign minute_label = "minutes" -%}
+            {%- if minutes == 1 -%}
+            {%- assign minute_label = "minute" -%}
+            {%- endif -%}
+            <h1>{{page.title}}</h1>
+            <p class="post-meta">
+                {{ page.date | date: "%B %-d, %Y" }}
+                <span aria-hidden="true">·</span>
+                {{ minutes }} {{ minute_label }} read
+            </p>
+            {%- include Content.html -%}
+            {%- if site.preferences.backlinks.enabled -%}
+            {%- include Backlinks.html -%}
+            {%- endif -%}
+            {%- endif -%}
 
             <!--- Static Page Layout-->
             {%- if page.content-type == "static" -%}
-                <h1>{{page.title}}</h1>                        
-                {%- include Content.html -%}
+            <h1>{{page.title}}</h1>
+            {%- include Content.html -%}
             {%- endif -%}
-            
-            <!--- Writing Feed Layout-->
+
+            <!--- Writing Page Layout (Search + Archive) -->
             {%- if page.permalink == "/writing" -%}
-                <div class="related-wrapper">
-                {% assign post_items = site.posts | sort: "date" | reverse %}
-                {% for post_items in post_items %}
-                    {%- if post_items.feed == "show" -%}
-                            <div class="notelist-feed">
-                                <a href="{{ site.baseurl }}{{post_items.url}}">
-                                    <p>{{ post_items.title }}</p>
-                                </a>
-                            </div>
-                    {%- endif -%}
-                {%- endfor -%}
-                </div>
+            <h1>{{page.title}}</h1>
+            {%- include Content.html -%}
+            {%- include PostSearch.html -%}
+            {%- include PostArchive.html -%}
             {%- endif -%}
 
             {%- include Footer.html -%}
@@ -170,4 +163,5 @@
     {%- include mermaid.html -%}
     {%- endif -%}
 </body>
+
 </html>
