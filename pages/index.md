@@ -2,6 +2,7 @@
 layout: Post
 permalink: /
 title: Learn, Build, Discover
+description: Personal notes on tech, projects, and ideas from Aes Saputra — sharing insights from real-world experiments and everyday learning
 ---
 
 I write about what I learn, build, and discover — sharing insights from real projects, experiments, and everyday curiosity.

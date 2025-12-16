@@ -3,6 +3,8 @@
 
 <head>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="description"
+        content="{{ page.description | default: site.description | default: 'Personal notes on tech, projects, and ideas — sharing insights from real-world experiments and everyday learning' }}">
     <meta content="{{ site.title | default: site.heading }}" property="og:site_name" />
     <meta content="{{ site.description | default: 'A Jekyll Garden site' }}" property="og:description">
     <meta content="{{ site.url }}/about/" property="article:author">

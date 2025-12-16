@@ -3,6 +3,7 @@ title: About Me
 layout: Post
 content-type: static
 permalink: /about
+description: Full Stack Developer and Cloud Engineer sharing technical notes and project insights — meet Aes Saputra
 ---
 Hi, I'm **Aes Saputra** - a Full Stack Developer and Cloud Engineer who enjoys shipping products, automating infrastructure, and documenting the process for future me.
 
