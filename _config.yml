@@ -98,6 +98,9 @@ privatelinks:
 katex: true
 mermaid: true
 
+# Allow future-dated
+future: true
+
 # Markdown Processing & Syntax Highlighting
 markdown: kramdown
 highlighter: rouge
