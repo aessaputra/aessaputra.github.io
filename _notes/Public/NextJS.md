@@ -33,20 +33,6 @@ aliases:
   - Next.js Development
 ---
 Next.js adalah framework React yang powerful untuk membangun aplikasi web full-stack modern. Panduan ini akan membantu Anda memahami Next.js dari dasar hingga mahir.
-
-## Daftar Isi
-
-1. [[#Pengenalan Next.js|Pengenalan Next.js]]
-2. [[#Instalasi dan Setup|Instalasi dan Setup]]
-3. [[#Konsep Dasar|Konsep Dasar]]
-4. [[#Routing System|Routing System]]
-5. [[#Server vs Client Components|Server vs Client Components]]
-6. [[#Data Fetching|Data Fetching]]
-7. [[#Styling|Styling]]
-8. [[#Optimisasi Performance|Optimisasi Performance]]
-9. [[#Deployment|Deployment]]
-10. [[#Resources dan Tools|Resources dan Tools]]
-
 ---
 
 ## Pengenalan Next.js
@@ -74,11 +60,11 @@ graph TD
     A --> C[Build System]
     A --> D[Development Tools]
     A --> E[Testing Infrastructure]
-    
-    B --> B1[next - Core Framework]
-    B --> B2[@next/swc - Compiler]
-    B --> B3[@next/font - Font Optimization]
-    
+
+    B --> B1["next - Core Framework"]
+    B --> B2["@next/swc - Compiler"]
+    B --> B3["@next/font - Font Optimization"]
+
     C --> C1[Webpack Integration]
     C --> C2[Turbopack - Next-gen Bundler]
     C --> C3[SWC - Rust Compiler]
