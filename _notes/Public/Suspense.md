@@ -180,6 +180,7 @@ function PostsSkeleton() {
 
 Nested Suspense seperti **teater dengan multiple stages** yang dapat menampilkan different scenes secara bertahap, memberikan audience progressive experience.
 
+{% raw %}
 ```javascript
 // Advanced nested Suspense patterns
 function BlogPost({ postId }) {
@@ -233,7 +234,7 @@ function PostContent({ postId }) {
     
     return (
         <div className="post-content">
-            <div dangerouslySetInnerHTML={%- raw -%}{{ __html: content.html }}{%- endraw -%} />
+            <div dangerouslySetInnerHTML={{ __html: content.html }} />
         </div>
     );
 }
@@ -280,6 +281,7 @@ function useResource(url) {
     return resource.read();
 }
 ```
+{% endraw %}
 
 ## Advanced Patterns: Tirai dengan Teknologi Canggih
 
