@@ -103,6 +103,7 @@ markdown: kramdown
 highlighter: rouge
 
 kramdown:
+  math_engine: katex
   input: GFM                      # GitHub Flavored Markdown (supports fenced code blocks)
   hard_wrap: false
   syntax_highlighter: rouge
