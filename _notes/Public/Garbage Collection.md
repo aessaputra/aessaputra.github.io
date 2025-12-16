@@ -116,46 +116,60 @@ graph LR
 - **Read barriers**: Ensure consistent view during concurrent phases
 - **Implementation varies** across different runtime systems
 
-## Integration dengan Runtime Systems
+## Performance Characteristics dan Trade-offs
 
-### Koordinasi dengan Memory Management
-- **mallocgc** mengalokasikan objek sebagai "black" during GC cycle
-- Write barriers memastikan new pointers terdeteksi
-- Seamless integration dengan [[Memory Management]] hierarchy
+### Latency vs Throughput Spectrum
+| Priority | GC Strategy | Examples | Trade-offs |
+|----------|-------------|----------|------------|
+| **Low Latency** | Concurrent, Incremental | ZGC, Shenandoah, Go GC | Higher CPU overhead |
+| **High Throughput** | Parallel, Batch | Parallel GC, G1GC | Longer pause times |
+| **Balanced** | Generational, Adaptive | HotSpot G1, .NET GC | Moderate both |
 
-### Scheduler Coordination  
-- **STW phases** menghentikan semua goroutines temporarily
-- Background marking menggunakan dedicated goroutines
-- Integration dengan [[Goroutine Scheduler]] untuk optimal performance
+### Memory Overhead Considerations
+- **GC metadata** requires additional memory
+- **Write barriers** add runtime overhead
+- **Concurrent algorithms** need extra bookkeeping structures
 
-## Performance Characteristics
+## Language-Specific Tuning dan Configuration
 
-### Latency Optimization
-| Aspect | Traditional GC | Go GC |
-|--------|---------------|-------|
-| STW Duration | Seconds | Sub-millisecond |
-| Concurrency | Stop-the-world | Mostly concurrent |
-| Predictability | Variable | Consistent low latency |
+### Java/JVM Tuning
+```bash
+# G1GC configuration
+-XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:G1HeapRegionSize=16m
 
-### Throughput vs Latency Trade-off
-- **Low-latency design** prioritizes responsiveness
-- Concurrent algorithms minimize application pauses
-- Tunable via GOGC untuk different workload characteristics
-
-## Configuration dan Tuning
-
-### Environment Variables
-- **GOGC**: Controls GC frequency (default 100%)
-- **GOMEMLIMIT**: Soft memory limit untuk GC triggering  
-- **GODEBUG=gctrace=1**: Detailed GC statistics dan timing
-
-### Runtime Controls
-```go
-// Programmatic GC control
-runtime.GC()              // Force GC cycle
-runtime.SetGCPercent(50)  // Adjust GC frequency
-debug.SetGCPercent(-1)    // Disable automatic GC
+# ZGC for ultra-low latency
+-XX:+UseZGC -XX:+UnlockExperimentalVMOptions
 ```
+
+### Go GC Configuration
+```bash
+# Environment variables
+GOGC=100          # GC frequency (default 100%)
+GOMEMLIMIT=4GiB   # Soft memory limit
+GODEBUG=gctrace=1 # GC statistics
+```
+
+### .NET GC Settings
+```xml
+<configuration>
+  <runtime>
+    <gcServer enabled="true"/>
+    <gcConcurrent enabled="true"/>
+  </runtime>
+</configuration>
+```
+
+## Advanced GC Concepts
+
+### Weak References dan Finalization
+- **Weak references**: References yang tidak mencegah GC
+- **Finalizers**: Cleanup code sebelum object destruction
+- **Phantom references**: Post-mortem notifications
+
+### Escape Analysis dan Stack Allocation
+- **Compiler optimization** untuk avoiding heap allocation
+- **Stack allocation** untuk short-lived objects
+- **Reduced GC pressure** melalui smart allocation strategies
 
 ## Advanced Features
 
