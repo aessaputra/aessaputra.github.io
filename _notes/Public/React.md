@@ -705,6 +705,7 @@ const AppRouter = () => (
 
 ### React Best Practices
 
+{% raw %}
 ```jsx
 // 1. Component Composition over Inheritance
 function Modal({ children, isOpen, onClose }) {
@@ -733,12 +734,12 @@ function BookProvider({ children }) {
   const [bookmarks, setBookmarks] = useState([]);
   
   return (
-    <BookContext.Provider value={%- raw -%}{{
+    <BookContext.Provider value={{
       selectedBook,
       setSelectedBook,
       bookmarks,
       setBookmarks
-    }}{%- endraw -%}>
+    }}>
       {children}
     </BookContext.Provider>
   );
@@ -775,6 +776,7 @@ class BookErrorBoundary extends Component {
   }
 }
 ```
+{% endraw %}
 
 ## Studi Kasus: Perpustakaan Digital Sukses
 
