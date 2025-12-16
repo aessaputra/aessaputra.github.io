@@ -52,15 +52,31 @@
     <meta name="apple-mobile-web-app-title" content="{{ site.title | default: site.heading }}">
     <link rel="manifest" href="{{ site.baseurl }}/assets/img/site.webmanifest">
     {%- if site.css_file -%}
-    <link href="{{ site.baseurl }}{{ site.css_file }}" rel="stylesheet" media="all" class="default" />
+    <link rel="preload" href="{{ site.baseurl }}{{ site.css_file }}" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="{{ site.baseurl }}{{ site.css_file }}" rel="stylesheet">
+    </noscript>
     {%- else -%}
-    <link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet" media="all" class="default" />
+    <link rel="preload" href="{{ site.baseurl }}/assets/css/style.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet">
+    </noscript>
     {%- endif -%}
     {%- if site.katex -%}
-    <link href="{{ site.baseurl }}/assets/css/vendor/Katex.css" rel="stylesheet" media="all" class="default" />
+    <link rel="preload" href="{{ site.baseurl }}/assets/css/vendor/Katex.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="{{ site.baseurl }}/assets/css/vendor/Katex.css" rel="stylesheet">
+    </noscript>
     {%- endif -%}
     <!-- Syntax Highlighting CSS (Rouge) -->
-    <link href="{{ site.baseurl }}/assets/css/fruity.css" rel="stylesheet" media="all" />
+    <link rel="preload" href="{{ site.baseurl }}/assets/css/fruity.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="{{ site.baseurl }}/assets/css/fruity.css" rel="stylesheet">
+    </noscript>
 
     <!--[if IE]>
         {%- if site.ie_css -%}
