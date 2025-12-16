@@ -4,6 +4,7 @@ aliases:
   - Transformer
   - Attention Mechanism
   - Self-Attention
+  - Transformer Architecture
 categories:
   - "[[Posts]]"
 tags:
