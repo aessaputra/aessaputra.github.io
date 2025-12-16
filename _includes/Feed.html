@@ -2,7 +2,7 @@
 
 <!-- Section 1: Recent Notes -->
 <section class="feed-section" aria-label="Recent notes">
-    <h2 class="feed-section-title">📝 Recent Notes</h2>
+    <h2 class="feed-section-title">Recent Notes</h2>
     {% assign notes = site.notes | sort: "date" | reverse %}
     {% assign note_count = 0 %}
     {% for note in notes limit:10 %}
@@ -20,7 +20,7 @@
 <!-- Section 2: Recent Writing (Posts) -->
 {% if site.posts.size > 0 %}
 <section class="feed-section" aria-label="Recent writing">
-    <h2 class="feed-section-title">✍️ Recent Writing</h2>
+    <h2 class="feed-section-title">Recent Writing</h2>
     {% for post in site.posts limit:5 %}
     <article class="notelist-feed">
         <a href="{{ site.baseurl }}{{ post.url }}" aria-label="Read {{ post.title }}">
