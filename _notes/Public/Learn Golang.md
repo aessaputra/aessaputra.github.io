@@ -6,6 +6,7 @@ aliases:
   - Go Programming
   - Golang Documentation
   - Go Language Guide
+  - GO
 categories:
   - "[[Posts]]"
 tags:

@@ -28,7 +28,7 @@ feed: show
 
 Garbage Collection adalah **sistem manajemen memori otomatis** yang bertindak seperti petugas kebersihan pintar di berbagai bahasa pemrograman modern. Seperti robot vacuum yang tahu kapan dan di mana harus membersihkan tanpa mengganggu aktivitas penghuni rumah, GC secara otomatis mengidentifikasi dan membersihkan objek-objek yang tidak lagi digunakan dalam program.
 
-Konsep ini hadir di berbagai bahasa seperti [[Java]], [[JVM]] languages, Go, C#, Python, JavaScript, dan banyak lagi, masing-masing dengan implementasi dan karakteristik yang unik sesuai dengan filosofi dan kebutuhan bahasa tersebut.
+Konsep ini hadir di berbagai bahasa seperti [[Java]], [[JVM]] languages, [[Go]], C#, Python, JavaScript, dan banyak lagi, masing-masing dengan implementasi dan karakteristik yang unik sesuai dengan filosofi dan kebutuhan bahasa tersebut.
 
 ## Algoritma Fundamental Garbage Collection
 
