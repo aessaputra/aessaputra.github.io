@@ -1,6 +1,6 @@
 <div class="footer">
   <div class="footer-left">
-    <h6>{{ site.footer.copyright }}</h6>
+    <p class="footer-copyright">{{ site.footer.copyright }}</p>
   </div>
 </div>
 
@@ -11,19 +11,19 @@
     const body = document.body;
     const sunIcon = themeToggle?.querySelector('.sun-icon');
     const moonIcon = themeToggle?.querySelector('.moon-icon');
-  
+
     if (!themeToggle || !sunIcon || !moonIcon) {
       console.warn('Theme toggle elements not found.');
       return;
     }
-  
+
     function setTheme(theme) {
       root.setAttribute('data-theme', theme);
       localStorage.setItem('theme', theme);
       updateIcon(theme);
       updateAria(theme);
     }
-  
+
     function updateIcon(theme) {
       if (theme === 'dark') {
         sunIcon.style.display = 'block';
@@ -33,42 +33,42 @@
         moonIcon.style.display = 'block';
       }
     }
-  
+
     function updateAria(theme) {
       themeToggle.setAttribute('aria-checked', theme === 'dark' ? 'true' : 'false');
     }
-  
+
     function toggleTheme() {
       root.classList.add('theme-transition');
       body.classList.add('theme-transition');
-  
+
       const isDark = root.getAttribute('data-theme') === 'dark';
       setTheme(isDark ? 'light' : 'dark');
-  
+
       setTimeout(() => {
         root.classList.remove('theme-transition');
         body.classList.remove('theme-transition');
       }, 300);
     }
-  
+
     const savedTheme = localStorage.getItem('theme');
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     const initialTheme = savedTheme || (prefersDarkScheme.matches ? 'dark' : 'light');
     setTheme(initialTheme);
-  
+
     themeToggle.addEventListener('click', toggleTheme);
     themeToggle.addEventListener('touchend', function (e) {
       e.preventDefault();
       toggleTheme();
     });
-  
+
     themeToggle.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         toggleTheme();
       }
     });
-  
+
     prefersDarkScheme.addEventListener('change', function (event) {
       if (!localStorage.getItem('theme')) {
         setTheme(event.matches ? 'dark' : 'light');
