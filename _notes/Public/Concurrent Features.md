@@ -70,6 +70,7 @@ graph TD
 Diagram ini menunjukkan bagaimana [[React]] Scheduler bekerja seperti konduktor orkestra yang mengatur different priority lanes - user inputs mendapat immediate execution, animations mendapat consistent time slices, dan background tasks dijalankan saat ada idle time. Interruption system memungkinkan high priority tasks untuk pause low priority operations.
 
 **Priority Lanes Implementation:**
+{% raw %}
 ```javascript
 // Advanced priority management dengan Concurrent Features
 import { 
@@ -121,6 +122,7 @@ function AdvancedConcurrentApp() {
     );
 }
 ```
+{% endraw %}
 
 Implementasi ini menunjukkan bagaimana different priority lanes bekerja dalam harmoni - user input mendapat immediate response, search operations dijalankan sebagai transitions, dan background tasks dijalankan saat ada idle time. Seperti orkestra yang dapat mengatur volume different sections berdasarkan kebutuhan musical piece.
 
@@ -165,6 +167,7 @@ Time slicing memungkinkan [[React]] untuk memberikan control kembali kepada brow
 
 useTransition seperti **konduktor orkestra yang sophisticated** - dapat memberikan signal kepada musicians untuk transition ke movement baru tanpa menghentikan current performance abruptly. Musicians akan finish current phrase dengan graceful, kemudian smoothly transition ke next section.
 
+{% raw %}
 ```javascript
 // Pattern dasar useTransition untuk navigation
 function NavigationExample() {
@@ -193,6 +196,7 @@ function NavigationExample() {
     );
 }
 ```
+{% endraw %}
 
 ### Advanced Patterns - Multiple Transitions Management
 
@@ -286,6 +290,7 @@ function MultiTransitionManager() {
 
 useDeferredValue seperti **section musisi yang experienced** dalam orkestra - mereka tahu kapan harus wait for their cue dan tidak akan rush untuk play their part. Mereka akan keep playing previous notes sampai conductor memberikan clear signal untuk transition.
 
+{% raw %}
 ```javascript
 // Pattern dasar untuk search dengan deferred results
 function SmartSearchInterface() {
@@ -346,6 +351,7 @@ const SearchResults = memo(function SearchResults({ query }) {
     );
 });
 ```
+{% endraw %}
 
 ### Advanced Deferral Patterns
 
@@ -426,6 +432,7 @@ Diagram ini menunjukkan bagaimana useDeferredValue bekerja dengan memo optimizat
 
 Kombinasi Concurrent Features dengan [[Suspense]] seperti **orkestra modern dengan advanced sound system** - musicians dapat play dengan confidence knowing bahwa sound engineer akan handle mixing dan audience akan mendapat seamless audio experience bahkan saat ada technical transitions.
 
+{% raw %}
 ```javascript
 function ConcurrentSuspenseApp() {
     const [isPending, startTransition] = useTransition();
@@ -490,6 +497,7 @@ function ProductList({ category, isStale }) {
     );
 }
 ```
+{% endraw %}
 
 ### Error Boundaries dengan Concurrent Features
 
@@ -538,6 +546,7 @@ class ConcurrentErrorBoundary extends Component {
 
 Implementasi real-world dari concurrent features dalam e-commerce platform yang handle thousands of products dengan complex filtering requirements.
 
+{% raw %}
 ```javascript
 function EcommerceSearchApp() {
     // State management untuk different aspects
@@ -649,6 +658,7 @@ function EcommerceSearchApp() {
     );
 }
 ```
+{% endraw %}
 
 ### Performance Metrics dan Results
 

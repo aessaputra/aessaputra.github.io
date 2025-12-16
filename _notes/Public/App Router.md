@@ -532,6 +532,7 @@ export default function PhotoPage({ params }) {
 
 App Router menyediakan API untuk SEO metadata:
 
+{% raw %}
 ```typescript
 // app/blog/[slug]/page.tsx
 import { Metadata } from 'next'
@@ -567,6 +568,7 @@ export default async function BlogPost({ params }) {
   )
 }
 ```
+{% endraw %}
 
 ## Migration dari Pages Router
 

@@ -123,6 +123,7 @@ graph TD
 ## Implementasi SSG di Next.js
 
 ### 1. getStaticProps
+{% raw %}
 ```typescript
 // pages/blog/[slug].tsx
 export async function getStaticProps({ params }) {
@@ -163,8 +164,10 @@ export default function BlogPost({ post }) {
   )
 }
 ```
+{% endraw %}
 
 ### 2. App Router SSG
+{% raw %}
 ```typescript
 // app/blog/[slug]/page.tsx
 async function getPost(slug: string) {
@@ -192,6 +195,7 @@ export default async function BlogPost({ params }) {
   )
 }
 ```
+{% endraw %}
 
 ## Incremental Static Regeneration (ISR)
 

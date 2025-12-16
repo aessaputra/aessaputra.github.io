@@ -212,6 +212,7 @@ jobs:
 
 Code generation seperti **pabrik otomatis** yang menghasilkan boilerplate code berkualitas tinggi dengan konsistensi sempurna.
 
+{% raw %}
 ```typescript
 // Code generation with Plop.js
 // plopfile.js
@@ -289,6 +290,7 @@ module.exports = function (plop) {
   });
 };
 ```
+{% endraw %}
 
 ### Automated Testing - Quality Assurance Express
 

@@ -291,6 +291,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 ```
 
 ### 3. getStaticPaths (untuk Dynamic SSG)
+{% raw %}
 ```typescript
 // pages/blog/[slug].tsx
 import { GetStaticProps, GetStaticPaths } from 'next'
@@ -338,6 +339,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 }
 ```
+{% endraw %}
 
 ## API Routes
 

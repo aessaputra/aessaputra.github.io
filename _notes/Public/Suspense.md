@@ -233,7 +233,7 @@ function PostContent({ postId }) {
     
     return (
         <div className="post-content">
-            <div dangerouslySetInnerHTML={{ __html: content.html }} />
+            <div dangerouslySetInnerHTML={%- raw -%}{{ __html: content.html }}{%- endraw -%} />
         </div>
     );
 }

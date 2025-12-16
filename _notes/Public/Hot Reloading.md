@@ -433,6 +433,7 @@ class _CounterAppState extends State<CounterApp> {
 
 Error recovery seperti **sistem pemulihan otomatis** yang dapat mengatasi kesalahan renovasi tanpa merusak seluruh bangunan.
 
+{% raw %}
 ```javascript
 // Error Boundary untuk Hot Reload
 class HotReloadErrorBoundary extends React.Component {
@@ -505,6 +506,7 @@ function App() {
   );
 }
 ```
+{% endraw %}
 
 ### CSS Hot Reload - Renovasi Dekorasi Instan
 

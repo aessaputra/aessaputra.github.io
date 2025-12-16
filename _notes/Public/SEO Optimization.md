@@ -148,6 +148,7 @@ export const metadata: Metadata = {
 ```
 
 ### 3. Structured Data (Schema.org)
+{% raw %}
 ```typescript
 // JSON-LD structured data
 export default function BlogPost({ post }) {
@@ -191,6 +192,7 @@ export default function BlogPost({ post }) {
   )
 }
 ```
+{% endraw %}
 
 ## Next.js SEO Implementation
 
@@ -391,6 +393,7 @@ export async function getStaticPaths() {
 ```
 
 ### 2. Internal Linking
+{% raw %}
 ```typescript
 import Link from 'next/link'
 
@@ -426,6 +429,7 @@ export default function BlogPost({ post, relatedPosts }) {
   )
 }
 ```
+{% endraw %}
 
 ## Mobile SEO
 

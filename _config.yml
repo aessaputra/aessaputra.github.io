@@ -98,6 +98,20 @@ privatelinks:
 katex: true
 mermaid: true
 
+# Markdown Processing & Syntax Highlighting
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM                      # GitHub Flavored Markdown (supports fenced code blocks)
+  hard_wrap: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    block:
+      line_numbers: false         # Set to true if you want line numbers
+      start_line: 1
+
 # Exclude from processing
 exclude:
   - Gemfile

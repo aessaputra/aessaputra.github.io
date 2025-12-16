@@ -733,12 +733,12 @@ function BookProvider({ children }) {
   const [bookmarks, setBookmarks] = useState([]);
   
   return (
-    <BookContext.Provider value={{
+    <BookContext.Provider value={%- raw -%}{{
       selectedBook,
       setSelectedBook,
       bookmarks,
       setBookmarks
-    }}>
+    }}{%- endraw -%}>
       {children}
     </BookContext.Provider>
   );

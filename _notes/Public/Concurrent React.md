@@ -61,6 +61,7 @@ graph TD
 Diagram ini menunjukkan bagaimana React Scheduler bekerja seperti konduktor yang mengatur prioritas - user interactions mendapat immediate attention, animations mendapat time slices yang konsisten, dan background tasks dijalankan saat ada idle time. Ini memastikan UI tetap responsive tanpa mengorbankan functionality.
 
 **Time Slicing Implementation:**
+{% raw %}
 ```javascript
 // Concurrent rendering dengan time slicing
 import { createRoot } from 'react-dom/client';
@@ -135,11 +136,13 @@ const container = document.getElementById('root');
 const root = createRoot(container); // Enables concurrent features
 root.render(<SearchableProductList />);
 ```
+{% endraw %}
 
 ### Interruptible Rendering - Orkestra yang Dapat Dipause
 
 Interruptible rendering seperti **orkestra yang dapat dipause** di tengah lagu untuk memberikan kesempatan kepada soloist penting, kemudian melanjutkan dari titik yang sama.
 
+{% raw %}
 ```javascript
 // Advanced concurrent patterns
 class ConcurrentDataProcessor extends React.Component {
@@ -229,6 +232,7 @@ class ConcurrentDataProcessor extends React.Component {
     }
 }
 ```
+{% endraw %}
 
 ## Concurrent Features: Instrumen Orkestra Modern
 
@@ -738,6 +742,7 @@ setTimeout(() => {
 
 ### Concurrent Patterns
 
+{% raw %}
 ```javascript
 // 1. Proper transition usage
 function OptimalTransitionUsage() {
@@ -822,6 +827,7 @@ function ConcurrentSafeComponent() {
     );
 }
 ```
+{% endraw %}
 
 ## Studi Kasus: Orkestra Concurrent dalam Production
 
