@@ -3,38 +3,50 @@
 :root {
   --bg: rgb(255, 252, 240);
   --bg2: rgb(242, 240, 229);
-  --text: #4a4944;        /* Darker text for better contrast */
-  --title: #1a1a18;       /* Darker title for better contrast */
+  --text: #4a4944;
+  /* Darker text for better contrast */
+  --title: #1a1a18;
+  /* Darker title for better contrast */
   --brand: rgb(58, 169, 159);
   --border: rgb(230, 228, 217);
-  
+
   --font: "Inter", sans-serif;
-  --weight-medium: 500;    /* Increased from 400 for better readability */
-  --weight-bold: 700;      /* Increased from 600 for better emphasis */
-  
+  --weight-medium: 500;
+  /* Increased from 400 for better readability */
+  --weight-bold: 700;
+  /* Increased from 600 for better emphasis */
+
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2rem;
   --space-xl: 3rem;
-  
+
   --max-width: 48rem;
-  --line-height: 1.7;      /* Slightly taller line height to match larger text */
-  
+  --line-height: 1.7;
+  /* Slightly taller line height to match larger text */
+
   /* 5-level typography scale (1rem = 16px) */
-  --scale-xs: 0.85rem;     /* ~14px */
-  --scale-sm: 0.95rem;     /* ~15px */
-  --scale-base: 1.1rem;    /* ~18px */
-  --scale-lg: 1.35rem;     /* ~22px */
-  --scale-xl: 1.65rem;     /* ~26px */
+  --scale-xs: 0.85rem;
+  /* ~14px */
+  --scale-sm: 0.95rem;
+  /* ~15px */
+  --scale-base: 1.1rem;
+  /* ~18px */
+  --scale-lg: 1.35rem;
+  /* ~22px */
+  --scale-xl: 1.65rem;
+  /* ~26px */
 }
 
 /* Dark theme variables */
 [data-theme="dark"] {
   --bg: #18181c;
   --bg2: #23232a;
-  --text: #e6e6e6;        /* Lighter text for better contrast in dark mode */
-  --title: #ffffff;       /* Pure white for titles */
+  --text: #e6e6e6;
+  /* Lighter text for better contrast in dark mode */
+  --title: #ffffff;
+  /* Pure white for titles */
   --brand: #3ac9b0;
   --border: #33343a;
 }
@@ -52,7 +64,8 @@ body.theme-transition {
 }
 
 html {
-  font-size: 16px;         /* Standard base size keeps typography compact */
+  font-size: 16px;
+  /* Standard base size keeps typography compact */
 }
 
 body {
@@ -73,7 +86,7 @@ body {
   padding-top: var(--space-xl);
 }
 
-.container > div {
+.container>div {
   max-width: var(--max-width);
   width: 100%;
   margin: 0 auto;
@@ -123,7 +136,12 @@ body {
   color: var(--brand);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font);
   color: var(--title);
   margin-bottom: var(--space-sm);
@@ -147,7 +165,7 @@ h1 {
   margin-bottom: 0;
 }
 
-.post-meta + .content {
+.post-meta+.content {
   margin-top: var(--space-lg);
 }
 
@@ -169,8 +187,10 @@ h3 {
   margin-bottom: var(--space-sm);
 }
 
-h4, h5, h6 { 
-  font-size: var(--scale-base); 
+h4,
+h5,
+h6 {
+  font-size: var(--scale-base);
   font-weight: var(--weight-bold);
 }
 
@@ -179,7 +199,8 @@ p {
   margin-bottom: var(--space-md);
   color: var(--text);
   line-height: 1.7;
-  font-weight: var(--weight-medium); /* Using variable instead of hardcoded 400 */
+  font-weight: var(--weight-medium);
+  /* Using variable instead of hardcoded 400 */
 }
 
 a {
@@ -234,7 +255,7 @@ a:hover {
   gap: var(--space-sm);
 }
 
-.note-list > li:first-child {
+.note-list>li:first-child {
   border-top: 1px solid var(--border);
 }
 
@@ -427,12 +448,12 @@ a:hover {
     min-width: 44px;
     min-height: 44px;
   }
-  
+
   .theme-toggle svg {
     width: 18px;
     height: 18px;
   }
-  
+
   .theme-toggle-icons {
     width: 18px;
     height: 18px;
@@ -449,12 +470,12 @@ a:hover {
     min-width: 44px;
     min-height: 44px;
   }
-  
+
   .theme-toggle svg {
     width: 19px;
     height: 19px;
   }
-  
+
   .theme-toggle-icons {
     width: 19px;
     height: 19px;
@@ -470,12 +491,12 @@ a:hover {
     min-width: 44px;
     min-height: 44px;
   }
-  
+
   .theme-toggle svg {
     width: 17px;
     height: 17px;
   }
-  
+
   .theme-toggle-icons {
     width: 17px;
     height: 17px;
@@ -491,12 +512,12 @@ a:hover {
     min-width: 44px;
     min-height: 44px;
   }
-  
+
   .theme-toggle svg {
     width: 16px;
     height: 16px;
   }
-  
+
   .theme-toggle-icons {
     width: 16px;
     height: 16px;
@@ -520,10 +541,12 @@ code {
   background: var(--bg2);
   padding: 0.125rem 0.25rem;
   border-radius: 0.25rem;
-  font-size: 0.9em;       /* Increased from 0.875em for better readability */
+  font-size: 0.9em;
+  /* Increased from 0.875em for better readability */
   font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
   color: var(--text);
-  font-weight: 500;       /* Added weight for better visibility */
+  font-weight: 500;
+  /* Added weight for better visibility */
 }
 
 pre {
@@ -539,9 +562,11 @@ pre code {
   background: none;
   padding: 0;
   border-radius: 0;
-  font-size: 0.9rem;      /* Increased from 0.875rem */
+  font-size: 0.9rem;
+  /* Increased from 0.875rem */
   line-height: 1.5;
-  font-weight: 500;       /* Added weight for better visibility */
+  font-weight: 500;
+  /* Added weight for better visibility */
 }
 
 hr {
@@ -550,7 +575,8 @@ hr {
   margin: var(--space-xl) 0;
 }
 
-ul, ol {
+ul,
+ol {
   margin-bottom: var(--space-md);
   padding-left: var(--space-lg);
 }
@@ -572,10 +598,12 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: var(--space-lg) 0;
-  font-size: 0.9rem;       /* Increased from 0.875rem */
+  font-size: 0.9rem;
+  /* Increased from 0.875rem */
 }
 
-th, td {
+th,
+td {
   padding: var(--space-sm) var(--space-md);
   text-align: left;
   border-bottom: 1px solid var(--border);
@@ -607,7 +635,8 @@ td {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font);
-  font-weight: var(--weight-medium); /* Added weight for better visibility */
+  font-weight: var(--weight-medium);
+  /* Added weight for better visibility */
 }
 
 .search-input:focus {
@@ -779,7 +808,7 @@ td {
   color: var(--text);
   border-radius: 6px;
   border: 1px solid var(--border);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s;
@@ -849,23 +878,23 @@ td {
   .container {
     padding-top: var(--space-md);
   }
-  
-  .container > div {
+
+  .container>div {
     padding: 0 var(--space-md) var(--space-md);
   }
-  
+
   .nav {
     margin-bottom: var(--space-lg);
   }
-  
+
   h1 {
     font-size: var(--scale-lg);
   }
-  
+
   h2 {
     font-size: var(--scale-base);
   }
-  
+
   h3 {
     font-size: var(--scale-base);
   }
@@ -875,11 +904,11 @@ td {
   .container {
     padding-top: var(--space-sm);
   }
-  
-  .container > div {
+
+  .container>div {
     padding: 0 var(--space-sm) var(--space-sm);
   }
-  
+
   .btn {
     display: block;
     margin-bottom: var(--space-sm);
@@ -893,12 +922,17 @@ img {
   margin: var(--space-md) 0;
 }
 
-p a[href^="http://"], p a[href^="https://"],
-li a[href^="http://"], li a[href^="https://"] {
+p a[href^="http://"],
+p a[href^="https://"],
+li a[href^="http://"],
+li a[href^="https://"] {
   position: relative;
 }
-p a[href^="http://"]:after, p a[href^="https://"]:after,
-li a[href^="http://"]:after, li a[href^="https://"]:after {
+
+p a[href^="http://"]:after,
+p a[href^="https://"]:after,
+li a[href^="http://"]:after,
+li a[href^="https://"]:after {
   content: '';
   display: inline-block;
   width: 1em;
@@ -908,4 +942,17 @@ li a[href^="http://"]:after, li a[href^="https://"]:after {
   background: url('data:image/svg+xml;utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%23555%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%3E%3Cpath%20d=%22M5%2019L19%205M5%205h14v14%22/%3E%3C/svg%3E') no-repeat center center;
   background-size: 1em 1em;
   opacity: 0.7;
+}
+
+/* Visually Hidden - Accessible to screen readers only */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

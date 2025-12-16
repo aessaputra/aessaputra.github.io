@@ -100,6 +100,37 @@ Gunakan tabel untuk:
 - **Classification**: Mengkategorikan informasi
 - **Reference**: Quick lookup information
 
+### Liquid Syntax Escape (Jekyll)
+Site ini menggunakan Jekyll yang memproses **Liquid templating**. Code blocks yang mengandung `{{ }}` (double curly braces) harus di-escape agar tidak terjadi error.
+
+#### Kapan Perlu Escape?
+| Pola dalam Code Block | Perlu Escape? | Contoh |
+|-----------------------|---------------|--------|
+| `style={{ color: 'red' }}` | ✅ Ya | JSX inline style |
+| `value={{ name, id }}` | ✅ Ya | JSX object props |
+| `dangerouslySetInnerHTML={{ __html: x }}` | ✅ Ya | React HTML injection |
+| `{{pascalCase name}}` | ✅ Ya | Template generators |
+| `const x = 5;` | ❌ Tidak | Normal code |
+| `<div className="test">` | ❌ Tidak | Normal JSX |
+
+#### Cara Escape dengan Raw Tags
+Wrap **seluruh code block** dengan `{% raw %}` dan `{% endraw %}`:
+
+```markdown
+{% raw %}
+\`\`\`jsx
+function Component() {
+  return <div style={{ color: 'red' }}>Hello</div>
+}
+\`\`\`
+{% endraw %}
+```
+
+#### Aturan Penting
+- **JANGAN** gunakan inline `{%- raw -%}` di dalam code
+- **SELALU** wrap di luar code fence (sebelum ``` dan setelah ```)
+- **Periksa** semua code JSX/React yang menggunakan inline style atau object props
+
 ## 5. Sumber Dokumentasi
 
 ### Prioritas Sumber
