@@ -11,14 +11,30 @@
     {%- if site.og_image -%}
     <meta property="og:image" content="{{ site.baseurl }}{{ site.og_image }}">
     {%- endif -%}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Async load Google Fonts to prevent 750ms blocking -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    </noscript>
+    <!-- Preload self-hosted fonts -->
+    <link rel="preload" href="{{ site.baseurl }}/assets/fonts/inter-v20-latin-regular.woff2" as="font" type="font/woff2"
+        crossorigin>
+    <link rel="preload" href="{{ site.baseurl }}/assets/fonts/inter-v20-latin-600.woff2" as="font" type="font/woff2"
+        crossorigin>
+
+    <!-- Self-hosted Inter font @font-face definitions -->
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+            src: url('{{ site.baseurl }}/assets/fonts/inter-v20-latin-regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Inter';
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+            src: url('{{ site.baseurl }}/assets/fonts/inter-v20-latin-600.woff2') format('woff2');
+        }
+    </style>
     {%- if page.title -%}
     <meta content="{{ page.title }}" property="og:title">
     <meta content="article" property="og:type">
