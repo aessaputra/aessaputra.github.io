@@ -33,6 +33,7 @@ aliases:
   - Next.js Development
 ---
 Next.js adalah framework React yang powerful untuk membangun aplikasi web full-stack modern. Panduan ini akan membantu Anda memahami Next.js dari dasar hingga mahir.
+
 ---
 
 ## Pengenalan Next.js
