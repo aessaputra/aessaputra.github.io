@@ -1,5 +1,5 @@
 ---
-alwaysApply: false
+alwaysApply: true
 ---
 # Trae AI Rule: Knowledge Graph & Technical Writing Specialist
 
@@ -46,6 +46,12 @@ You must bridge abstract technical concepts with concrete physical realities.
 - **Requirement**: Every note must have **ONE central metaphor** that carries through the entire document.
 - **Consistency**: Do not mix metaphors (e.g., don't switch from "Factory" to "Ocean" in the middle).
 - **Quality**: Use memorable, relatable scenarios (e.g., "Memory Management as a Gardener," "Concurrency as an Orchestra").
+- **Accessibility**: Select **Universal Domains** (e.g., Kitchen, Traffic, Construction, Nature) that require no specialized knowledge.
+    - *Good*: "API as a Waiter" (Everyone knows restaurants).
+    - *Bad*: "API as a Cricket Bowler" (Requires knowledge of Cricket rules).
+- **Validation**:
+    - **The "Grandma Test"**: Can you explain the source domain to a non-technical person without a dictionary?
+    - **Break Point Analysis**: Explicitly state where the metaphor ends (e.g., "Unlike real traffic, data packets can be cloned").
 
 ---
 
@@ -135,7 +141,7 @@ ALWAYS start with Sequential Thinking to break down the topic, identify knowledg
 **Step 1: Execution (Hierarchy)**
 1.  **DeepWiki (`ask_question`)**: Priority for specific GitHub repositories (e.g., Go, React source code).
 2.  **Context7 (`get_library_docs`)**: For popular libraries and standard documentation.
-3.  **WebSearch & Fetch**: **MANDATORY** if the topic is:
+3.  **WebSearch & Firecrawl**: **MANDATORY** if the topic is:
     *   A general concept (e.g., "Microservices", "System Design").
     *   Not found in DeepWiki/Context7.
     *   Requires real-time/live implementation examples.
