@@ -53,7 +53,7 @@ Jarak antar titik dalam ruang vektor disebut **Cosine Similarity**. Semakin deka
 
 ```mermaid
 graph TD
-    subgraph "Ruang Vektor (Disederhanakan)"
+    subgraph "Ruang Vektor"
         A((Raja)) ---|Dekat| B((Ratu))
         C((Apel)) ---|Dekat| D((Jeruk))
         A -.-|Jauh| C
