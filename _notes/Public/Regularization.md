@@ -32,7 +32,7 @@ Model tidak lagi hanya diminta untuk "meminimalkan kesalahan", tetapi "meminimal
 
 $$ \text{Total Cost} = \text{Error} + (\lambda \times \text{Complexity}) $$
 
-Di mana $\lambda$ (Lambda) adalah tarif pajaknya. Semakin tinggi tarifnya, semakin model takut untuk menjadi kompleks.
+Di mana $$\lambda$$ adalah tarif pajaknya. Semakin tinggi tarifnya, semakin model takut untuk menjadi kompleks.
 
 ## Dua Jenis Pajak: L1 vs L2
 
