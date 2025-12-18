@@ -98,7 +98,6 @@ Konvensi ini tidak dipaksakan oleh *compiler*, namun diikuti oleh komunitas peng
 
 ## Hubungan Terkait
 *   Untuk detail tentang tipe data yang dapat disimpan dalam variabel, lihat [[Creating Primitive Type Variables in Your Programs]].
-*   Artikel ini merupakan bagian dari panduan [[Java Language Basics]].
 
 ## Referensi
 *   [Creating Variables and Naming Them - Dev.java](https://dev.java/learn/language-basics/variables/) - Dokumentasi resmi mengenai variabel dan aturan penamaan di Java.
