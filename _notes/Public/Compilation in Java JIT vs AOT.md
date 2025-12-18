@@ -1,5 +1,5 @@
 ---
-title: Kompilasi di Java: JIT vs AOT
+title: Kompilasi di Java | JIT vs AOT
 categories:
   - "[[Posts]]"
 tags:
