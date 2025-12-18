@@ -1,8 +1,5 @@
 ---
-title: Pernyataan Switch Expression - Papan Catur Strategi
-aliases:
-  - Switch Expression
-  - Branching with Switch Expressions
+title: Switch Expression di Java
 categories:
   - "[[Posts]]"
 tags:
@@ -15,33 +12,40 @@ url: https://aessaputra.net/notes/pernyataan-switch-expression/
 created: 2025-12-18
 published: 2025-12-18
 date: 2025-12-18
-topics: ["[[Java]]", "[[Programming Fundamentals]]", "[[Control Flow]]"]
+topics:
+  - "[[Java]]"
+  - "[[Programming Fundamentals]]"
+  - "[[Control Flow]]"
 status: "[[Published]]"
 feed: show
+aliases:
+  - Switch Expression
+  - Branching with Switch Expressions
+contentType: concept
 ---
 
-## Pengantar: Papan Catur Strategi dalam Kode
+**Switch Expression** adalah fitur yang diperkenalkan secara resmi di [[Java]] SE 14 yang memperbarui cara kita menangani percabangan kode. Fitur ini menawarkan sintaks yang lebih ringkas, aman, dan fleksibel dibandingkan `switch statement` tradisional, serta memungkinkan blok `switch` untuk dievaluasi menjadi sebuah nilai secara langsung.
 
-Dalam evolusi [[Pemrograman Java]], `switch statement` tradisional telah menjadi alat yang andal untuk mengarahkan alur program. Namun, seiring berjalannya waktu, kebutuhan akan ekspresi yang lebih ringkas dan aman muncul. Di sinilah `switch expression` hadir, seperti "Papan Catur Strategi" yang baru dan lebih efisien. Ia memungkinkan kita untuk tidak hanya memilih jalur, tetapi juga menghasilkan nilai secara langsung, mengubah cara kita menyusun logika percabangan menjadi lebih elegan dan fungsional.
+## Motivasi Perubahan
 
-## Evolusi Strategi: Mengapa `switch expression`?
+Sebelum adanya Switch Expression, pengembang [[Java]] sering menghadapi beberapa keterbatasan dengan `switch statement` klasik:
 
-`switch expression`, yang diperkenalkan di Java SE 14, adalah sintaks yang lebih nyaman dan kuat dibandingkan `switch statement` tradisional. Motivasi di balik pengembangannya meliputi:
+1.  **Perilaku *Fall-through***: Secara default, eksekusi kode akan "jatuh" ke `case` berikutnya jika tidak ada pernyataan `break`. Ini sering menjadi sumber *bug* yang sulit dideteksi.
+2.  **Cakupan Variabel (*Scope*)**: Blok `switch` tradisional dianggap sebagai satu blok cakupan tunggal. Ini menyulitkan jika kita ingin mendefinisikan variabel lokal dengan nama yang sama di `case` yang berbeda.
+3.  **Pernyataan vs Ekspresi**: `switch` tradisional adalah sebuah pernyataan (*statement*), yang berarti ia hanya melakukan aksi tetapi tidak menghasilkan nilai. Ini sering memaksa pengembang untuk mendeklarasikan variabel di luar blok `switch` dan mengisinya di dalam setiap `case`, yang kurang elegan dan rentan kesalahan.
 
-1.  **Mengatasi `fall-through`**: Perilaku `fall-through` default pada `switch statement` seringkali menjadi sumber bug. `switch expression` menghilangkan masalah ini dengan sintaks baru.
-2.  **Blok yang lebih fleksibel**: `switch statement` memperlakukan seluruh blok sebagai satu kesatuan. `switch expression` memungkinkan definisi variabel lokal dalam setiap `case`.
-3.  **Menghasilkan nilai**: `switch statement` adalah pernyataan (statement), yang berarti ia melakukan tindakan. `switch expression` adalah ekspresi (expression), yang berarti ia mengevaluasi menjadi sebuah nilai, menghasilkan kode yang lebih ringkas dan mudah dibaca.
+## Sintaks Baru: `case L ->`
 
-`switch statement` tradisional masih tersedia dan semantiknya tidak berubah. `switch expression` adalah tambahan yang memberikan fleksibilitas lebih.
+Switch Expression memperkenalkan sintaks label baru `case L ->`. Dengan sintaks ini, hanya kode di sebelah kanan tanda panah (`->`) yang akan dieksekusi jika label cocok. Tidak ada perilaku *fall-through*, sehingga kita tidak lagi memerlukan pernyataan `break`.
 
-## Langkah-Langkah Strategis: Sintaks Baru `case L ->`
+### Contoh Perbandingan
 
-Sintaks `switch expression` memodifikasi cara label `switch` ditulis. Mari kita bandingkan dengan `switch statement` tradisional:
+Berikut adalah perbandingan antara sintaks lama dan baru:
 
-### `switch statement` Tradisional
+**Switch Statement Tradisional:**
 
 ```java
-Day day = Day.MONDAY; // hari apa pun
+Day day = Day.MONDAY;
 int len = 0;
 switch (day) {
     case MONDAY:
@@ -60,138 +64,64 @@ switch (day) {
         len = 9;
         break;
 }
-System.out.println("len = " + len);
 ```
 
-### `switch expression` (Java SE 14+)
+**Switch Expression:**
 
 ```java
-Day day = Day.MONDAY; // hari apa pun
-int len =
-    switch (day) {
-        case MONDAY, FRIDAY, SUNDAY -> 6;
-        case TUESDAY                -> 7;
-        case THURSDAY, SATURDAY     -> 8;
-        case WEDNESDAY              -> 9;
-    };
-System.out.println("len = " + len);
-```
-
-Sintaks label `switch` sekarang adalah `case L ->`. Hanya kode di sebelah kanan `->` yang dieksekusi jika label cocok. Kode ini bisa berupa ekspresi tunggal, blok kode, atau pernyataan `throw`. Karena setiap `case` adalah bloknya sendiri, Anda dapat mendefinisikan variabel lokal di dalamnya. Sintaks ini juga mendukung beberapa konstanta per `case`, dipisahkan dengan koma.
-
-## Buah dari Strategi: Menghasilkan Nilai
-
-Salah satu fitur paling kuat dari `switch expression` adalah kemampuannya untuk menghasilkan nilai. Ini berarti Anda dapat menetapkan hasil dari `switch expression` langsung ke sebuah variabel.
-
-```java
-int quarter = 0; // nilai apa pun
-
-String quarterLabel =
-    switch (quarter) {
-        case 0  -> "Q1 - Winter";
-        case 1  -> "Q2 - Spring";
-        case 2  -> "Q3 - Summer";
-        case 3  -> "Q3 - Summer";
-        default -> "Unknown quarter";
-    };
-System.out.println("Label kuartal: " + quarterLabel);
-```
-
-Jika hanya ada satu pernyataan dalam blok `case`, nilai yang dihasilkan oleh pernyataan ini akan menjadi nilai yang dikembalikan oleh `switch expression`.
-
-### Mengatasi Ambiguitas dengan `yield`
-
-Ketika blok kode dalam `case` lebih kompleks, penggunaan `return` tradisional dapat menimbulkan ambiguitas. Untuk mengatasi ini, Java memperkenalkan pernyataan `yield`.
-
-**Contoh Kode yang Tidak Kompilasi (untuk ilustrasi ambiguitas `return`):**
-```java
-{% raw %}
-// Hati-hati, kode ini TIDAK akan kompilasi!
-public String convertToLabel(int quarter) {
-    String quarterLabel =
-        switch (quarter) {
-            case 0  -> {
-                System.out.println("Q1 - Winter");
-                return "Q1 - Winter"; // Ambiguitas: return method atau switch?
-            }
-            default -> "Unknown quarter";
-        };
-    return quarterLabel;
-}
-{% endraw %}
-```
-
-**Menggunakan `yield` untuk Kejelasan:**
-```java
-{% raw %}
-public String convertToLabel(int quarter) {
-    String quarterLabel =
-        switch (quarter) {
-            case 0  -> {
-                System.out.println("Q1 - Winter");
-                yield "Q1 - Winter"; // Jelas: menghasilkan nilai untuk switch expression
-            }
-            default -> "Unknown quarter";
-        };
-    return quarterLabel;
-}
-{% endraw %}
-```
-
-Pernyataan `yield` digunakan dalam blok `case` dari `switch expression` untuk secara eksplisit menyatakan nilai yang akan dihasilkan oleh `switch expression` tersebut.
-
-## Strategi Pertahanan: Klausa `default` dan Exhaustiveness
-
-Klausa `default` memungkinkan kode Anda menangani kasus di mana nilai pemilih tidak cocok dengan konstanta `case` mana pun. Dalam `switch expression`, semua `case` harus bersifat *exhaustive*, artinya untuk semua nilai yang mungkin, harus ada label `switch` yang cocok. `switch statement` tradisional tidak memiliki persyaratan ini.
-
-Untuk `enum`, jika semua konstanta `enum` telah dicakup oleh `case`, klausa `default` tidak diperlukan. Namun, jika ada nilai `enum` baru ditambahkan dan `switch expression` tidak diperbarui, kompiler akan menambahkan klausa `default` secara otomatis yang akan melempar `IncompatibleClassChangeError` saat runtime, membantu mendeteksi potensi bug.
-
-## Fleksibilitas Strategi: `case L:` dalam `switch expression`
-
-`switch expression` juga dapat menggunakan blok `case` tradisional dengan sintaks `case L:`. Dalam kasus ini, perilaku `fall-through` masih berlaku, dan nilai dihasilkan menggunakan pernyataan `yield`.
-
-```java
-{% raw %}
-String result = switch (someValue) {
-    case 1: 
-        System.out.println("Case 1");
-        yield "One";
-    case 2: 
-        System.out.println("Case 2");
-        yield "Two";
-    default: 
-        System.out.println("Default");
-        yield "Other";
+Day day = Day.MONDAY;
+int len = switch (day) {
+    case MONDAY, FRIDAY, SUNDAY -> 6;
+    case TUESDAY                -> 7;
+    case THURSDAY, SATURDAY     -> 8;
+    case WEDNESDAY              -> 9;
 };
-System.out.println(result);
-{% endraw %}
 ```
 
-## Ancaman Tersembunyi: Menangani Nilai `null`
+Perhatikan bahwa kita dapat menggunakan beberapa konstanta dalam satu `case` dengan memisahkannya menggunakan koma, dan seluruh ekspresi `switch` dapat langsung ditugaskan ke variabel `len`.
 
-Secara default, `switch statement` dan `switch expression` tidak menerima nilai pemilih `null`. Mencoba `switch` pada nilai `null` akan menghasilkan `NullPointerException`. Namun, Java SE 17 memperkenalkan fitur pratinjau yang memungkinkan `switch expression` untuk menangani nilai `null`, menunjukkan evolusi berkelanjutan dalam bahasa ini.
+## Menghasilkan Nilai dengan `yield`
 
-## Peta Strategi `switch expression`
+Salah satu fitur utama Switch Expression adalah kemampuannya untuk mengembalikan nilai. Jika blok kode di sebelah kanan `->` adalah ekspresi tunggal, nilai ekspresi tersebut otomatis dikembalikan. Namun, jika kita memerlukan blok kode penuh (menggunakan kurung kurawal `{}`), kita harus menggunakan kata kunci `yield` untuk mengembalikan nilai.
 
-Berikut adalah visualisasi bagaimana `switch expression` bekerja sebagai "Papan Catur Strategi" yang menghasilkan nilai:
+### Mengapa `yield`, bukan `return`?
 
-```mermaid
-graph TD
-    A[Mulai Program] --> B{Variabel Pemilih};
-    B --> C{Nilai Variabel Pemilih?};
-    C -- Cocok dengan Case 1 --> D[Jalur Case 1 (-> Nilai 1)];
-    C -- Cocok dengan Case 2 --> E[Jalur Case 2 (-> Nilai 2)];
-    C -- Tidak Cocok --> F[Jalur Default (-> Nilai Default)];
-    D --> G(Hasil: Nilai 1);
-    E --> H(Hasil: Nilai 2);
-    F --> I(Hasil: Nilai Default);
-    G --> J[Lanjutkan Program dengan Hasil];
-    H --> J;
-    I --> J;
+Penggunaan `return` di dalam blok `switch` dapat menimbulkan ambiguitas: apakah kita ingin mengembalikan nilai dari `switch` atau menghentikan eksekusi *method* pembungkusnya? Untuk mengatasi ini, [[Java]] memperkenalkan `yield`.
+
+**Contoh Penggunaan `yield`:**
+
+```java
+int quarter = 0;
+String quarterLabel = switch (quarter) {
+    case 0 -> {
+        System.out.println("Menghitung Q1...");
+        yield "Q1 - Winter";
+    }
+    case 1 -> "Q2 - Spring"; // Ekspresi tunggal tidak butuh yield
+    default -> "Unknown quarter";
+};
 ```
-**Penjelasan Diagram:**
-Diagram ini menggambarkan alur kerja `switch expression`. Program dimulai, dan "Variabel Pemilih" dievaluasi. Berdasarkan nilai tersebut, `switch expression` akan memilih salah satu "Jalur Case" yang sesuai. Setiap jalur ini secara langsung "menghasilkan" sebuah nilai. Jika tidak ada `case` yang cocok, "Jalur Default" akan menghasilkan nilai default. Akhirnya, program akan "Lanjutkan Program dengan Hasil" yang telah dihasilkan oleh `switch expression`.
 
-## Refleksi: Master Catur Kode
+Kata kunci `yield` berfungsi mirip dengan `return`, tetapi khusus untuk mengembalikan nilai dari dalam blok `switch expression`.
 
-`switch expression` adalah langkah maju yang signifikan dalam [[Pemrograman Java]], memberikan [[Pengembang Perangkat Lunak|developer]] kemampuan untuk menulis kode yang lebih ringkas, aman, dan ekspresif. Ini seperti seorang master catur yang tidak hanya merencanakan gerakan, tetapi juga memprediksi hasil dari setiap langkah dengan presisi. Dengan menguasai "Papan Catur Strategi" ini, kita dapat membangun [[Aplikasi]] yang lebih kuat dan mudah dipelihara, di mana setiap keputusan percabangan tidak hanya mengarahkan alur, tetapi juga secara aktif berkontribusi pada nilai yang dihasilkan oleh program.
+## Kelengkapan (*Exhaustiveness*)
+
+Berbeda dengan `switch statement`, Switch Expression mewajibkan **kelengkapan** (*exhaustiveness*). Artinya, semua kemungkinan nilai dari variabel penentu harus ditangani.
+
+*   Untuk tipe data primitif (seperti `int` atau `String`), kita biasanya wajib menyertakan klausa `default`.
+*   Untuk tipe **[[Enum]]**, jika kita telah menangani semua konstanta enum yang ada, kita tidak perlu menambahkan `default`.
+
+Jika di kemudian hari ada konstanta baru yang ditambahkan ke [[Enum]] dan kode `switch` tidak diperbarui, [[Compiler]] akan mendeteksi ketidaklengkapan ini (jika dikompilasi ulang) atau melempar kesalahan saat *runtime*, menjaga keamanan kode.
+
+## Kesimpulan
+
+Switch Expression di [[Java]] bukan hanya sekadar pemanis sintaks (*syntactic sugar*). Ia membawa perbaikan fundamental pada alur kontrol program dengan:
+*   Menghilangkan risiko *fall-through*.
+*   Memungkinkan penulisan kode fungsional yang lebih bersih dengan pengembalian nilai.
+*   Menjamin keamanan tipe melalui pengecekan kelengkapan (*exhaustiveness*).
+
+Dengan mengadopsi fitur ini, pengembang dapat menulis kode yang lebih ekspresif, ringkas, dan bebas dari *bug* umum yang terkait dengan percabangan.
+
+---
+**Referensi:**
+*   [Branching with Switch Expressions - Dev.java](https://dev.java/learn/language-basics/switch-expression/)

@@ -1,5 +1,5 @@
 ---
-title: Creating Variables and Naming Them - Gudang Dapur
+title: Creating Variables and Naming Them
 aliases:
   - Creating Variables and Naming Them
 categories:
@@ -20,109 +20,85 @@ status: "[[Published]]"
 feed: show
 ---
 
-## Pengantar: Gudang Dapur
-- Bayangkan variabel seperti wadah di gudang dapur: tiap wadah diberi label yang jelas agar bahan tersusun rapi, mudah ditemukan, dan tidak tertukar saat memasak.
-- Di Java, ada beberapa jenis "wadah" dengan karakteristik berbeda: milik objek (instance), milik kelas (static), milik metode (local), dan parameter.
-- Untuk konteks eksekusi dan memori, lihat [[JVM]]; untuk desain tipe dan enkapsulasi, rujuk [[Object-Oriented Programming|OOP]]; untuk struktur data yang menyimpan koleksi bahan, lihat [[Java Collections]].
-- Break Point Analysis: tidak seperti gudang nyata, wadah (variabel) dapat diduplikasi tanpa kehilangan bahan, dan label (nama variabel) tidak mempengaruhi kinerja secara langsung, tetapi mempengaruhi keterbacaan dan perawatan kode.
+## Pengantar
 
-```mermaid
-graph TD
-  A[Gudang Dapur] --> B[Jenis Variabel]
-  B --> B1[Instance Variables]
-  B --> B2[Class Variables]
-  B --> B3[Local Variables]
-  B --> B4[Parameters]
-  A --> C[Penamaan & Konvensi]
-  C --> C1[Case-sensitive]
-  C --> C2[Identifier rules]
-  C --> C3[Hindari $ dan _]
-```
+Dalam bahasa pemrograman Java, objek menyimpan statusnya di dalam **field**. Seringkali istilah "field" dan "variable" digunakan secara bergantian, yang dapat membingungkan pengembang baru. Artikel ini menjelaskan perbedaan teknis antara jenis-jenis variabel yang ada di Java serta aturan penamaannya.
 
-- Diagram menampilkan hierarki topik: dari metafora gudang ke empat jenis variabel, lalu cabang aturan penamaan. Baca dari atas ke bawah untuk memahami struktur dan detail yang perlu diperhatikan.
+Pemahaman tentang variabel sangat fundamental sebelum mempelajari pengelolaan memori di [[JVM]] atau struktur data kompleks di [[Java Collections]].
 
-## Jenis Variabel: Wadah di Gudang
-### Instance Variables (Non-Static Fields)
-- Milik tiap objek; setiap "kotak bahan" unik per objek.
-- Dideklarasikan tanpa `static` dan umumnya berakses melalui instance.
-- Default value berlaku untuk tipe primitif/objek saat menjadi field.
+## Jenis-Jenis Variabel
+
+Bahasa pemrograman Java mendefinisikan kategori variabel sebagai berikut:
+
+### 1. Instance Variables (Non-Static Fields)
+Secara teknis, objek menyimpan status individualnya dalam "non-static fields". Variabel ini dideklarasikan tanpa kata kunci `static`.
+*   **Karakteristik**: Nilainya unik untuk setiap *instance* dari kelas (setiap objek).
+*   **Konteks**: Berkaitan erat dengan konsep enkapsulasi dalam [[Object-Oriented Programming|OOP]].
 
 ```java
 class Bicycle {
-  int cadence = 0;   // instance variable
-  int speed = 0;     // instance variable
-  int gear = 1;      // instance variable
+    int cadence = 0;   // instance variable
+    int speed = 0;     // instance variable
+    int gear = 1;      // instance variable
 }
 ```
 
-### Class Variables (Static Fields)
-- Milik kelas; satu "rak bersama" untuk semua objek.
-- Dideklarasikan dengan `static`; dapat ditambah `final` untuk nilai konstan.
+### 2. Class Variables (Static Fields)
+Variabel kelas adalah field yang dideklarasikan dengan modifier `static`.
+*   **Karakteristik**: Hanya ada satu salinan variabel ini yang eksis, terlepas dari berapa banyak objek yang dibuat dari kelas tersebut.
+*   **Penggunaan**: Kata kunci `final` sering ditambahkan untuk mendefinisikan konstanta.
 
 ```java
 class Bicycle {
-  static int numGears = 6;      // class variable
-  static final double PI = 3.14; // class constant
+    static int numGears = 6;    // class variable
 }
 ```
 
-### Local Variables
-- Milik metode; "wadah sementara" di dalam langkah resep.
-- Hanya terlihat di blok tempat deklarasi; tidak memiliki default value, harus diinisialisasi sebelum dipakai.
+### 3. Local Variables
+Metode sering kali menyimpan status sementaranya dalam variabel lokal.
+*   **Deklarasi**: Terletak di antara kurung kurawal pembuka dan penutup dari sebuah metode.
+*   **Lingkup (Scope)**: Hanya terlihat oleh metode tempat mereka dideklarasikan; tidak dapat diakses dari bagian lain kelas.
+*   **Inisialisasi**: Tidak memiliki nilai default; harus diinisialisasi sebelum digunakan.
 
 ```java
 void bake() {
-  int count = 0; // local variable
-  count++;
+    int count = 0; // local variable
+    count = count + 1;
 }
 ```
 
-### Parameters
-- Nilai masuk ke metode/konstruktor/penanganan exception; selalu diklasifikasikan sebagai variabel, bukan field.
+### 4. Parameters
+Parameter adalah variabel yang digunakan dalam deklarasi metode, konstruktor, atau penanganan pengecualian (*exception handler*).
+*   **Penting**: Parameter selalu diklasifikasikan sebagai "variabel", bukan "field".
 
 ```java
-public static void main(String[] args) { // parameter: args
-  System.out.println(args.length);
+public static void main(String[] args) { // args adalah parameter
+    // ...
 }
 ```
 
-## Penamaan Variabel: Label Wadah
-### Aturan dasar identifier
-- Nama variabel peka huruf besar/kecil (case-sensitive).
-- Boleh menggunakan huruf Unicode, digit, diawali huruf, `$`, atau `_`.
-- Konvensi: mulai dengan huruf; hindari `$` dan `_` untuk nama yang dibuat sendiri.
+## Penamaan Variabel
 
-### Gaya penulisan
-- Satu kata: semua huruf kecil, mis. `count`.
-- Lebih dari satu kata: gunakan camelCase, mis. `gearRatio`, `currentGear`.
-- Konstanta: kapital semua huruf dengan underscore, mis. `NUM_GEARS`.
-- Hindari penggunaan kata kunci atau reserved word sebagai nama variabel.
+Setiap bahasa pemrograman memiliki aturan dan konvensi penamaan. Di Java, hal ini sangat penting untuk keterbacaan kode.
 
-### Konvensi keterbacaan
-- Gunakan kata lengkap yang deskriptif (mis. `currentSpeed`, `totalPrice`).
-- Hindari singkatan kabur; pilih nama yang membuat kode "self-documenting".
-- Konsisten dengan gaya penamaan proyek dan idiom Java.
+### Aturan (Rules)
+Aturan ini bersifat wajib; jika dilanggar, kode akan gagal dikompilasi.
+1.  **Case-sensitive**: Nama variabel membedakan huruf besar dan kecil (`speed` berbeda dengan `Speed`).
+2.  **Karakter Legal**: Boleh terdiri dari huruf Unicode, angka, simbol dolar (`$`), atau garis bawah (`_`).
+3.  **Karakter Awal**: Harus dimulai dengan huruf, `$`, atau `_` (tidak boleh dimulai dengan angka).
+4.  **Spasi**: Tidak boleh mengandung spasi (*white space*).
 
-## Terminologi: Field vs Variable
-- Istilah "field" biasanya merujuk ke anggota tipe yang bukan lokal/parameter.
-- Istilah "variable" dapat mencakup semua jenis: instance, class, local, parameter.
-- Kadang terdengar "member" untuk menyebut gabungan field, method, dan nested types.
+### Konvensi (Conventions)
+Konvensi ini tidak dipaksakan oleh *compiler*, namun diikuti oleh komunitas pengembang Java untuk standar kualitas kode.
+1.  **Karakter Awal**: Selalu mulai dengan huruf. Hindari penggunaan `$` dan `_` di awal nama, meskipun secara teknis legal.
+2.  **Nama Lengkap**: Gunakan kata penuh alih-alih singkatan kriptik (misalnya, `cadence` lebih baik daripada `c`). Ini membuat kode bersifat *self-documenting*.
+3.  **Gaya Penulisan**:
+    *   **Variabel**: Gunakan `camelCase` (misalnya: `currentSpeed`, `gearRatio`).
+    *   **Konstanta**: Gunakan huruf kapital semua dengan pemisah garis bawah (misalnya: `NUM_GEARS`, `MAX_WIDTH`).
 
-## Scope, Lifetime, dan Default Value
+## Hubungan Terkait
+*   Untuk detail tentang tipe data yang dapat disimpan dalam variabel, lihat [[Creating Primitive Type Variables in Your Programs]].
+*   Artikel ini merupakan bagian dari panduan [[Java Language Basics]].
 
-| Jenis | Kata Kunci | Lokasi Deklarasi | Scope | Lifetime | Default Value |
-|---|---|---|---|---|---|
-| Instance | (none) | Di dalam kelas, tanpa `static` | Per instance | Selama instance hidup | Ada (ditetapkan oleh JVM) |
-| Class | `static` | Di dalam kelas | Global per kelas | Selama kelas dimuat | Ada |
-| Local | (none) | Di dalam metode/blok | Terbatas ke blok | Selama eksekusi blok | Tidak ada (wajib inisialisasi) |
-| Parameter | (none) | Tanda tangan metode/konstruktor | Terbatas ke metode | Selama eksekusi metode | Nilai dari pemanggil |
-
-## Hubungan ke Topik Lain
-- Variabel menyimpan state yang berinteraksi erat dengan [[Object-Oriented Programming|OOP]] (enkapsulasi dan invariants).
-- Pemilihan tipe bahan (nilai) berkaitan dengan [[Creating Primitive Type Variables in Your Programs]].
-- Ketika wadah perlu menyimpan banyak item, gunakan struktur di [[Java Collections]].
-- Catatan induk ringkasnya ada di [[Java Language Basics]].
-
-## Refleksi: Gudang yang Tertata
-- Dengan metafora gudang, kita menekankan pentingnya jenis wadah (variabel) dan label (nama) agar seluruh proses memasak (program) berjalan rapi dan bisa dirawat.
-- Batas metafora: label tidak memengaruhi performa, dan wadah bisa berjumlah sangat banyak tanpa ruang fisik; berbeda dengan gudang nyata.
+## Referensi
+*   [Creating Variables and Naming Them - Dev.java](https://dev.java/learn/language-basics/variables/) - Dokumentasi resmi mengenai variabel dan aturan penamaan di Java.

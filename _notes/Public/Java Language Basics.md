@@ -1,5 +1,5 @@
 ---
-title: Java Language Basics - Dapur Profesional
+title: Java Language Basics
 aliases:
   - Java Language Basics
 categories:
@@ -19,115 +19,69 @@ status: "[[Published]]"
 feed: show
 ---
 
-## Pengantar: Dapur Profesional
-- Bayangkan dasar-dasar Java seperti operasi sebuah dapur profesional: bahan, alat, resep, dan alur memasak bekerja serempak agar hidangan konsisten dan cepat disajikan.
-- Variabel adalah wadah bahan, tipe data adalah jenis bahan, operator adalah alat, ekspresi dan pernyataan adalah langkah resep, sedangkan control flow adalah keputusan koki di tengah proses.
-- Untuk konteks eksekusi mesin, lihat [[JVM]] dan kaitannya dengan [[Object-Oriented Programming|OOP]]. Koleksi seperti daftar dan set dapat dibaca di [[Java Collections]].
-- Break Point Analysis: tidak seperti dapur nyata, data di Java dapat digandakan tanpa habis; waktu komputasi tidak selalu linear dengan "berat bahan"; dan bahan (nilai) tidak basi kecuali kita menggantinya.
+## Pengantar
 
-```mermaid
-graph TD
-  A[Dapur Profesional] --> B[Inventaris: Variabel]
-  A --> C[Peralatan: Operator]
-  A --> D[Resep: Ekspresi & Blok]
-  A --> E[Alur Memasak: Control Flow]
-  B --> B1[Tipe primitif]
-  B --> B2[Array]
-  C --> C1[Aritmatika]
-  C --> C2[Perbandingan]
-  C --> C3[Logika]
-  E --> E1[if/else]
-  E --> E2[for/while]
-  E --> E3[switch]
-```
+Artikel ini merangkum dasar-dasar bahasa pemrograman Java berdasarkan dokumentasi resmi **Dev.java**. Materi ini mencakup komponen fundamental yang membentuk struktur program Java, mulai dari variabel, operator, ekspresi, pernyataan, blok, hingga pernyataan alur kontrol.
 
-- Diagram di atas memetakan hierarki konsep: mulai dari dapur (Java dasar) ke empat cabang utama. Baca dari atas ke bawah: setiap node adalah sub-topik; anak node merinci kategori di dalamnya.
+Pemahaman yang kuat tentang konsep-konsep ini sangat penting sebelum melangkah ke topik yang lebih lanjut seperti [[Object-Oriented Programming|OOP]] atau pengelolaan memori oleh [[JVM]].
 
-## Inventaris: Variabel & Tipe
-### Menamai dan menyimpan bahan
-- Variabel menamai wadah agar koki tahu di mana bahan disimpan. Lihat [[Creating Variables and Naming Them]] untuk aturan penamaan yang konsisten dan mudah dibaca.
-- Gunakan nama yang menjawab "apa" bukan "bagaimana" (mis. `totalPrice`, bukan `tp`).
+## 1. Variabel dan Tipe Data
 
-### Tipe primitif sebagai jenis bahan
-- Tipe primitif adalah bahan dasar: `int`, `double`, `boolean`, `char`, `byte`, `short`, `long`, `float`.
-- Lihat [[Creating Primitive Type Variables in Your Programs]] untuk sintaks inisialisasi dan default value.
-- Pertimbangkan rentang dan presisi: pilih `int` vs `long`, `float` vs `double` sesuai "ukuran bahan" yang dibutuhkan.
+Bagian ini menjelaskan bagaimana data disimpan, diberi nama, dan dikelola dalam memori program.
 
-### Var sebagai inferensi wadah
-- `var` memungkinkan compiler menginferensi tipe bahan dari konteks lokal sehingga resep tetap ringkas namun bertipe statis.
-- Lihat [[Using the Var Type Identifier]] untuk batasan (hanya variabel lokal), praktik penamaan yang tetap eksplisit, dan contoh yang aman.
+### Pembuatan dan Penamaan Variabel
+Variabel adalah unit dasar penyimpanan dalam program Java. Agar kode dapat dikompilasi dan mudah dibaca, pengembang harus mematuhi aturan penamaan (*naming conventions*) yang ketat.
+*   Panduan lengkap: [[Creating Variables and Naming Them]]
 
-### Array sebagai rak bahan
-- Array menyusun bahan sejenis di satu rak berindeks untuk akses cepat.
-- Lihat [[Creating Arrays in Your Programs]] untuk membuat rak berukuran tetap dan teknik iterasi yang aman.
-- Jika perlu fleksibilitas rak, pertimbangkan koleksi dinamis pada [[Java Collections]].
+### Variabel Tipe Primitif
+Java merupakan bahasa *strongly-typed* yang menyediakan sekumpulan tipe data primitif sebagai blok bangunan dasar. Tipe ini menyimpan nilai data sederhana secara langsung.
+*   Sintaks dan inisialisasi: [[Creating Primitive Type Variables in Your Programs]]
 
-## Peralatan: Operator
-### Menggunakan operator sebagai alat
-- Operator aritmatika (`+`, `-`, `*`, `/`, `%`) adalah pisau, panci, dan pengaduk untuk "mengolah" bahan.
-- Operator perbandingan (`==`, `!=`, `>`, `<`, `>=`, `<=`) menilai kualitas/kuantitas bahan.
-- Operator logika (`&&`, `||`, `!`) menggabungkan keputusan seperti "jika bahan ada dan segar".
-- Lihat [[Using Operators in Your Programs]] dan [[Summary of Operators]] untuk daftar lengkap dan prioritas evaluasi.
+### Array (Larik)
+Array adalah objek kontainer yang menampung sejumlah nilai dengan tipe tunggal dalam ukuran yang tetap (*fixed-length*). Panjang array ditetapkan saat pembuatan dan tidak dapat diubah setelahnya.
+*   Implementasi: [[Creating Arrays in Your Programs]]
 
-## Resep: Ekspresi, Pernyataan dan Blok
-### Ekspresi sebagai adukan
-- Ekspresi mengembalikan nilai; pikirkan sebagai adukan yang menghasilkan konsistensi tertentu (nilai akhir).
-- Contoh: `a + b * c` dievaluasi mengikuti prioritas alat.
+### Identifiers Tipe Var
+Diperkenalkan pada Java SE 10, kata kunci `var` memungkinkan deklarasi variabel lokal dengan inferensi tipe otomatis. Hal ini memungkinkan penulisan kode yang lebih ringkas tanpa mengorbankan keamanan tipe statis (*static type safety*).
+*   Penggunaan `var`: [[Using the Var Type Identifier]]
 
-### Pernyataan dan blok sebagai langkah resep
-- Pernyataan menjalankan tindakan (mis. penugasan, pemanggilan metode); blok `{ ... }` mengelompokkan langkah-langkah menjadi satu tahapan.
-- Lihat [[Expressions, Statements and Blocks]] untuk pola penyusunan agar resep tetap rapi dan teruji.
+## 2. Operator
 
-## Alur Memasak: Control Flow
-### Keputusan, perulangan, dan percabangan
-- `if/else` adalah keputusan koki saat melihat kondisi bahan.
-- Perulangan `for`/`while` mengaduk atau memanggang berulang sampai syarat tercapai.
-- `break`/`continue` mengatur kapan berhenti atau loncat dalam proses.
-- Lihat [[Control Flow Statements]] untuk kombinasi pola yang aman dan idiomatik.
+Operator adalah simbol khusus yang melakukan operasi spesifik pada satu, dua, atau tiga operan, dan kemudian mengembalikan hasilnya.
 
-### Papan menu: switch statement
-- Gunakan `switch` untuk memilih cabang resep berdasarkan satu nilai.
-- Lihat [[Branching with Switch Statements]] untuk sintaks dan praktik `break` agar tidak "meluber" ke kasus lain.
+*   **Penggunaan Operator**: Mencakup operator aritmatika, unari, penugasan, dan relasional untuk melakukan komputasi data. Lihat [[Using Operators in Your Programs]].
+*   **Ringkasan Operator**: Daftar referensi lengkap mengenai semua operator yang tersedia beserta aturan presedensinya. Lihat [[Summary of Operators]].
 
-```java
-int day = 3;
-switch (day) {
-  case 1:
-    System.out.println("Mon");
-    break;
-  case 2:
-    System.out.println("Tue");
-    break;
-  default:
-    System.out.println("Other");
-}
-```
+## 3. Struktur Program: Ekspresi, Pernyataan, dan Blok
 
-### Papan menu: switch expression
-- `switch` modern dapat menghasilkan nilai secara langsung dan lebih ringkas.
-- Lihat [[Branching with Switch Expressions]] untuk pola ekspresi dengan panah `->`.
+Kode Java tersusun dari tiga elemen struktural utama:
 
-```java
-int grade = 85;
-String result = switch (grade / 10) {
-  case 10, 9 -> "A";
-  case 8 -> "B";
-  case 7 -> "C";
-  case 6 -> "D";
-  default -> "E";
-};
-```
+1.  **Ekspresi (*Expressions*)**: Konstruksi yang terdiri dari variabel, operator, dan pemanggilan metode yang dievaluasi menjadi sebuah nilai tunggal.
+2.  **Pernyataan (*Statements*)**: Unit eksekusi terkecil dalam program yang menyatakan suatu tindakan (setara dengan kalimat dalam bahasa manusia).
+3.  **Blok (*Blocks*)**: Sekumpulan nol atau lebih pernyataan yang dikelompokkan di dalam kurung kurawal `{ ... }`.
 
-## Perbandingan: Statement vs Expression
+*   Pembahasan mendalam: [[Expressions, Statements and Blocks]]
 
-| Aspek | Switch Statement | Switch Expression |
-|---|---|---|
-| Tujuan | Percabangan prosedural | Menghasilkan nilai |
-| Verbositas | Lebih panjang (butuh `break`) | Lebih ringkas (panah `->`) |
-| Keamanan | Risiko fall-through | Tidak ada fall-through |
-| Kesesuaian | Alur langkah resep | Penentuan hasil hidangan |
+## 4. Pernyataan Alur Kontrol (*Control Flow Statements*)
 
-## Refleksi: Dapur yang Konsisten
-- Dengan metafora dapur, kita menempatkan variabel sebagai bahan, operator sebagai alat, dan control flow sebagai keputusan koki sehingga resep (program) selalu konsisten.
-- Untuk performa dan memori, rujuk [[JVM]]; untuk desain tipe dan antarmuka, rujuk [[Object-Oriented Programming|OOP]]; untuk struktur data siap pakai, rujuk [[Java Collections]].
-- Batas metafora: bahan di Java tidak rusak oleh waktu, alat tidak tumpul, dan hasil dapat direplikasi persis—sesuatu yang sulit di dapur nyata.
+Secara default, pernyataan dalam program dieksekusi secara berurutan dari atas ke bawah. Pernyataan alur kontrol memutus aliran eksekusi tersebut, memungkinkan program untuk membuat keputusan, melakukan perulangan, dan percabangan kode.
+
+### Jenis Alur Kontrol
+Java mendukung berbagai mekanisme kontrol, termasuk:
+*   **Decision-making**: `if`, `if-else`, `switch`.
+*   **Looping**: `for`, `while`, `do-while`.
+*   **Branching**: `break`, `continue`, `return`.
+
+Pelajari detail implementasinya di: [[Control Flow Statements]].
+
+### Percabangan dengan Switch
+Pernyataan `switch` menyediakan cara yang efisien untuk mengalihkan alur eksekusi ke berbagai bagian kode berdasarkan nilai variabel.
+
+1.  **Switch Statement**: Bentuk tradisional dari `switch` yang digunakan untuk mengontrol alur program secara imperatif.
+    *   Panduan: [[Branching with Switch Statements]]
+2.  **Switch Expressions**: Fitur modern yang memungkinkan `switch` digunakan sebagai ekspresi yang menghasilkan nilai, mendukung sintaks panah (`->`) yang lebih aman dan ringkas.
+    *   Panduan: [[Branching with Switch Expressions]]
+
+## Referensi
+
+*   [Java Language Basics - Dev.java](https://dev.java/learn/language-basics/) - Dokumentasi dan tutorial resmi untuk dasar-dasar bahasa Java.

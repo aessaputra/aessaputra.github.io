@@ -1,5 +1,5 @@
 ---
-title: Creating Primitive Type Variables in Your Programs - Rak Bahan Kering
+title: Creating Primitive Type Variables in Your Programs
 aliases:
   - Creating Primitive Type Variables in Your Programs
 categories:
@@ -19,134 +19,126 @@ status: "[[Published]]"
 feed: show
 ---
 
-## Pengantar: Rak Bahan Kering
-- Bayangkan tipe primitif sebagai bahan kering di rak dapur: ukurannya tetap, tidak saling memengaruhi, dan siap dipakai langsung untuk resep.
-- Java adalah bahasa statically-typed: setiap wadah (variabel) harus dideklarasikan dengan tipe. Lihat [[Creating Variables and Naming Them]] untuk relasi antara field dan variabel.
-- Untuk eksekusi dan default value level mesin, rujuk [[JVM]]. Untuk desain tipe dan enkapsulasi, lihat [[Object-Oriented Programming|OOP]]. Ikhtisar umumnya ada di [[Java Language Basics]].
-- Break Point Analysis: tidak seperti bahan basah, tipe primitif tidak menyimpan state bersama; literal merepresentasikan nilai langsung tanpa objek.
+## Pengantar
 
-```mermaid
-graph TD
-  A[Rak Bahan Kering] --> B[Primitive Types]
-  B --> B1[byte]
-  B --> B2[short]
-  B --> B3[int]
-  B --> B4[long]
-  B --> B5[float]
-  B --> B6[double]
-  B --> B7[boolean]
-  B --> B8[char]
-  A --> C[Unsigned (Java 8+)]
-  C --> C1[int (Integer)]
-  C --> C2[long (Long)]
-  A --> D[Default Values]
-  A --> E[Literals]
+Bahasa pemrograman Java bersifat *statically-typed*, yang berarti semua variabel harus dideklarasikan terlebih dahulu sebelum dapat digunakan. Hal ini melibatkan penyebutan tipe variabel dan namanya.
+
+```java
+int gear = 1;
 ```
 
-- Diagram memperlihatkan hierarki: delapan tipe primitif sebagai bahan kering, dukungan unsigned di Java 8+, serta simpul untuk default values dan literals. Baca dari atas ke bawah untuk memahami cakupan dan keterkaitan.
+Mendeklarasikan variabel memberitahu program bahwa ada *field* bernama `gear`, memegang data numerik, dan memiliki nilai awal `1`. Tipe data variabel menentukan nilai yang mungkin dikandungnya, serta operasi yang dapat dilakukan padanya. Selain `int`, bahasa pemrograman Java mendukung tujuh tipe data primitif lainnya. Tipe primitif didefinisikan oleh bahasa dan dinamai dengan kata kunci yang dipesan (*reserved keyword*).
 
-## Jenis Bahan: Delapan Tipe Primitif
-### byte (8-bit, two's complement)
-- Rentang: -128 hingga 127 (inklusif).
-- Gunaan: hemat memori pada array besar; memperjelas batas nilai.
+Untuk pemahaman lebih lanjut tentang variabel, lihat [[Creating Variables and Naming Them]].
 
-### short (16-bit, two's complement)
-- Rentang: -32,768 hingga 32,767.
-- Gunaan: mirip `byte`, hemat memori untuk kumpulan besar.
+## Tipe Data Primitif
 
-### int (32-bit, two's complement)
-- Rentang: -2^31 hingga 2^31-1.
-- Gunaan: bilangan bulat umum; default untuk perhitungan integral.
+Java mendukung delapan tipe data primitif:
 
-### long (64-bit, two's complement)
-- Rentang: -2^63 hingga 2^63-1.
-- Gunaan: bilangan bulat lebar; gunakan saat `int` tidak cukup.
+### 1. byte
+*   **Spesifikasi**: Integer 8-bit *signed two's complement*.
+*   **Rentang**: -128 hingga 127 (inklusif).
+*   **Kegunaan**: Berguna untuk menghemat memori dalam array besar di mana penghematan memori benar-benar penting. Batasannya juga dapat berfungsi sebagai dokumentasi kode.
 
-### float (32-bit, IEEE 754)
-- Gunaan: angka pecahan, hemat memori pada array besar.
-- Catatan: jangan untuk nilai presisi (mis. mata uang); gunakan `java.math.BigDecimal`.
+### 2. short
+*   **Spesifikasi**: Integer 16-bit *signed two's complement*.
+*   **Rentang**: -32,768 hingga 32,767 (inklusif).
+*   **Kegunaan**: Sama seperti `byte`, digunakan untuk menghemat memori pada array besar.
 
-### double (64-bit, IEEE 754)
-- Gunaan: angka pecahan; pilihan default untuk desimal.
-- Catatan: hindari untuk presisi finansial; gunakan `BigDecimal`.
+### 3. int
+*   **Spesifikasi**: Integer 32-bit *signed two's complement*.
+*   **Rentang**: -2^31 hingga 2^31-1.
+*   **Kegunaan**: Tipe data default untuk nilai integral.
 
-### boolean
-- Nilai: `true` atau `false`; ukuran tidak didefinisikan presisi.
-- Gunaan: flags kondisi sederhana.
+### 4. long
+*   **Spesifikasi**: Integer 64-bit *two's complement*.
+*   **Rentang**: -2^63 hingga 2^63-1.
+*   **Kegunaan**: Digunakan ketika rentang nilai `int` tidak cukup luas.
 
-### char (16-bit Unicode)
-- Rentang: `\u0000` hingga `\uffff` (0..65,535).
-- Gunaan: karakter UTF-16 tunggal.
+### 5. float
+*   **Spesifikasi**: *Single-precision* 32-bit IEEE 754 floating point.
+*   **Kegunaan**: Menghemat memori dalam array besar angka *floating point*.
+*   **Peringatan**: Jangan gunakan untuk nilai presisi seperti mata uang. Gunakan `java.math.BigDecimal` sebagai gantinya.
 
-## Unsigned di Java 8+
-### Unsigned int (32-bit)
-- Rentang: 0 hingga 2^32-1.
-- Dukungan: metode statis pada `Integer` seperti `compareUnsigned`.
+### 6. double
+*   **Spesifikasi**: *Double-precision* 64-bit IEEE 754 floating point.
+*   **Kegunaan**: Pilihan default untuk nilai desimal.
+*   **Peringatan**: Sama seperti `float`, jangan gunakan untuk mata uang.
 
-### Unsigned long (64-bit)
-- Rentang: 0 hingga 2^64-1.
-- Dukungan: metode pada `Long` seperti `compareUnsigned`, `divideUnsigned`.
+### 7. boolean
+*   **Nilai**: Hanya memiliki dua kemungkinan nilai: `true` dan `false`.
+*   **Kegunaan**: Untuk *flag* sederhana yang melacak kondisi benar/salah. Ukurannya tidak didefinisikan secara presisi.
 
-## Strings dan Arrays (bukan primitif)
-### String
-- `java.lang.String` mendapatkan dukungan khusus; objek immutable (nilainya tidak berubah setelah dibuat).
-- Contoh literal: `"this is a string"`.
+### 8. char
+*   **Spesifikasi**: Karakter Unicode 16-bit tunggal.
+*   **Rentang**: `\u0000` (atau 0) hingga `\uffff` (atau 65,535 inklusif).
 
-### Arrays
-- Menyimpan kumpulan nilai bertipe sama; default value berlaku untuk field bertipe array dan elemennya sesuai tipe elemen.
-- Untuk koleksi dinamis, lihat [[Java Collections]].
+## Dukungan Unsigned (Java SE 8+)
 
-## Default Values (fields) dan Local Variables
-### Default untuk fields
-- `byte`: `0`
-- `short`: `0`
-- `int`: `0`
-- `long`: `0L`
-- `float`: `0.0f`
-- `double`: `0.0d`
-- `char`: `\u0000`
-- `String`/objek: `null`
-- `boolean`: `false`
+Mulai Java SE 8, Anda dapat menggunakan tipe data `int` untuk merepresentasikan *unsigned 32-bit integer* (0 hingga 2^32-1) dan `long` untuk *unsigned 64-bit integer* (0 hingga 2^64-1).
 
-### Local variables
-- Tidak memiliki default value; wajib diinisialisasi sebelum digunakan.
-- Akses variabel lokal yang belum diinisialisasi memicu compile-time error.
+*   Gunakan kelas `Integer` dan `Long` untuk melakukan operasi aritmatika pada nilai *unsigned* ini, seperti `Integer.compareUnsigned()`, `Long.divideUnsigned()`, dll.
 
-## Literals: Membuat Nilai
-### Integer literals
-- `int` default; akhiran `L`/`l` untuk `long` (gunakan `L` agar tidak mirip `1`).
-- Basis: desimal (`10`), heksadesimal (`0x`), biner (`0b`, Java 7+).
+## String dan Array
 
-### Floating-point literals
-- `double` default; akhiran `F`/`f` untuk `float`, `D`/`d` opsional.
-- Mendukung notasi ilmiah `E`/`e`.
+Meskipun bukan tipe primitif, `java.lang.String` mendapatkan dukungan khusus dari bahasa. String adalah objek yang tidak dapat diubah (*immutable*).
 
-### Character dan String literals
-- Gunakan `'` untuk `char`, `"` untuk `String`; dukungan escape: `\b`, `\t`, `\n`, `\f`, `\r`, `\"`, `\'`, `\\`.
-- Unicode escape dapat digunakan di berbagai konteks.
+```java
+String s = "this is a string";
+```
 
-### null literal dan class literal
-- `null` untuk reference types (bukan primitif); sering dipakai sebagai penanda ketiadaan objek.
-- Class literal: `TypeName.class`, mis. `String.class` bertipe `Class`.
+Array adalah objek kontainer yang memegang sejumlah nilai dengan tipe tunggal. Untuk struktur data yang lebih dinamis, Anda mungkin ingin mempelajari [[Java Collections]].
 
-### Underscore pada numeric literals (Java 7+)
-- Boleh di antara digit untuk keterbacaan (mis. `1_000_000`).
-- Larangan: awal/akhir angka, bersebelahan dengan titik desimal, sebelum akhiran `F`/`L`, atau pada posisi yang mengharuskan deret digit utuh.
+## Nilai Default
 
-## Tabel Ringkas: Pemilihan Tipe
+Tidak selalu perlu memberikan nilai saat variabel dideklarasikan. Field yang dideklarasikan tetapi tidak diinisialisasi akan diset ke nilai default yang wajar oleh kompilator.
 
-| Tipe | Lebar | Rentang Singkat | Default (field) | Gunaan Umum | Catatan |
-|---|---|---|---|---|---|
-| byte | 8-bit | -128..127 | 0 | Array besar | Dokumentasi batas |
-| short | 16-bit | -32,768..32,767 | 0 | Array besar | Hemat memori |
-| int | 32-bit | -2^31..2^31-1 | 0 | Bilangan bulat | Default integral |
-| long | 64-bit | -2^63..2^63-1 | 0L | Bilangan lebar | Saat `int` tak cukup |
-| float | 32-bit | IEEE 754 | 0.0f | Pecahan hemat memori | Bukan presisi finansial |
-| double | 64-bit | IEEE 754 | 0.0d | Pecahan umum | Default desimal |
-| boolean | — | true/false | false | Flag kondisi | Ukuran tak pasti |
-| char | 16-bit | \u0000..\uffff | \u0000 | Karakter UTF-16 | Satu karakter |
+| Tipe Data | Nilai Default (untuk Field) |
+| :--- | :--- |
+| byte | `0` |
+| short | `0` |
+| int | `0` |
+| long | `0L` |
+| float | `0.0f` |
+| double | `0.0d` |
+| char | `\u0000` |
+| String (atau objek apapun) | `null` |
+| boolean | `false` |
 
-## Refleksi: Rak yang Tertata
-- Dengan metafora rak bahan kering, tiap tipe primitif diperlakukan sebagai bahan standar: ukurannya tetap, jelas batasnya, dan mudah dipilih untuk kebutuhan resep (program).
-- Untuk desain menyeluruh, kembali ke [[Java Language Basics]] dan relasi dengan [[Creating Variables and Naming Them]]; untuk operasi tingkat mesin rujuk [[JVM]]; untuk penyimpanan koleksi, gunakan [[Java Collections]].
-- Batas metafora: bahan kering di Java tidak berubah kualitas dan dapat direpresentasikan langsung sebagai literal; berbeda dengan dunia nyata yang penuh variasi.
+**Catatan Penting tentang Variabel Lokal**:
+Nilai default di atas **tidak** berlaku untuk variabel lokal. Variabel lokal harus diinisialisasi sebelum digunakan. Mengakses variabel lokal yang belum diinisialisasi akan menyebabkan kesalahan waktu kompilasi (*compile-time error*).
+
+## Literals
+
+Literal adalah representasi kode sumber dari nilai tetap.
+
+### Integer Literals
+*   Defaultnya bertipe `int`.
+*   Tambahkan akhiran `L` atau `l` untuk tipe `long`.
+*   Sistem bilangan:
+    *   Desimal: `10`
+    *   Heksadesimal: `0x1a`
+    *   Biner: `0b11010` (Java SE 7+)
+
+### Floating-Point Literals
+*   Defaultnya bertipe `double`.
+*   Tambahkan akhiran `F` atau `f` untuk tipe `float`.
+*   Tambahkan akhiran `D` atau `d` untuk tipe `double` (opsional).
+*   Mendukung notasi ilmiah (E notation).
+
+### Character dan String Literals
+*   `char` menggunakan tanda kutip tunggal: `'a'`.
+*   `String` menggunakan tanda kutip ganda: `"Hello"`.
+*   Mendukung *escape sequences* seperti `\n` (baris baru), `\t` (tab), `\'`, `\"`, `\\`.
+
+### Underscore pada Numeric Literals
+Sejak Java SE 7, karakter garis bawah (`_`) dapat muncul di mana saja di antara digit dalam literal numerik untuk meningkatkan keterbacaan.
+
+```java
+long creditCardNumber = 1234_5678_9012_3456L;
+long socialSecurityNumber = 999_99_9999L;
+```
+
+## Referensi
+*   [Creating Primitive Type Variables in Your Programs - Dev.java](https://dev.java/learn/language-basics/primitive-types/) - Dokumentasi resmi mengenai tipe data primitif di Java.
+*   Topik terkait: [[JVM]] untuk representasi memori, [[Object-Oriented Programming|OOP]] untuk konsep objek.

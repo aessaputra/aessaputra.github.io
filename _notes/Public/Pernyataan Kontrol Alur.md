@@ -1,8 +1,7 @@
 ---
-title: Pernyataan Kontrol Alur - Sutradara Alur Cerita
+title: Pernyataan Kontrol Alur
 aliases:
   - Java Control Flow
-  - Control Flow Statements
   - Control Flow Statements
 categories:
   - "[[Posts]]"
@@ -23,43 +22,43 @@ status: "[[Published]]"
 feed: show
 ---
 
-## Pengantar: Sutradara Alur Cerita
+Pernyataan dalam kode sumber Java umumnya dieksekusi dari atas ke bawah, sesuai urutan kemunculannya. Namun, **Pernyataan Kontrol Alur** (Control Flow Statements) memecah aliran eksekusi linier ini dengan menggunakan pengambilan keputusan, perulangan, dan percabangan, memungkinkan program Anda untuk mengeksekusi blok kode tertentu secara kondisional. Artikel ini membahas pernyataan kontrol alur berdasarkan panduan resmi dari [[Dev.java]].
 
-Dalam dunia [[Pemrograman|pemrograman]], sebuah program adalah seperti sebuah film dengan alur cerita yang kompleks. [[Pernyataan Kontrol Alur|Pernyataan kontrol alur]] adalah sutradara yang mengarahkan jalannya cerita, memutuskan adegan mana yang akan dimainkan, berapa kali adegan itu diulang, dan kapan sebuah adegan harus dihentikan atau dilewati. Tanpa sutradara ini, cerita akan berjalan secara linier dan monoton. Dengan pernyataan kontrol alur, kita dapat menciptakan narasi yang dinamis, interaktif, dan penuh kejutan, memungkinkan program untuk merespons berbagai skenario. Konten ini akan membahas berbagai pernyataan kontrol alur di Java, berdasarkan panduan dari [[Dev.java|sumber resmi Java]].
+## Pernyataan If-Then dan If-Then-Else
 
-## Pernyataan Kondisional: Memilih Adegan
+### Pernyataan If-Then
+Pernyataan `if-then` adalah pernyataan kontrol alur yang paling mendasar. Pernyataan ini memerintahkan program untuk mengeksekusi bagian kode tertentu hanya jika pengujian tertentu bernilai `true`.
 
-Pernyataan kondisional adalah sutradara yang memutuskan adegan mana yang akan ditampilkan berdasarkan kondisi tertentu. Ini seperti sutradara yang berkata, "Jika hujan, kita syuting adegan di dalam ruangan; jika tidak, kita syuting di luar."
+Contoh implementasi pada kelas `Bicycle`:
 
-### `if-then`
-- Paling dasar, mengeksekusi blok kode hanya jika kondisi `true`.
-{% raw %}
 ```java
 void applyBrakes() {
-    if (isMoving){ // Jika sepeda bergerak
-        currentSpeed--; // Kurangi kecepatan
+    // klausa "if": sepeda harus bergerak
+    if (isMoving){ 
+        // klausa "then": kurangi kecepatan saat ini
+        currentSpeed--;
     }
 }
 ```
-{% endraw %}
 
-### `if-then-else`
-- Menyediakan jalur eksekusi alternatif jika kondisi `if` adalah `false`.
-{% raw %}
+Jika pengujian ini bernilai `false` (artinya sepeda tidak bergerak), kontrol akan melompat ke akhir pernyataan `if-then`.
+
+### Pernyataan If-Then-Else
+Pernyataan `if-then-else` menyediakan jalur eksekusi sekunder ketika klausa `if` bernilai `false`.
+
 ```java
 void applyBrakes() {
     if (isMoving) {
         currentSpeed--;
     } else {
-        System.err.println("The bicycle has already stopped!"); // Pesan error jika sudah berhenti
+        System.err.println("The bicycle has already stopped!");
     }
 }
 ```
-{% endraw %}
 
-### `if-then-else if-else`
-- Rangkaian kondisi untuk memilih dari beberapa jalur. Hanya satu blok yang akan dieksekusi.
-{% raw %}
+### If-Then-Else Bertingkat
+Anda dapat menggunakan rangkaian pernyataan `if-then-else` untuk menangani berbagai kondisi.
+
 ```java
 class IfElseDemo {
     public static void main(String[] args) {
@@ -81,15 +80,16 @@ class IfElseDemo {
     }
 }
 ```
-{% endraw %}
 
-## Pernyataan Perulangan: Mengulang Adegan
+## Pernyataan Switch
 
-Pernyataan perulangan adalah sutradara yang memerintahkan untuk mengulang sebuah adegan berkali-kali sampai kondisi tertentu terpenuhi. Ini seperti mengulang sebuah take sampai sempurna.
+Pernyataan `switch` memungkinkan percabangan alur program berdasarkan nilai variabel. Untuk pembahasan lebih mendalam mengenai topik ini, silakan lihat artikel [[Pernyataan Switch]].
 
-### `while`
-- Mengeksekusi blok pernyataan secara terus-menerus selama kondisi `true`.
-{% raw %}
+## Pernyataan While dan Do-While
+
+### Pernyataan While
+Pernyataan `while` terus mengeksekusi blok pernyataan selama kondisi tertentu bernilai `true`.
+
 ```java
 class WhileDemo {
     public static void main(String[] args){
@@ -101,11 +101,10 @@ class WhileDemo {
     }
 }
 ```
-{% endraw %}
 
-### `do-while`
-- Mirip dengan `while`, tetapi kondisi dievaluasi di akhir, sehingga blok `do` selalu dieksekusi setidaknya sekali.
-{% raw %}
+### Pernyataan Do-While
+Perbedaan utama antara `do-while` dan `while` adalah `do-while` mengevaluasi ekspresinya di bagian bawah loop. Oleh karena itu, pernyataan di dalam blok `do` selalu dieksekusi setidaknya satu kali.
+
 ```java
 class DoWhileDemo {
     public static void main(String[] args){
@@ -117,134 +116,45 @@ class DoWhileDemo {
     }
 }
 ```
-{% endraw %}
 
-### `for`
-- Cara ringkas untuk mengulang dalam rentang nilai, sering disebut "for loop".
-{% raw %}
+## Pernyataan For
+
+Pernyataan `for` menyediakan cara yang ringkas untuk melakukan iterasi pada rentang nilai. Programmer sering menyebutnya sebagai "for loop".
+
+### Bentuk Dasar
 ```java
-for (int i = 1; i < 11; i++) {
-    System.out.println("Count is: " + i);
-}
-```
-{% endraw %}
-
-### `for` yang Ditingkatkan (Enhanced `for`)
-- Untuk iterasi melalui koleksi dan array, membuat loop lebih ringkas dan mudah dibaca.
-{% raw %}
-```java
-int[] numbers = {1,2,3,4,5,6,7,8,9,10};
-for (int item : numbers) {
-    System.out.println("Count is: " + item);
-}
-```
-{% endraw %}
-
-## Pernyataan Percabangan: Mengubah Arah Cerita
-
-Pernyataan percabangan adalah sutradara yang dapat mengubah arah cerita secara tiba-tiba, melompati bagian tertentu atau mengakhiri adegan.
-
-### `break`
-- Mengakhiri loop `for`, `while`, `do-while`, atau `switch` terdekat. Dapat berlabel untuk mengakhiri loop luar.
-{% raw %}
-```java
-// Unlabeled break
-for (int i = 0; i < 100; i++) {
-    if (i == 50) {
-        break; // Keluar dari loop saat i mencapai 50
-    }
-    System.out.println(i);
-}
-
-// Labeled break
-search: // Label
-for (int i = 0; i < 3; i++) {
-    for (int j = 0; j < 3; j++) {
-        if (i == 1 && j == 1) {
-            break search; // Keluar dari loop luar
-        }
-        System.out.println("i = " + i + ", j = " + j);
+class ForDemo {
+    public static void main(String[] args){
+         for(int i=1; i<11; i++){
+              System.out.println("Count is: " + i);
+         }
     }
 }
 ```
-{% endraw %}
 
-### `continue`
-- Melewatkan iterasi saat ini dari loop `for`, `while`, atau `do-while` dan melanjutkan ke iterasi berikutnya. Dapat berlabel untuk melewatkan iterasi loop luar.
-{% raw %}
+### Pernyataan For yang Ditingkatkan (Enhanced For Loop)
+Didesain untuk iterasi melalui [[Collections Framework|koleksi]] dan [[Array|array]], bentuk ini lebih ringkas dan mudah dibaca.
+
 ```java
-String searchMe = "peter piper picked a peck of pickled peppers";
-int max = searchMe.length();
-int numPs = 0;
-
-for (int i = 0; i < max; i++) {
-    if (searchMe.charAt(i) != 'p') {
-        continue; // Lewati jika bukan 'p'
+class EnhancedForDemo {
+    public static void main(String[] args){
+         int[] numbers = {1,2,3,4,5,6,7,8,9,10};
+         for (int item : numbers) {
+             System.out.println("Count is: " + item);
+         }
     }
-    numPs++;
-}
-System.out.println("Found " + numPs + " p's in the string.");
-```
-{% endraw %}
-
-### `return`
-- Keluar dari metode saat ini dan mengembalikan kontrol ke tempat metode dipanggil. Dapat mengembalikan nilai atau tidak (untuk metode `void`).
-{% raw %}
-```java
-public int calculateSum(int a, int b) {
-    return a + b; // Mengembalikan nilai
-}
-
-public void printMessage(String message) {
-    System.out.println(message);
-    return; // Keluar dari metode void
 }
 ```
-{% endraw %}
 
-### `yield`
-- Keluar dari ekspresi `switch` saat ini dan menghasilkan nilai. Digunakan dalam `switch expression` (Java 14+).
-{% raw %}
-```java
-String day = "MONDAY";
-String result = switch (day) {
-    case "MONDAY", "FRIDAY", "SUNDAY" -> "6";
-    case "TUESDAY" -> "7";
-    case "THURSDAY", "SATURDAY" -> "8";
-    case "WEDNESDAY" -> "9";
-    default -> {
-        yield "Invalid day."; // Menghasilkan nilai dari blok
-    }
-};
-System.out.println(result);
-```
-{% endraw %}
+## Pernyataan Percabangan
 
-## Diagram: Peta Alur Cerita Program
+Pernyataan percabangan memungkinkan Anda untuk mengalihkan aliran kontrol secara spesifik.
 
-Berikut adalah diagram yang memvisualisasikan berbagai pernyataan kontrol alur, seperti peta alur cerita yang digunakan oleh sutradara:
+*   **`break`**: Mengakhiri loop `for`, `while`, atau `do-while` terdekat.
+*   **`continue`**: Melewatkan iterasi saat ini dari loop dan melanjutkan ke iterasi berikutnya.
+*   **`return`**: Keluar dari metode saat ini dan mengembalikan kontrol ke pemanggil metode.
 
-```mermaid
-graph TD
-    A[Pernyataan Kontrol Alur] --> B(Kondisional)
-    B --> B1(If-Then)
-    B --> B2(If-Then-Else)
-    B --> B3(If-Then-Else If-Else)
+## Referensi
 
-    A --> C(Perulangan)
-    C --> C1(While)
-    C --> C2(Do-While)
-    C --> C3(For)
-    C --> C4(Enhanced For)
-
-    A --> D(Percabangan)
-    D --> D1(Break)
-    D --> D2(Continue)
-    D --> D3(Return)
-    D --> D4(Yield)
-```
-Diagram di atas menggambarkan "Peta Alur Cerita Program" yang dipimpin oleh "Sutradara Alur Cerita". Kategori utama adalah Pernyataan Kontrol Alur, yang bercabang menjadi Kondisional (memilih adegan), Perulangan (mengulang adegan), dan Percabangan (mengubah arah cerita). Setiap sub-kategori menunjukkan jenis pernyataan spesifik yang telah kita bahas, memberikan gambaran visual tentang bagaimana program dapat mengarahkan alurnya secara dinamis.
-
-## Refleksi: Mengarahkan Simfoni Kode
-
-Sebagai sutradara yang mahir mengarahkan alur cerita sebuah film, seorang programmer yang menguasai pernyataan kontrol alur dapat menciptakan program yang dinamis dan responsif. Setiap pernyataan kondisional adalah keputusan penting yang membentuk narasi, setiap perulangan adalah adegan yang diulang untuk mencapai tujuan, dan setiap percabangan adalah perubahan arah yang strategis. Dengan memahami bagaimana "Sutradara Alur Cerita" ini bekerja, kita tidak hanya menulis kode; kita sedang menyusun sebuah simfoni digital yang kompleks dan menarik. Kemampuan untuk mengontrol alur eksekusi adalah fondasi dari setiap program yang efektif, memungkinkan kita untuk membangun solusi yang cerdas dan adaptif dalam perjalanan [[Belajar Pemrograman|pemrograman]] kita.
+*   [Control Flow Statements - Dev.java](https://dev.java/learn/language-basics/controlling-flow/)
+*   [The Java™ Language Specification](https://docs.oracle.com/javase/specs/)

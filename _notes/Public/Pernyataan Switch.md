@@ -1,51 +1,52 @@
 ---
-title: Pernyataan Switch - Pintu Gerbang Pilihan
+title: Pernyataan Switch
 aliases:
-  - Pernyataan Switch
   - Branching with Switch Statements
+  - Switch Statement
 categories:
   - "[[Posts]]"
 tags:
   - Java
-  - Programming Fundamentals
   - Control Flow
+  - Programming Fundamentals
 author:
   - "[[Aes Saputra]]"
 url: https://aessaputra.net/notes/pernyataan-switch/
 created: 2025-12-18
 published: 2025-12-18
 date: 2025-12-18
-topics: ["[[Java]]", "[[Programming Fundamentals]]", "[[Control Flow]]"]
+topics:
+  - "[[Java]]"
+  - "[[Programming Fundamentals]]"
+  - "[[Control Flow]]"
 status: "[[Published]]"
 feed: show
 ---
 
-## Pengantar: Pintu Gerbang Pilihan dalam Kode
+Pernyataan `switch` adalah salah satu dari lima pernyataan kontrol alur yang tersedia dalam bahasa Java. Artikel ini membahas penggunaan pernyataan `switch` secara mendalam berdasarkan panduan resmi dari [[Dev.java]].
 
-Dalam dunia [[Pemrograman Java]], seringkali kita dihadapkan pada persimpangan jalan di mana program harus memilih jalur eksekusi berdasarkan kondisi tertentu. Jika [[Pernyataan Kontrol Alur|`if-else`]] ibarat persimpangan tunggal dengan dua arah, maka `switch statement` adalah sebuah "Pintu Gerbang Pilihan" yang megah, menawarkan banyak jalur alternatif yang dapat diambil oleh alur program. Setiap jalur ini mengarah pada serangkaian tindakan yang berbeda, memungkinkan kode kita bereaksi secara dinamis terhadap berbagai skenario.
+## Menggunakan Pernyataan Switch untuk Mengontrol Alur
 
-## Anatomi Pintu Gerbang: Memahami `switch`
+Pernyataan `switch` memungkinkan percabangan alur program ke sejumlah jalur eksekusi yang berbeda. Pernyataan ini mengambil variabel pemilih (*selector variable*) sebagai argumen dan menggunakan nilai variabel ini untuk memilih jalur yang akan dieksekusi.
 
-`switch statement` adalah salah satu dari lima pernyataan kontrol alur utama dalam bahasa Java. Ia mengambil sebuah variabel "pemilih" (selector variable) sebagai argumen dan menggunakan nilai dari variabel ini untuk memilih jalur eksekusi yang akan dijalankan.
+### Tipe Data yang Didukung
 
-### Kunci Pembuka Pintu: Tipe Data yang Diizinkan
+Anda harus memilih tipe variabel pemilih dari salah satu tipe berikut:
+*   Tipe data primitif: `byte`, `short`, `char`, dan `int`.
+*   Tipe *wrapper*: `Character`, `Byte`, `Short`, dan `Integer`.
+*   Tipe enumerasi (*enumerated types*).
+*   Tipe `String`.
 
-Tidak semua kunci dapat membuka pintu gerbang ini. Variabel pemilih harus dari tipe data tertentu:
-- Tipe data primitif: `byte`, `short`, `char`, dan `int`.
-- Tipe wrapper: `Character`, `Byte`, `Short`, dan `Integer`.
-- Tipe `enum` (enumerated types).
-- Tipe `String` (sejak Java SE 7).
+**Catatan Penting**: Tipe primitif berikut **tidak dapat** digunakan sebagai variabel pemilih: `boolean`, `long`, `float`, dan `double`.
 
-Penting untuk diingat bahwa tipe data primitif seperti `boolean`, `long`, `float`, dan `double` **tidak dapat** digunakan sebagai variabel pemilih.
+### Contoh Dasar: Menentukan Kuartal
 
-### Jalur-Jalur di Balik Pintu: `case` dan `default`
-
-Setiap jalur di dalam pintu gerbang ini ditandai dengan label `case`. Ketika nilai variabel pemilih cocok dengan salah satu label `case`, program akan memasuki jalur tersebut dan mengeksekusi semua pernyataan yang mengikutinya.
+Berikut adalah contoh sederhana penggunaan pernyataan `switch` untuk menentukan label kuartal berdasarkan nilai integer:
 
 ```java
-int quarter = 0; // nilai apa pun
-
+int quarter = 2; // Contoh nilai
 String quarterLabel = null;
+
 switch (quarter) {
     case 0: quarterLabel = "Q1 - Winter"; 
             break;
@@ -57,16 +58,22 @@ switch (quarter) {
             break;
     default: quarterLabel = "Unknown quarter";
 };
+System.out.println(quarterLabel);
 ```
 
-### Penjaga Pintu: Kata Kunci `break`
+Bagian tubuh dari pernyataan `switch` dikenal sebagai **blok switch**. Pernyataan dalam blok switch dapat diberi label dengan satu atau lebih label `case` atau `default`. Pernyataan `switch` mengevaluasi ekspresinya, kemudian mengeksekusi semua pernyataan yang mengikuti label `case` yang cocok.
 
-Tanpa "penjaga pintu" yaitu kata kunci `break`, program akan terus berjalan melalui semua jalur `case` berikutnya setelah menemukan kecocokan pertama. Fenomena ini dikenal sebagai "fall-through". `break` berfungsi untuk menghentikan eksekusi `switch statement` dan melanjutkan alur program setelah blok `switch`.
+## Kata Kunci `break` dan Perilaku "Fall Through"
+
+Setiap pernyataan `break` mengakhiri pernyataan `switch` yang melingkupinya. Tanpa pernyataan `break`, pernyataan dalam blok switch akan mengalami **fall through** (jatuh ke bawah): semua pernyataan setelah label `case` yang cocok akan dieksekusi secara berurutan, terlepas dari label `case` berikutnya, sampai pernyataan `break` ditemui.
+
+### Contoh Fall Through
+
+Kode berikut menggunakan perilaku *fall through* untuk mengisi daftar bulan-bulan di masa depan (`futureMonths`) berdasarkan bulan saat ini:
 
 ```java
-{% raw %}
 int month = 8;
-List<String> futureMonths = new ArrayList<>();
+java.util.List<String> futureMonths = new java.util.ArrayList<>();
 
 switch (month) {
     case 1:  futureMonths.add("January");
@@ -84,17 +91,13 @@ switch (month) {
              break;
     default: break;
 }
-{% endraw %}
 ```
-Meskipun `break` terakhir secara teknis tidak wajib karena alur akan keluar dari `switch`, penggunaannya sangat direkomendasikan untuk kemudahan modifikasi dan mengurangi potensi kesalahan.
 
-### Jalur Darurat: `default`
+Secara teknis, `break` terakhir tidak diperlukan karena alur akan keluar dari pernyataan `switch`. Namun, penggunaan `break` sangat disarankan untuk mempermudah modifikasi kode dan mengurangi risiko kesalahan. Bagian `default` menangani semua nilai yang tidak ditangani secara eksplisit oleh salah satu bagian `case`.
 
-Jika tidak ada `case` yang cocok dengan nilai variabel pemilih, program akan mencari jalur `default`. Ini adalah "jalur darurat" yang menangani semua nilai yang tidak ditangani secara eksplisit oleh `case` lainnya.
+## Menggunakan Label `case` Ganda
 
-### Pintu Ganda: Multiple `case` Labels
-
-Satu pernyataan dapat memiliki beberapa label `case`, memungkinkan beberapa kondisi memicu tindakan yang sama.
+Sebuah pernyataan dapat memiliki beberapa label `case`. Contoh kode berikut menghitung jumlah hari dalam bulan tertentu, di mana beberapa bulan memiliki jumlah hari yang sama:
 
 ```java
 int month = 2;
@@ -102,106 +105,80 @@ int year = 2021;
 int numDays = 0;
 
 switch (month) {
-    case 1: case 3: case 5:   // Januari, Maret, Mei
-    case 7: case 8: case 10:  // Juli, Agustus, Oktober
+    case 1: case 3: case 5:   // January March May
+    case 7: case 8: case 10:  // July August October
     case 12:
         numDays = 31;
         break;
-    case 4: case 6:   // April, Juni
-    case 9: case 11:  // September, November
+    case 4: case 6:   // April June
+    case 9: case 11:  // September November
         numDays = 30;
         break;
-    case 2: // Februari
-        if (((year % 4 == 0) && 
-             !(year % 100 == 0))
-             || (year % 400 == 0))
+    case 2: // February
+        if (((year % 4 == 0) && !(year % 100 == 0)) || (year % 400 == 0))
             numDays = 29;
         else
             numDays = 28;
         break;
     default:
-        // IO.println("Invalid month."); // Asumsi IO.println adalah metode output
-        System.out.println("Bulan tidak valid.");
+        System.out.println("Invalid month.");
         break;
 }
+System.out.println("Number of Days = " + numDays);
 ```
 
-## Memilih Pintu Gerbang atau Persimpangan: `switch` vs `if-then-else`
+## Memilih Antara Switch dan If-Then-Else
 
-Memutuskan antara `switch statement` dan [[Pernyataan Kontrol Alur|`if-then-else`]] bergantung pada keterbacaan dan jenis ekspresi yang diuji.
-- `if-then-else` dapat menguji ekspresi berdasarkan rentang nilai atau kondisi kompleks.
-- `switch statement` hanya menguji ekspresi berdasarkan nilai tunggal (integer, `enum`, atau `String`).
+Keputusan untuk menggunakan pernyataan `switch` atau `if-then-else` didasarkan pada keterbacaan kode dan jenis ekspresi yang diuji.
 
-Contoh yang bisa ditulis dengan `switch`:
+*   **If-Then-Else**: Dapat menguji ekspresi berdasarkan rentang nilai atau kondisi yang kompleks.
+*   **Switch**: Hanya menguji ekspresi berdasarkan satu nilai integer, enumerasi, atau objek String.
+
+Contoh yang cocok untuk `switch`:
 ```java
-int month = 1; // bulan apa pun
-if (month == 1) {
-    System.out.println("January");
-} else if (month == 2) {
-    System.out.println("February");
-} // ... dan seterusnya
+if (month == 1) { ... } else if (month == 2) { ... } // Bisa diubah menjadi switch
 ```
 
-Contoh yang **tidak bisa** ditulis dengan `switch` karena tidak mendukung label tipe `boolean`:
+Contoh yang **tidak bisa** menggunakan `switch` (karena tipe boolean atau kondisi rentang):
 ```java
-int temperature = -5; // suhu apa pun
+int temperature = 85;
 if (temperature < 0) {
-    System.out.println("Air adalah es");
+    System.out.println("Water is ice");
 } else if (temperature < 100){
-    System.out.println("Air adalah cairan");
+    System.out.println("Water is liquid");
 } else {
-    System.out.println("Air adalah uap");
+    System.out.println("Water is vapor");
 }
 ```
 
-## Pintu Gerbang dengan Label Teks: Menggunakan `String`
+## Menggunakan String dalam Switch
 
-Sejak Java SE 7, `String` dapat digunakan sebagai tipe untuk label `case`. Perbandingan `String` dilakukan seolah-olah menggunakan metode `String.equals()`. Untuk menangani kasus huruf besar/kecil, `String` pemilih seringkali dikonversi ke huruf kecil terlebih dahulu.
+Sejak Java SE 7, Anda dapat menggunakan objek `String` dalam ekspresi pernyataan `switch`. Contoh berikut menampilkan nomor bulan berdasarkan nama bulan:
 
 ```java
-String month = "January"; // bulan apa pun
+String month = "August";
 int monthNumber = -1;
 
 switch (month.toLowerCase()) {
     case "january":
         monthNumber = 1;
         break;
-    case "february":
-        monthNumber = 2;
+    // ... case lainnya ...
+    case "august":
+        monthNumber = 8;
         break;
-    // ... kasus lainnya
-    default:
-        monthNumber = 0; // Bulan tidak dikenal
+    // ... case lainnya ...
+    default: 
+        monthNumber = 0;
         break;
 }
-System.out.println("Nomor bulan: " + monthNumber);
 ```
 
-## Pintu Gerbang yang Rapuh: Variabel Pemilih `null`
+Pernyataan `switch` membandingkan ekspresi String menggunakan metode `String.equals`.
 
-Jika variabel pemilih `switch statement` adalah objek dan nilainya `null`, maka `switch statement` akan melempar `NullPointerException`. Penting untuk melindungi kode dari variabel pemilih `null` untuk menghindari kesalahan runtime.
+**Peringatan NullPointerException**: Pernyataan `switch` akan melempar `NullPointerException` jika ekspresi yang dievaluasi bernilai `null`. Selalu pastikan ekspresi tidak null sebelum digunakan dalam switch.
 
-## Peta Pintu Gerbang Pilihan
+## Referensi
 
-Berikut adalah visualisasi sederhana tentang bagaimana `switch statement` bekerja sebagai "Pintu Gerbang Pilihan":
-
-```mermaid
-graph TD
-    A[Mulai Program] --> B{Variabel Pemilih};
-    B --> C{Nilai Variabel Pemilih?};
-    C -- Cocok dengan Case 1 --> D[Jalur Case 1];
-    C -- Cocok dengan Case 2 --> E[Jalur Case 2];
-    C -- Tidak Cocok --> F[Jalur Default];
-    D --> G(Eksekusi Pernyataan Case 1);
-    E --> H(Eksekusi Pernyataan Case 2);
-    F --> I(Eksekusi Pernyataan Default);
-    G -- break --> J[Lanjutkan Program];
-    H -- break --> J;
-    I --> J;
-```
-**Penjelasan Diagram:**
-Diagram ini menggambarkan alur kerja `switch statement`. Program dimulai, kemudian nilai dari "Variabel Pemilih" dievaluasi. Berdasarkan nilai tersebut, program akan memilih salah satu "Jalur Case" yang sesuai. Jika tidak ada `case` yang cocok, "Jalur Default" akan diambil. Setelah pernyataan di jalur yang dipilih dieksekusi, `break` akan mengarahkan alur program untuk "Lanjutkan Program" setelah blok `switch`.
-
-## Refleksi: Fleksibilitas Sang Sutradara
-
-`switch statement` adalah alat yang ampuh dalam gudang senjata seorang [[Pengembang Perangkat Lunak|developer]] Java. Ia memberikan cara yang elegan dan terstruktur untuk menangani banyak pilihan, mirip dengan seorang sutradara yang mengarahkan aktor-aktornya ke adegan yang berbeda berdasarkan naskah. Dengan memahami cara kerja "Pintu Gerbang Pilihan" ini, kita dapat menulis kode yang lebih bersih, lebih mudah dibaca, dan lebih efisien dalam mengelola alur eksekusi program. Ini adalah salah satu fondasi penting dalam membangun [[Aplikasi]] yang responsif dan logis.
+*   [Branching with Switch Statements - Dev.java](https://dev.java/learn/language-basics/switch-statement/)
+*   Topik terkait: [[Pernyataan Kontrol Alur]], [[If-Else]], [[Enum]], [[Numbers and Strings]].
