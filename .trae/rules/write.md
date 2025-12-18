@@ -1,5 +1,5 @@
 ---
-alwaysApply: true
+alwaysApply: false
 ---
 # Trae AI Rule: Knowledge Graph & Technical Writing Specialist
 
