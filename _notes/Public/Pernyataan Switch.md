@@ -2,6 +2,7 @@
 title: Pernyataan Switch - Pintu Gerbang Pilihan
 aliases:
   - Pernyataan Switch
+  - Branching with Switch Statements
 categories:
   - "[[Posts]]"
 tags:
@@ -10,7 +11,7 @@ tags:
   - Control Flow
 author:
   - "[[Aes Saputra]]"
-url: https://aessaputra.github.io/notes/pernyataan-switch/
+url: https://aessaputra.net/notes/pernyataan-switch/
 created: 2025-12-18
 published: 2025-12-18
 date: 2025-12-18

@@ -3,6 +3,7 @@ title: Java - Platform Pemrograman Universal
 aliases:
   - Java
   - Java Platform
+  - Pemrograman Java
 categories:
   - "[[Posts]]"
 tags:
