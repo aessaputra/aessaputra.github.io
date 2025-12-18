@@ -6,7 +6,7 @@ tags:
   - posts
 author:
   - "[[Aes Saputra]]"
-url: https://aessaputra.net/notes/siklus-hidup-program-java
+url: https://aessaputra.net/notes/life-cycle-of-a-java-program
 created: "2025-12-18"
 published: "2025-12-18"
 date: "2025-12-18"
