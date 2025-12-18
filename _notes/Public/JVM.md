@@ -12,7 +12,7 @@ tags:
   - bytecode
 author:
   - "[[Aes Saputra]]"
-url:
+url: https://aessaputra.net/notes/jvm
 created: 2025-12-16
 published: 2025-12-16
 date: 2025-12-16
