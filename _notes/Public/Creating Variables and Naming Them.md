@@ -96,5 +96,8 @@ Konvensi ini tidak dipaksakan oleh *compiler*, namun diikuti oleh komunitas peng
     *   **Variabel**: Gunakan `camelCase` (misalnya: `currentSpeed`, `gearRatio`).
     *   **Konstanta**: Gunakan huruf kapital semua dengan pemisah garis bawah (misalnya: `NUM_GEARS`, `MAX_WIDTH`).
 
+## Baca Juga
+*   Untuk detail tentang tipe data yang dapat disimpan dalam variabel, lihat [[Creating Primitive Type Variables in Your Programs]].
+
 ## Referensi
 *   [Creating Variables and Naming Them - Dev.java](https://dev.java/learn/language-basics/variables/) - Dokumentasi resmi mengenai variabel dan aturan penamaan di Java.
