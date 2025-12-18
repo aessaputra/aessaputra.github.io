@@ -27,16 +27,18 @@ title: Judul Artikel
 categories:
   - "[[Posts]]"
 tags:
-  - posts
+  - tag1
+  - tag2
 author:
   - "[[Aes Saputra]]"
-url: /notes/slug-artikel
+url: https://aessaputra.net/notes/file-name
 created: "YYYY-MM-DD"
 published: "YYYY-MM-DD"
 date: "YYYY-MM-DD"
-topics: []
+topics:
+  - "[[Topic1]]"
+  - "[[Topic2]]"
 status: "[[Published]]"
- contentType: tutorial
 feed: show
 aliases:
   - short

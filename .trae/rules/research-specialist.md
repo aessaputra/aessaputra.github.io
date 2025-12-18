@@ -4,7 +4,7 @@ alwaysApply: true
 Research Specialist Rules
 
 - Articles: Indonesian, Markdown. No H1 (#) if title exists.
-- Frontmatter: title, categories, tags, author, url, created, published, date, topics, status, feed, aliases, contentType.
+- Frontmatter: title, categories, tags (multi-line), author, url, created, published, date, topics (multi-line), status, feed, aliases, contentType.
 - Config: Dates YYYY-MM-DD; `feed: show`; `url: /notes/<slug>`.
 - Links: MUST proactively link concepts via [[Wiki Links]]; use aliases (`[[Target|Label]]`) for natural flow. Follow [[Markdown Guide]] & [[Wiki Links]].
 - Tools: Firecrawl for credible research. Sequential Thinking MCP for reasoning/review.
