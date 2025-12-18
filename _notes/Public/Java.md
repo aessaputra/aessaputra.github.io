@@ -13,10 +13,10 @@ tags:
   - enterprise
 author:
   - "[[Aes Saputra]]"
-url:
 created: 2025-12-16
 published: 2025-12-16
 date: 2025-12-16
+url: https://aessaputra.net/notes/java
 topics: []
 status: "[[Published]]"
 feed: show
