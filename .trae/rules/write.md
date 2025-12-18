@@ -46,12 +46,6 @@ You must bridge abstract technical concepts with concrete physical realities.
 - **Requirement**: Every note must have **ONE central metaphor** that carries through the entire document.
 - **Consistency**: Do not mix metaphors (e.g., don't switch from "Factory" to "Ocean" in the middle).
 - **Quality**: Use memorable, relatable scenarios (e.g., "Memory Management as a Gardener," "Concurrency as an Orchestra").
-- **Accessibility**: Select **Universal Domains** (e.g., Kitchen, Traffic, Construction, Nature) that require no specialized knowledge.
-    - *Good*: "API as a Waiter" (Everyone knows restaurants).
-    - *Bad*: "API as a Cricket Bowler" (Requires knowledge of Cricket rules).
-- **Validation**:
-    - **The "Grandma Test"**: Can you explain the source domain to a non-technical person without a dictionary?
-    - **Break Point Analysis**: Explicitly state where the metaphor ends (e.g., "Unlike real traffic, data packets can be cloned").
 
 ---
 
