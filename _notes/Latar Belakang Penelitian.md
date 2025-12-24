@@ -20,7 +20,7 @@ topics:
   - "[[Kerangka Teoretis]]"
   - "[[Identifikasi Masalah]]"
 status: "[[Published]]"
-feed: show
+feed: 
 aliases:
   - latar belakang penelitian
   - research background
