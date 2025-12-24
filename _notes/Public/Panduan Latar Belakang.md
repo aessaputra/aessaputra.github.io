@@ -20,8 +20,8 @@ topics:
 status: "[[Published]]"
 feed: 
 aliases:
-  - panduan-latar-belakang
-  - background-research-guide
+  - panduan latar belakang
+  - background research guide
 ---
 
 ## Pengertian dan Fungsi Latar Belakang Penelitian
